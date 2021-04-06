@@ -1,0 +1,34 @@
+body{
+    background-color: #8FB159;
+}
+
+h1{
+
+    font-family: Verdana;
+    color: #002f01;
+}
+h2{
+
+    font-family: Verdana;
+    color: #002f01;
+}
+h3{
+
+    font-family: Verdana;
+    color: #32753d;
+}
+.botonverde{
+
+    background-color: #8FB159;
+    border:1px solid black;
+    color:black;
+}
+.botonmorado{
+    background-color:#643c54;
+    border:1px solid black;
+    color:white;
+
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+}

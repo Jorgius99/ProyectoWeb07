@@ -6,21 +6,48 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>GTI: Monitoriza tu campo</title>
     <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen" />
+    <style>
+
+        .total{
+            width: auto;
+            height: 100vh;
+        }
+        .masinfo {
+
+            height:72vh ;
+            width: -moz-available;
+            object-fit:cover ;
+        }
+
+        .iniciarsesion {
+            height: 28vh;
+            width: -moz-available;
+            object-fit: cover;
+        }
+
+
+
+
+    </style>
 </head>
 <body>
+<section class="total">
+
+
     <!-- Introducimos la imagen de mas informacion -->
-    <section class="masinfo">
+    <section >
         <header class="logo" role="none">
-            <img src="icon/Logo_GTI.png">
+           <!-- <img src="icon/Logo_GTI.png">-->
         </header>
-        <a href="html/informacion.html"><img src="image/mas_informacion.jpg" alt="mas informacion">
+        <a href="html/informacion.html"> <img src="image/mas_informacion.jpg" alt="mas informacion" class="masinfo">
         </a>
     </section>
     <!-- Introducimos la imagen de iniciar sesión -->
     <section class="iniciarsesion">
-        <a href="html/iniciarsesion.html"><img src="image/iniciarsesion.jpg" alt="iniciar sesion">
+        <a href="html/iniciarsesion.html"><img src="image/iniciarsesion.jpg" alt="iniciar sesion" class="iniciarsesion">
         </a>
     </section>
+</section>
 
 </body>
 </html>

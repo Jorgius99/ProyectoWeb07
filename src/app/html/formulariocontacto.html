@@ -17,12 +17,15 @@
     .contenedor-bloque-buscar{
         flex-direction: column;
         align-items: flex-end;
+        column-count: 1;
+        text-align: justify;
 
     }
     section{
         width: 500px;
         height: 500px;
         margin: 0 auto;
+        justify-content: center;
 
     }
     .flechaatras {
@@ -36,40 +39,60 @@
         height:auto;
         width:auto;
     }
+    label{
+        text-align: center;
+    }
+    form{
+        text-align: center;
+        width:400px;
+        padding:50px;
+        border-radius:10px;
+        margin:auto;
+    }
+    form label{
+        width:190px;
+        font-weight:bold;
+        display:inline-block;
+    }
+    form input[type="text"],
+    form input[type="email"]{
+        width:180px;
+        padding:3px 10px;
+        border:1px solid #f6f6f6;
+        border-radius:3px;
+        background-color:#f6f6f6;
+        margin:8px 0;
+        display:inline-block;
+    }
 </style>
 <body>
-<header>
-    <a href="informacion.html" class="flechaatras"><img src="../icon/previous.svg"></a>
-</header>
-<h2>CONTACTA CON NOSOTROS</h2>
-<form action="#" id="bloque-contactanos">
-    <div class="contenedor-bloque-buscar">
-        <label>
-            Nombre
-            <input type="text" placeholder="Escriba aquí..." required>
-        </label>
-        <label>
-            Apellidos
-            <input type="text" placeholder="Escriba aquí..." required>
-        </label>
-        <label>
-            Teléfono
-            <input type="text" placeholder="Escriba aquí...">
-        </label>
-        <label>
-            Correo
-            <input type="text" placeholder="Escriba aquí..." required>
-        </label>
-        <label>
-            Dirección
-            <input type="text" placeholder="Escriba aquí...">
-        </label>
-        <br>
-        <br>
-        <a href="#" class="botonverde">Contactanos</a>
-        <!--<img src="../icon/Logo_GTI.png">-->
-    </div>
-    </form>
-<footer><a href="informacion.html#quienessomos" class="logo"><img src="../icon/logoGTI.svg" alt="quienes somos"></a></footer>
+    <header>
+        <a href="informacion.html" class="flechaatras"><img src="../icon/previous.svg"></a>
+    </header>
+    <h2>CONTACTA CON NOSOTROS</h2>
+    <br>
+    <br>
+    <br>
+    <section>
+
+        <form action="#" id="bloque-contactanos">
+            <div class="contenedor-bloque-buscar">
+                <label><p>Nombre</p></label>
+                <input type="text" placeholder="Escriba aquí..." required>
+                <label><p>Apellidos</p></label>
+                <input type="text" placeholder="Escriba aquí..." required>
+                <label><p>Teléfono</p></label>
+                <input type="text" placeholder="Escriba aquí...">
+                <label><p>Correo</p></label>
+                <input type="text" placeholder="Escriba aquí..." required>
+                <label><p>Dirección</p></label>
+                <input type="text" placeholder="Escriba aquí...">
+                <br>
+                <br>
+                <a href="informacion.html" class="botonverde">Contactanos</a>
+            </div>
+        </form>
+    </section>
+    <footer><a href="informacion.html#quienessomos" class="logo"><img src="../icon/logoGTI.svg" alt="quienes somos"></a></footer>
     </body>
 </html>

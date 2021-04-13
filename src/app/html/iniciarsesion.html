@@ -11,26 +11,60 @@
             height:100vh ;
             width: 100%;
             object-fit:cover;
+            position: absolute;
         }
+       
 
         .icono{
+            text-align: left;
+            width: 4%;
+            position: relative;
 
         }
 
         .candado{
+            display: flex;
+            margin: auto;
+            height: 100px;
+            width: 100px;
+            position: relative;
 
         }
 
         .contenedor-login{
-
+            flex-direction: column;
+            align-items: flex-end;
+            column-count: 1;
+            text-align: justify;
+            position: relative;
+        }
+        div{
+            text-align: center;
+            width:400px;
+            padding:50px;
+            border-radius:10px;
+            margin:auto;
+            position: relative;
+        }
+        div label{
+            width:190px;
+            font-weight:bold;
+            display:inline-block;
+            position: relative;
+        }
+        div input[type="text"],
+        div input[type="email"]{
+            width:180px;
+            padding:3px 10px;
+            border:1px solid #f6f6f6;
+            border-radius:3px;
+            background-color:#f6f6f6;
+            margin:8px 0;
+            display:inline-block;
+            position: relative;
         }
 
-        .texto{
 
-        }
-        .contenedor-texto{
-
-        }
     </style>
 
 </head>
@@ -40,12 +74,19 @@
 <img src="../image/fondo_login.jpg" alt="fondo" class="fondo">
 <a href="../index.html"><img src="../icon/previous.svg" alt="atrás" class="icono"></a>
 <img src="../icon/padlock.svg" alt="candado" class="candado">
-
+<br>
+<br>
 <div class="contenedor-login">
     <label><p class="texto">Usuario</p></label>
     <input type="text" placeholder="Escriba aquí..." required class="contenedor-texto">
+    <br>
+    <br>
+    <br>
     <label><p class="texto">Contraseña</p></label>
     <input type="text" placeholder="Escriba aquí..." required class="contenedor-texto">
+    <br>
+    <br>
+    <a href="#" class="botonmorado">Entrar</a>
 </div>
 
 </body>

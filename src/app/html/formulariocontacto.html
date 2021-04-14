@@ -4,93 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="../css/estilo.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/estilo.css" media="screen"/>
     <title>Contacto</title>
 </head>
 <style>
-    header{
+    .flex{
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+        height: 10vh;
+    }
+    .imagenfondo {
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+    }
+
+    header {
         height: 0px;
         display: flex;
         justify-content: space-between;
+        position: relative;
     }
 
-    .contenedor-bloque-buscar{
+    h2 {
+        position: relative;
+    }
+    .centrado{
+        margin-left: 150px;
+
+    }
+    .contenedor-bloque-buscar {
         flex-direction: column;
         align-items: flex-end;
         column-count: 1;
         text-align: justify;
+        position: relative;
 
     }
-    section{
+
+    section {
         width: 500px;
         height: 500px;
         margin: 0 auto;
         justify-content: center;
+        position: relative;
 
     }
+
     .flechaatras {
+        margin-left:7px;
+        margin-top: 7px;
         text-align: left;
-        width: 4%;
+        height: 5vh;
+        position: relative;
 
+    }
 
-    }
-    .logo{
+    .logo {
         text-align: center;
-        height:auto;
-        width:auto;
+        height: 3vh;
+        width: auto;
+        position: relative;
     }
-    label{
+
+    label {
         text-align: center;
+        position: relative;
     }
-    form{
+
+    form {
         text-align: center;
-        width:400px;
-        padding:50px;
-        border-radius:10px;
-        margin:auto;
+        width: 400px;
+        padding: 50px;
+        border-radius: 10px;
+        margin: auto;
+        position: relative;
     }
-    form label{
-        width:190px;
-        font-weight:bold;
-        display:inline-block;
+
+    form label {
+        width: 190px;
+        font-weight: bold;
+        display: inline-block;
+        position: relative;
     }
-    form input[type="text"],
-    form input[type="email"]{
-        width:180px;
-        padding:3px 10px;
-        border:1px solid #f6f6f6;
-        border-radius:3px;
-        background-color:#f6f6f6;
-        margin:8px 0;
-        display:inline-block;
+
+    form input[type="text"] {
+        width: 180px;
+        padding: 3px 10px;
+        border: 1px solid #f6f6f6;
+        border-radius: 3px;
+        background-color: #f6f6f6;
+        margin: 8px 0;
+        display: inline-block;
+        position: relative;
     }
 </style>
-<body background="../image/masinformacion.jpg">
-    <header>
-        <a href="informacion.html" class="flechaatras"><img src="../icon/previous.svg"></a>
-    </header>
-    <h2>CONTACTA CON NOSOTROS</h2>
-    <br>
-    <br>
-    <br>
-    <section>
+<body>
+<img src="../image/masinformacion.jpg" alt="fondo" class="imagenfondo">
+<section class="flex"><a href="informacion.html" ><img src="../icon/previous.svg" class="flechaatras"></a>
+<a href="informacion.html#quienessomos" class="logo"><img src="../icon/logoGTI.svg" alt="quienes somos"></a>
+</section>
+<br>
+<br>
+<h2>CONTACTA CON NOSOTROS</h2>
+<section>
+    <form action="#" id="bloque-contactanos">
+        <div class="contenedor-bloque-buscar">
+            <label><p>Nombre</p></label>
+            <input type="text" placeholder="Escriba aquí..." required>
+            <label><p>Apellidos</p></label>
+            <input type="text" placeholder="Escriba aquí..." required>
+            <label><p>Teléfono</p></label>
+            <input type="text" placeholder="Escriba aquí...">
+            <label><p>Correo</p></label>
+            <input type="text" placeholder="Escriba aquí..." required>
+            <br>
+            <br>
+            <br>
+            <button class="botonverde centrado">Contáctanos</button>
+        </div>
+    </form>
+</section>
 
-        <form action="#" id="bloque-contactanos">
-            <div class="contenedor-bloque-buscar">
-                <label><p>Nombre</p></label>
-                <input type="text" placeholder="Escriba aquí..." required>
-                <label><p>Apellidos</p></label>
-                <input type="text" placeholder="Escriba aquí..." required>
-                <label><p>Teléfono</p></label>
-                <input type="number" placeholder="Escriba aquí...">
-                <label><p>Correo</p></label>
-                <input type="email" placeholder="Escriba aquí..." required>
-                <label><p>Dirección</p></label>
-                <input type="text" placeholder="Escriba aquí...">
-                <a href="#" class="botonverde">Contactanos</a>
-            </div>
-        </form>
-    </section>
-    <footer><a href="informacion.html#quienessomos" class="logo"><img src="../icon/logoGTI.svg" alt="quienes somos"></a></footer>
-    </body>
+</body>
 </html>

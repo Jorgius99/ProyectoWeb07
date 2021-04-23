@@ -8,15 +8,46 @@
     <title>GTI Infórmate</title>
 
     <style>
+        h1 {
+            font-size: 6vh;
+        }
+        h2 {
+            font-size: 2vw;
+        }
         p {
             margin: 20px 50px 40px 50px;
         }
+        .icono {
+
+            height: 10vh;
+        }
+
+        header {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 20px;
+        }
         .logoGTI{
             text-align: center;
-            height: 3vh;
-            width: auto;
+            height: 2vh;
+            width: 100vw;
             position: relative;
 
+        }
+        .indice {
+            margin: 100px;
+            display: inherit;
+            align-content: center;
+
+        }
+        #Indice {
+            height: 80vh;
+
+        }
+        .contenedorindice{
+            margin: inherit;
+            display: flex ;
+            align-content: space-between;
         }
         .indiceflotante {
             display: flex;
@@ -28,19 +59,7 @@
         .botonverde{
             text-align: right;
         }
-        header {
-            position: -webkit-sticky;
-            position: sticky;
-            top: 20px;
-        }
 
-        h1 {
-            font-size: 6vh;
-        }
-
-        h2 {
-            font-size: 2vw;
-        }
 
         .flechaabajo {
             display: flex;
@@ -55,18 +74,6 @@
             height: 50px;
             width: 50px;
 
-        }
-
-        .indice {
-            margin: 100px;
-            display: flex;
-            justify-content: space-around;
-
-        }
-
-        .icono {
-
-            height: 8vh;
         }
 
         .fotosensor {
@@ -98,10 +105,7 @@
             height: 100vh;
         }
 
-        #Indice {
-            height: 75vh;
 
-        }
 
         #funcionamiento {
 
@@ -121,30 +125,45 @@
 <body>
 <header>
     <a href="../index.html" class="flechaatras"><img src="icon/previous.svg" alt="atras" class="flechaatras"></a>
-    <a href="#quienessomos" class="logoGTI"><img src="icon/logoGTI.svg" alt="logogti"></a>
+
 </header>
+
 <section id="Indice">
-    <h1>ÍNDICE</h1>
-    <section class="indice">
-        <article><a href="#funcionamiento"><img src="icon/ajustes-de-engranajes.svg" alt="¿Como funciona?"
-                                                class="icono"></a></article>
-        <article><a href="#comodatos"><img src="icon/diseno.svg" alt="¿Como se muestran los datos?"
-                                           class="icono"></a></article>
-    </section>
-    <section class="indice">
-        <article><a href="#funcionamiento"><h2>¿CÓMO FUNCIONA?</h2></a></article>
-        <article><a href="#comodatos"><h2>¿CÓMO SE MUESTRAN LOS DATOS?</h2></a></article>
-    </section>
-    <section class="indice">
-        <article><a href="#quienessomos"><img src="icon/grupo-de-hombres.svg" alt="¿Como funciona?"
-                                              class="icono"></a></article>
-        <article><a href="formulariocontacto.html"><img src="icon/formulario-de-contacto.svg"
-                                                        alt="¿Como se muestran los datos?" class="icono"></a></article>
-    </section>
-    <section class="indice">
-        <article><a href="#quienessomos"><h2>¿QUIÉNES SOMOS?</h2></a></article>
-        <article><a href="formulariocontacto.html"><h2>CONTÁCTANOS</h2></a></article>
-    </section>
+    <div class="logoGTI">
+        <a href="#quienessomos" ><img src="icon/logoGTI.svg" alt="logogti"></a>
+    </div>
+   <section class="indice">
+       <div class="cabecera">
+           <h1>ÍNDICE</h1>
+       </div>
+
+       <div class="contenedorindice" >
+           <a href="#funcionamiento">
+           <article><img src="icon/ajustes-de-engranajes.svg" alt="¿Como funciona?"
+                                                   class="icono"></article>
+           <article><h2>¿CÓMO FUNCIONA?</h2></article>
+           </a>
+       </div>
+       <div class="contenedorindice">
+           <a href="#comodatos">
+           <article><img src="icon/diseno.svg" alt="¿Como se muestran los datos?"
+                                              class="icono"></article>
+           <article><h2>¿CÓMO SE MUESTRAN LOS DATOS?</h2></article>
+           </a>
+       </div>
+       <div class="contenedorindice">
+           <article><a href="#quienessomos"><img src="icon/grupo-de-hombres.svg" alt="¿Como funciona?"
+                                                 class="icono"></a></article>
+           <article><a href="#quienessomos"><h2>¿QUIÉNES SOMOS?</h2></a></article>
+       </div>
+       <div class="contenedorindice">
+           <article><a href="formulariocontacto.html"><img src="icon/formulario-de-contacto.svg"
+                                                           alt="¿Como se muestran los datos?" class="icono"></a></article>
+
+           <article><a href="formulariocontacto.html"><h2>CONTÁCTANOS</h2></a></article>
+       </div>
+   </section>
+
 </section>
 <br>
 <a href="#que_ofrecemos"><img src="icon/down-arrow.svg" alt="bajar a indice" class="flechaabajo"></a>

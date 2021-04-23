@@ -11,12 +11,15 @@
         h1 {
             font-size: 6vh;
         }
+
         h2 {
-            font-size: 2vw;
+            font-size: 4vh;
         }
+
         p {
             margin: 20px 50px 40px 50px;
         }
+
         .icono {
 
             height: 10vh;
@@ -27,28 +30,34 @@
             position: sticky;
             top: 20px;
         }
-        .logoGTI{
+
+        .logoGTI {
             text-align: center;
             height: 2vh;
             width: 100vw;
             position: relative;
 
         }
+
         .indice {
             margin: 100px;
-            display: inherit;
-            align-content: center;
+            display: flex;
+            align-items: baseline;
+            width: 100vw;
+
 
         }
+
         #Indice {
             height: 80vh;
 
         }
-        .contenedorindice{
-            margin: inherit;
-            display: flex ;
-            align-content: space-between;
+
+        .contenedorindice {
+            width: 40vw;
+            height: auto;
         }
+
         .indiceflotante {
             display: flex;
             justify-content: space-between;
@@ -56,7 +65,8 @@
             position: sticky;
             bottom: 30px;
         }
-        .botonverde{
+
+        .botonverde {
             text-align: right;
         }
 
@@ -106,7 +116,6 @@
         }
 
 
-
         #funcionamiento {
 
             height: 100vh;
@@ -130,61 +139,67 @@
 
 <section id="Indice">
     <div class="logoGTI">
-        <a href="#quienessomos" ><img src="icon/logoGTI.svg" alt="logogti"></a>
+        <a href="#quienessomos"><img src="icon/logoGTI.svg" alt="logogti"></a>
     </div>
-   <section class="indice">
-       <div class="cabecera">
-           <h1>ÍNDICE</h1>
-       </div>
+    <div class="cabecera">
+        <h1>ÍNDICE</h1>
+    </div>
+    <section class="indice">
 
-       <div class="contenedorindice" >
-           <a href="#funcionamiento">
-           <article><img src="icon/ajustes-de-engranajes.svg" alt="¿Como funciona?"
-                                                   class="icono"></article>
-           <article><h2>¿CÓMO FUNCIONA?</h2></article>
-           </a>
-       </div>
-       <div class="contenedorindice">
-           <a href="#comodatos">
-           <article><img src="icon/diseno.svg" alt="¿Como se muestran los datos?"
-                                              class="icono"></article>
-           <article><h2>¿CÓMO SE MUESTRAN LOS DATOS?</h2></article>
-           </a>
-       </div>
-       <div class="contenedorindice">
-           <article><a href="#quienessomos"><img src="icon/grupo-de-hombres.svg" alt="¿Como funciona?"
-                                                 class="icono"></a></article>
-           <article><a href="#quienessomos"><h2>¿QUIÉNES SOMOS?</h2></a></article>
-       </div>
-       <div class="contenedorindice">
-           <article><a href="formulariocontacto.html"><img src="icon/formulario-de-contacto.svg"
-                                                           alt="¿Como se muestran los datos?" class="icono"></a></article>
 
-           <article><a href="formulariocontacto.html"><h2>CONTÁCTANOS</h2></a></article>
-       </div>
-   </section>
+        <div class="contenedorindice">
+            <a href="#funcionamiento">
+                <article><img src="icon/ajustes-de-engranajes.svg" alt="¿Como funciona?"
+                              class="icono"></article>
+                <article><h2>¿CÓMO FUNCIONA?</h2></article>
+            </a>
+        </div>
+        <div class="contenedorindice">
+            <a href="#comodatos">
+                <article><img src="icon/diseno.svg" alt="¿Como se muestran los datos?"
+                              class="icono"></article>
+                <article><h2>¿CÓMO SE MUESTRAN LOS DATOS?</h2></article>
+            </a>
+        </div>
+        <div class="contenedorindice">
+            <article><a href="#quienessomos"><img src="icon/grupo-de-hombres.svg" alt="¿Como funciona?"
+                                                  class="icono"></a></article>
+            <article><a href="#quienessomos"><h2>¿QUIÉNES SOMOS?</h2></a></article>
+        </div>
+        <div class="contenedorindice">
+            <article><a href="formulariocontacto.html"><img src="icon/formulario-de-contacto.svg"
+                                                            alt="¿Como se muestran los datos?" class="icono"></a>
+            </article>
 
-</section>
-<br>
-<a href="#que_ofrecemos"><img src="icon/down-arrow.svg" alt="bajar a indice" class="flechaabajo"></a>
+            <article><a href="formulariocontacto.html"><h2>CONTÁCTANOS</h2></a></article>
+        </div>
+    </section>
 
-<section id="que_ofrecemos">
+    </section>
     <br>
-    <br>
-    <br>
-    <h1>¿Qué ofrecemos?</h1>
-    <p class="parrafo">Nuestras sondas están equipadas con una serie de sensores capaces de monitorizar de manera óptima
-        y profesional todo tipo de campos y plantaciones de forma económica; accediendo a los datos de manera remota y
-        cuando sea necesario. Contamos con un servicio de visita a las instalaciones para adaptar nuestros productos a
-        tus necesidades.</p>
-    <img src="image/sensor.jpeg" alt="foto del sensor" class="fotosensor">
-    <p class="parrafo">Contamos con los sensores necesarios para el correcto y pleno seguimiento del desarrollo y total
-        actividad de tu campo.</p>
-    <a href="formulariocontacto.html" class="botonmorado ">CONTACTA CON NOSOTROS</a>
 
-
-</section>
+    <a href="#que_ofrecemos"><img src="icon/down-arrow.svg" alt="bajar a indice" class="flechaabajo"></a>
 <section class="footer">
+    <section id="que_ofrecemos">
+        <br>
+        <br>
+        <br>
+        <h1>¿Qué ofrecemos?</h1>
+        <p class="parrafo">Nuestras sondas están equipadas con una serie de sensores capaces de monitorizar de manera
+            óptima
+            y profesional todo tipo de campos y plantaciones de forma económica; accediendo a los datos de manera remota
+            y
+            cuando sea necesario. Contamos con un servicio de visita a las instalaciones para adaptar nuestros productos
+            a
+            tus necesidades.</p>
+        <img src="image/sensor.jpeg" alt="foto del sensor" class="fotosensor">
+        <p class="parrafo">Contamos con los sensores necesarios para el correcto y pleno seguimiento del desarrollo y
+            total
+            actividad de tu campo.</p>
+        <a href="formulariocontacto.html" class="botonmorado ">CONTACTA CON NOSOTROS</a>
+
+
+    </section>
 
 
     <section id="funcionamiento">

@@ -4,248 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen"/>
     <title>GTI Infórmate</title>
 
     <style>
-        h1 {
-            font-size: 6vh;
-        }
-
-        h2 {
-            font-size: 4vh;
-        }
-
-        p {
-            margin: 20px 50px 40px 50px;
-        }
-
-        .icono {
-
-            height: 10vh;
-        }
-
-        header {
-            position: -webkit-sticky;
-            position: sticky;
-            top: 20px;
-        }
-
-        .logoGTI {
+        div{
             text-align: center;
-            height: 2vh;
-            width: 100vw;
-            position: relative;
-
         }
-
-        .indice {
-            margin: 100px;
-            display: flex;
-            align-items: baseline;
-            width: 100vw;
-
-
-        }
-
-        #Indice {
-            height: 80vh;
-
-        }
-
-        .contenedorindice {
-            width: 40vw;
-            height: auto;
-        }
-
-        .indiceflotante {
-            display: flex;
-            justify-content: space-between;
-            position: -webkit-sticky;
+        header {
             position: sticky;
-            bottom: 30px;
+            top: 10px;
         }
 
-        .botonverde {
-            text-align: right;
-        }
-
-
-        .flechaabajo {
+        .header {
             display: flex;
-            margin: auto;
-            height: 50px;
-            width: 50px;
-            margin-top: 20px;
+            flex:1 1 0;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .cajaheader{
+            width: 120px;
+            text-align: center;
         }
 
         .flechaatras {
+            margin-left: 7px;
+            margin-top: 7px;
             text-align: left;
-            height: 50px;
+            height: 5vh;
+            position: relative;
+        }
+
+        .logo {
+            margin: auto;
+            width: 100px;
+        }
+
+        .icono {
             width: 50px;
-
         }
 
-        .fotosensor {
-
-            height: 40vh;
-            display: flex;
-            margin: auto auto;
+        .contenedorindice {
+            text-align: center;
+            margin: auto;
+            width: 200px;
+            height: 200px;
         }
 
-        .fotoplanta {
-            height: 40vh;
-            display: flex;
-            margin: auto auto;
+        .indice {
+            position: ;
         }
 
-        .fotoalvaro {
-            height: 50vh;
-            display: flex;
-            margin: auto auto;
+        .titulo {
+            text-align: center;
         }
 
-        .fotografica {
-            height: 40vh;
-            display: flex;
-            margin: auto auto;
+        .parrafo {
+            text-align: right;
+            margin: auto 50px auto 50px;
+        }
+        .foto{
+            position: center;
+            height:100px ;
+        }
+        .indiceflotante{
+            position: sticky;
+            bottom: 10px;
         }
 
-        #que_ofrecemos {
-            height: 100vh;
-        }
-
-
-        #funcionamiento {
-
-            height: 100vh;
-            justify-content: center;
-        }
-
-        #quienessomos {
-            height: 100vh;
-        }
-
-        #comodatos {
-            height: 100vh;
-        }
     </style>
 </head>
 <body>
 <header>
-    <a href="../index.html" class="flechaatras"><img src="icon/previous.svg" alt="atras" class="flechaatras"></a>
+    <div class="header">
+        <div class="cajaheader">
+            <a href="../index.html" class="flechaatras"><img src="icon/previous.svg" alt="atras" class="flechaatras"></a>
+        </div>
 
+        <div>
+            <a href="formulariocontacto.html"class="botonmorado">Contactanos</a>
+        </div>
+
+        <div>
+            <a href="#quienessomos"><img src="icon/logoGTI.svg" alt="nuestro logo" class="logo"></a>
+        </div>
+    </div>
 </header>
+<section class="indice" id="Indice">
+    <div class="contenedorindice">
 
-<section id="Indice">
-    <div class="logoGTI">
-        <a href="#quienessomos"><img src="icon/logoGTI.svg" alt="logogti"></a>
+        <img src="icon/ajustes-de-engranajes.svg" alt="¿Que ofrecemos?"
+             class="icono">
+        <a href="#queofrecemos">
+            <p CLASS="botonmorado">¿QUE OFRECEMOS?</p>
+        </a>
     </div>
-    <div class="cabecera">
-        <h1>ÍNDICE</h1>
+    <div class="contenedorindice">
+
+        <img src="icon/ajustes-de-engranajes.svg" alt="¿Como funciona?"
+             class="icono">
+        <a href="#comofunciona">
+            <p CLASS="botonmorado">¿CÓMO FUNCIONA?</p>
+        </a>
     </div>
-    <section class="indice">
+    <div class="contenedorindice">
 
-
-        <div class="contenedorindice">
-            <a href="#funcionamiento">
-                <article><img src="icon/ajustes-de-engranajes.svg" alt="¿Como funciona?"
-                              class="icono"></article>
-                <article><h2>¿CÓMO FUNCIONA?</h2></article>
-            </a>
-        </div>
-        <div class="contenedorindice">
-            <a href="#comodatos">
-                <article><img src="icon/diseno.svg" alt="¿Como se muestran los datos?"
-                              class="icono"></article>
-                <article><h2>¿CÓMO SE MUESTRAN LOS DATOS?</h2></article>
-            </a>
-        </div>
-        <div class="contenedorindice">
-            <article><a href="#quienessomos"><img src="icon/grupo-de-hombres.svg" alt="¿Como funciona?"
-                                                  class="icono"></a></article>
-            <article><a href="#quienessomos"><h2>¿QUIÉNES SOMOS?</h2></a></article>
-        </div>
-        <div class="contenedorindice">
-            <article><a href="formulariocontacto.html"><img src="icon/formulario-de-contacto.svg"
-                                                            alt="¿Como se muestran los datos?" class="icono"></a>
-            </article>
-
-            <article><a href="formulariocontacto.html"><h2>CONTÁCTANOS</h2></a></article>
-        </div>
-    </section>
-
-    </section>
-    <br>
-
-    <a href="#que_ofrecemos"><img src="icon/down-arrow.svg" alt="bajar a indice" class="flechaabajo"></a>
+        <article><img src="icon/diseno.svg" alt="¿Como se muestran los datos?"
+                      class="icono"></article>
+        <a href="#comodatos">
+            <p CLASS="botonmorado">¿CÓMO SE MUESTRAN LOS DATOS?</p>
+        </a>
+    </div>
+    <div class="contenedorindice">
+        <img src="icon/grupo-de-hombres.svg" alt="¿Como funciona?"
+             class="icono">
+        <a href="#quienessomos">
+            <p CLASS="botonmorado">¿QUIENES SOMOS?</p>
+        </a>
+    </div>
+</section>
 <section class="footer">
-    <section id="que_ofrecemos">
-        <br>
-        <br>
-        <br>
-        <h1>¿Qué ofrecemos?</h1>
-        <p class="parrafo">Nuestras sondas están equipadas con una serie de sensores capaces de monitorizar de manera
-            óptima
-            y profesional todo tipo de campos y plantaciones de forma económica; accediendo a los datos de manera remota
-            y
-            cuando sea necesario. Contamos con un servicio de visita a las instalaciones para adaptar nuestros productos
-            a
-            tus necesidades.</p>
-        <img src="image/sensor.jpeg" alt="foto del sensor" class="fotosensor">
-        <p class="parrafo">Contamos con los sensores necesarios para el correcto y pleno seguimiento del desarrollo y
-            total
-            actividad de tu campo.</p>
-        <a href="formulariocontacto.html" class="botonmorado ">CONTACTA CON NOSOTROS</a>
-
-
+    <section id="queofrecemos">
+        <div class="titulo"><h1>¿Qué ofrecemos?</h1></div>
+        <div class="parrafo"><p>Nuestras sondas están equipadas con una serie de sensores capaces de monitorizar de
+            manera
+            óptima y profesional todo tipo de campos y plantaciones de forma económica; accediendo a los datos de manera
+            remota
+            y cuando sea necesario. Contamos con un servicio de visita a las instalaciones para adaptar nuestros
+            productos
+            a tus necesidades.</p></div>
+        <div><img src="image/sensor.jpeg" alt="foto del sensor" class="foto">
+        </div>
+        <div class="parrafo"><p>Contamos con los sensores necesarios para el correcto y pleno seguimiento del desarrollo y total actividad de tu campo.</p>
+        </div>
     </section>
 
-
-    <section id="funcionamiento">
-        <h1>¿CÓMO FUNCIONA?</h1>
-        <P class="parrafo">Nuestras sondas cuentan con sensores que recogen datos directamente del campo y los envían a
-            una
-            nube a la cual se puede acceder de manera remota para poder obsevar la evolución del campo. Se pueden
+    <section id="comofunciona">
+        <div class="titulo"><h1>¿Cómo funciona?</h1></div>
+        <div class="parrafo"><p>Nuestras sondas cuentan con sensores que recogen datos directamente del campo y los envían a
+            una nube a la cual se puede acceder de manera remota para poder obsevar la evolución del campo. Se pueden
             monitorizar datos como la luminosidad, la salinidad de la tierra, la humedad relativa, y la temperatura
             ambiente, así como la posición exacta de la sonda a través de un geoposicionador. Cuenta también con un
             giroscopio que funciona a modo de alarma antirrobo, ya que cuenta con una bocina que alerta de movimientos
-            inusuales. </P>
-        <img src="image/plantitas.jpg" alt="Plantitas" class="fotoplanta">
-
-
+            inusuales. </p></div>
+        <div><img src="image/plantitas.jpg" alt="foto planta" class="foto">
+        </div>
     </section>
+
     <section id="comodatos">
-        <h1>¿CÓMO SE MUESTRAN LOS DATOS?</h1>
-        <p class="parrafo">Se puede acceder a todos los datos recopilados por los sensores a través de nuestra propia
-            página
-            web, que cuenta con una interfaz sencilla en la que se muestra la nube de datos por medio de gráficas y
-            mapas
-            elaborados con la información recopilada por las sondas. </p>
-        <img src="image/grafica.png" alt="grafica mostrando datos" class="fotografica">
-
-
+        <div class="titulo"><h1>¿Cómo se muestran los datos?</h1></div>
+        <div class="parrafo"><p>Se puede acceder a todos los datos recopilados por los sensores a través de nuestra propia
+            página web, que cuenta con una interfaz sencilla en la que se muestra la nube de datos por medio de gráficas y
+            mapas elaborados con la información recopilada por las sondas. </p></div>
+        <div><img src="image/grafica.png" alt="grafica de datos" class="foto">
+        </div>
     </section>
-
     <section id="quienessomos">
-        <h1>¿QUIENES SOMOS?</h1>
-        <p class="parrafo"> Somos una StartUp dedicada a la monitorización profesional de plantaciones y campos de
+        <div class="titulo"><h1>¿Quienes somos?</h1></div>
+        <div class="parrafo"><p>Somos una StartUp dedicada a la monitorización profesional de plantaciones y campos de
             explotación agrícolas. Hemos desarollado una serie de productos de accesible alcance para todo tipo de
-            usuarios
-            capaces de responder de forma automática y garantizando siempre la calidad ofrecida por los mismos.</p>
-        <article>
-            <img src="image/Alvaro.jpeg" alt="foto de Alvaro Mir, el gerente." class="fotoalvaro">
-            <p class="parrafo">Álvaro Mir Martinez, gerente de GTI.</p>
-        </article>
-        <br>
-        <br>
-        <br>
-
+            usuarios capaces de responder de forma automática y garantizando siempre la calidad ofrecida por los mismos. </p></div>
+        <div><img src="image/Alvaro.jpeg" alt="foto alvaro" class="foto">
+            <div class="parrafo"><p>Álvaro Mir Martinez, gerente de GTI.</p></div>
+        </div>
     </section>
     <section class="indiceflotante">
         <a href="#Indice" class="botonverde"> ÍNDICE</a>
-        <a href="formulariocontacto.html" class="botonmorado"> CONTACTANOS</a>
+
     </section>
+</section>
+
 </section>
 
 </body>

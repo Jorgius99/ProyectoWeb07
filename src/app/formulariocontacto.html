@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="app/css/estilo.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen"/>
     <title>Contacto</title>
 </head>
 <style>
@@ -44,12 +44,13 @@
 
     }
 
-    section {
+    .formulario {
         width: 500px;
         height: 450px;
         margin: 0 auto;
         justify-content: center;
         position: relative;
+        text-align: center;
     }
 
     .flechaatras {
@@ -74,22 +75,43 @@
     }
 
     form {
+        border: solid;
+        background-color: #8FB159;
+        box-shadow: #002f01 2px 5px 10px;
         text-align: center;
-        width: 400px;
+        width: 250px;
         padding: 50px;
         border-radius: 10px;
         margin: auto;
         position: relative;
+
+    }
+
+    @media (max-width: 590px) {
+        form{
+            border: solid;
+            background-color: #8FB159;
+            box-shadow: #002f01 2px 5px 10px;
+            text-align: center;
+            width: 250px;
+            padding: 50px;
+            border-radius: 10px;
+            margin: auto;
+            position: relative;
+        }
+
     }
 
     form label {
         width: 190px;
         font-weight: bold;
-        display: inline-block;
+        display: flex;
         position: relative;
+        text-align: center;
     }
 
     form input[type="text"] {
+        text-align: center;
         width: 184px;
         padding: 3px 10px;
         border: 1px solid #f6f6f6;
@@ -99,6 +121,17 @@
         display: inline-block;
         position: relative;
     }
+    .motivo{
+        width: 184px;
+        padding: 3px 10px;
+        border: 1px solid #f6f6f6;
+        border-radius: 3px;
+        background-color: #f6f6f6;
+        margin: 8px 0;
+        display: inline-block;
+        position: relative;
+    }
+
 </style>
 <body>
 <img src="image/masinformacion.jpg" alt="fondo" class="imagenfondo">
@@ -107,10 +140,13 @@
 </section>
 <br>
 <br>
-<h2>CONTACTA CON NOSOTROS</h2>
-<section>
+<br>
+<br>
+<br>
+<div class="formulario">
     <form action="#" id="bloque-contactanos">
         <div class="contenedor-bloque-buscar">
+            <h2>CONTACTA CON NOSOTROS</h2>
             <label><p>Nombre</p></label>
             <input type="text" placeholder="Escriba aquí..." required>
             <label><p>Apellidos</p></label>
@@ -119,13 +155,15 @@
             <input type="text" placeholder="Escriba aquí...">
             <label><p>Correo</p></label>
             <input type="text" placeholder="Escriba aquí..." required>
+            <label><p>Motivo</p></label>
+            <textarea name="Motivo" class="motivo"></textarea>
             <br>
             <br>
             <br>
             <button class="botonverde centrado">Contáctanos</button>
         </div>
     </form>
-</section>
+</div>
 
 </body>
 </html>

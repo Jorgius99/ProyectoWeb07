@@ -7,61 +7,79 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="stylesheet" href="css/estilo.css">
     <style>
-
-        .fondo {
-            height: 100vh;
-            width: 100%;
-            object-fit: cover;
-            position: absolute;
-        }
-
-
-        .icono {
-            text-align: left;
-            width: 5vh;
-            position: relative;
-
-        }
-
-        .candado {
-            display: flex;
-            margin: auto;
-            height: 20vh;
-            position: relative;
-
-        }
-
-        .contenedor-login {
-            flex-direction: column;
-            align-items: flex-end;
-            column-count: 1;
-            text-align: justify;
-            position: relative;
-            /*border: 2px solid black;*/
-            background-color: #8FB159;
-           box-shadow: #002f01 2px 5px 10px;
-
-        }
-
-        div {
+        div{
             text-align: center;
-            width: 400px;
-            padding: 50px;
+        }
+        header {
+            position: sticky;
+            top: 10px;
+        }
+
+        .header {
+            display: flex;
+            flex:1 1 0;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        .cajaheader{
+            width: 120px;
+            text-align: center;
+        }
+
+        .login{
+            margin: 1rem 0.2rem;
+            position: relative;
+
+        }
+        .flechaatras {
+            margin-left: 7px;
+            margin-top: 7px;
+            text-align: left;
+            height: 5vh;
+            position: relative;
+        }
+
+        .logo {
+            margin: auto;
+            width: 100px;
+        }
+
+        .candado{
+            width: 35%;
+        }
+        .contenedor_candado{
+            text-align: center;
+            margin: 1rem 0.2rem;
+            height: 120px;
+            position: relative;
+
+        }
+        form {
+            border: solid ;
+            background-color: #8FB159;
+            box-shadow: #002f01 2px 5px 10px;
+            text-align: center;
             border-radius: 10px;
             margin: auto;
-            position: relative;
         }
+        .fondo{
+            height:100vh ;
+            width: 100%;
+            object-fit:cover ;
+            position: absolute;
 
-        div label {
+        }
+        form label {
             width: 190px;
             font-weight: bold;
-            display: inline-block;
             position: relative;
+            text-align: center;
         }
 
-        div input[type="text"],
-        div input[type="email"] {
-            width: 180px;
+        form input[type="text"] {
+            text-align: center;
+            width: 184px;
             padding: 3px 10px;
             border: 1px solid #f6f6f6;
             border-radius: 3px;
@@ -70,29 +88,44 @@
             display: inline-block;
             position: relative;
         }
-.centrado{
-    margin-left: 150px;
-}
 
     </style>
-
 </head>
 
 <body>
+<img src="image/fondo_login.jpg" alt="fondo_login" class="fondo">
+<header>
+    <div class="header">
+        <div class="cajaheader">
+            <a href="../../index.html" class="flechaatras"><img src="icon/previous.svg" alt="atras" class="flechaatras"></a>
+        </div>
 
-<img src="image/fondo_login.jpg" alt="fondo" class="fondo">
-<a href="../index.html"><img src="icon/previous.svg" alt="atrás" class="icono"></a>
-<img src="icon/padlock.svg" alt="candado" class="candado">
-<br>
-    <div class="contenedor-login">
-        <label><p class="texto">Usuario</p></label>
-        <input type="text" placeholder="Escriba aquí..."  class="contenedor-texto" required>
-        <label><p >Contraseña</p></label>
-        <input type="text" placeholder="Escriba aquí..."  class="contenedor-text" required>
-        <br>
-        <br>
-        <button class="botonmorado centrado">Entrar</button>
+        <div>
+            <a href="formulariocontacto.html"class="botonmorado">Contactanos</a>
+        </div>
+
+        <div>
+            <a href="informacion.html#quienessomos"><img src="icon/logoGTI.svg" alt="nuestro logo" class="logo"></a>
+        </div>
     </div>
-
+</header>
+<br>
+<div class="contenedor_candado">
+    <img src="icon/padlock.svg" alt="candado" class="candado">
+</div>
+<br>
+<div class="login">
+    <form action="#">
+    <label><p class="texto">Usuario</p></label>
+    <input type="text" placeholder="Escriba aquí..."  class="contenedor-texto" required>
+    <label><p >Contraseña</p></label>
+    <input type="text" placeholder="Escriba aquí..."  class="contenedor-text" required>
+    <br>
+    <br>
+    <button class="botonmorado centrado">Entrar</button>
+        <br>
+        <p>Si ha olvidado su contraseña pulse el botón de "Contactanos".</p>
+    </form>
+</div>
 </body>
 </html>

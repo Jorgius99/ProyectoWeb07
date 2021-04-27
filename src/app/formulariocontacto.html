@@ -35,18 +35,10 @@
         margin-left: 150px;
 
     }
-    .contenedor-bloque-buscar {
-        flex-direction: column;
-        align-items: flex-end;
-        column-count: 1;
-        text-align: justify;
-        position: relative;
 
-    }
 
     .formulario {
-        width: 500px;
-        height: 450px;
+        width: 90%;
         margin: 0 auto;
         justify-content: center;
         position: relative;
@@ -69,43 +61,20 @@
         position: relative;
     }
 
-    label {
-        text-align: center;
-        position: relative;
-    }
 
     form {
         border: solid;
         background-color: #8FB159;
         box-shadow: #002f01 2px 5px 10px;
         text-align: center;
-        width: 250px;
-        padding: 50px;
         border-radius: 10px;
         margin: auto;
         position: relative;
 
     }
-
-    @media (max-width: 590px) {
-        form{
-            border: solid;
-            background-color: #8FB159;
-            box-shadow: #002f01 2px 5px 10px;
-            text-align: center;
-            width: 250px;
-            padding: 50px;
-            border-radius: 10px;
-            margin: auto;
-            position: relative;
-        }
-
-    }
-
     form label {
         width: 190px;
         font-weight: bold;
-        display: flex;
         position: relative;
         text-align: center;
     }
@@ -113,7 +82,6 @@
     form input[type="text"] {
         text-align: center;
         width: 184px;
-        padding: 3px 10px;
         border: 1px solid #f6f6f6;
         border-radius: 3px;
         background-color: #f6f6f6;
@@ -131,15 +99,15 @@
         display: inline-block;
         position: relative;
     }
-
+    #botonverde{
+        margin-bottom:10px;
+    }
 </style>
 <body>
 <img src="image/masinformacion.jpg" alt="fondo" class="imagenfondo">
 <section class="flex"><a href="informacion.html" ><img src="icon/previous.svg" class="flechaatras"></a>
 <a href="informacion.html#quienessomos" class="logo"><img src="icon/logoGTI.svg" alt="quienes somos"></a>
 </section>
-<br>
-<br>
 <br>
 <br>
 <br>
@@ -159,8 +127,7 @@
             <textarea name="Motivo" class="motivo"></textarea>
             <br>
             <br>
-            <br>
-            <button class="botonverde centrado">Contáctanos</button>
+            <button class="botonverde" id="botonverde">Contáctanos</button>
         </div>
     </form>
 </div>

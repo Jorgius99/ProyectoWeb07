@@ -8,39 +8,119 @@
     <link rel="stylesheet" href="css/estilo.css">
 
     <style>
+        header {
+            position: sticky;
+            top: 10px;
+        }
 
+        .header {
+            display: flex;
+            flex:1 1 0;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .cajaheader{
+            width: 120px;
+            text-align: center;
+        }
+        .flechaatras {
+            margin-left: 7px;
+            margin-top: 7px;
+            text-align: left;
+            height: 5vh;
+            position: relative;
+        }
+
+    .mapasesnores{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom:15px;
+
+    }
+   .graficos{
+       display: flex;
+       margin-bottom:15px;
+       justify-content: space-between;
+       align-items: center;
+       margin-bottom:15px;
+   }
+    .clima{
+        display: flex;
+        margin-bottom:15px;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom:15px;
+    }
+    .calendario{
+        display: flex;
+        margin-bottom:15px;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom:15px;
+    }
+    .contacto{
+        display: flex;
+        margin-bottom:15px;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom:15px;
+    }
+    .icono{
+        width: 120px;
+        margin-left: 30px;
+    }
+    .boton{
+        font-weight: 600;
+        color:black;
+        background-color: #32753d;
+        border-radius: 18px;
+        border: 10px solid #32753d;
+        font-size: large;
+    }
 
     </style>
 </head>
 <body>
-    <header>
-        <a href="iniciarsesion.html" class="flechatras"><img src="icon/previous.svg" alt=""></a>
-        <a href="#quienessomos" class="logogti"><img src="icon/logoGTI.svg.svg" alt=""></a>
-    </header>
+<header>
+    <div class="header">
+        <div class="cajaheader">
+            <a href="../../index.html" class="flechaatras"><img src="icon/previous.svg" alt="atras" class="flechaatras"></a>
+        </div>
+
+        <div>
+            <a href="#quienessomos" class="logogti"><img src="icon/logoGTI.svg" alt=""></a>
+        </div>
+    </div>
+</header>
+
+
+
+
 
     <div class="mapasesnores">
-        <img src="icon/iconfinder_Maps_and_Navigation_location_pin_map_6611414.svg" alt="calendario">
-        <button class="botonverde">Tus sensores</button>
+        <img src="icon/iconfinder_Maps_and_Navigation_location_pin_map_6611414.svg" alt="calendario" class="icono">
+        <button class="boton" >Tus sensores</button>
     </div>
 
     <div class="graficos">
-        <img src="icon/bar-chart.svg" alt="calendario">
-        <button class="botonverde">Gráficos y datos</button>
+        <img src="icon/bar-chart.svg" alt="calendario" class="icono">
+        <button class="boton" >Gráficos y datos</button>
     </div>
 
     <div class="clima">
-        <img src="icon/clima.svg" alt="calendario">
-        <button class="botonverde">Previsión meteorológica</button>
+        <img src="icon/clima.svg" alt="calendario" class="icono">
+        <button class="boton">Meteorología</button>
     </div>
 
     <div class="calendario">
-        <img src="icon/appointment.svg" alt="calendario">
-        <button class="botonverde">Calendario: recordatorios</button>
+        <img src="icon/appointment.svg" alt="calendario" class="icono">
+        <button class="boton">Calendario</button>
     </div>
 
     <div class="contacto">
-        <img src="icon/comunicar.svg" alt="calendario">
-        <button class="botonverde">Envíanos tu mensaje</button>
+        <img src="icon/comunicar.svg" alt="calendario" class="icono">
+        <button class="boton">Contactanos</button>
     </div>
 
 

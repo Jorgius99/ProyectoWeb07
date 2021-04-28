@@ -8,7 +8,27 @@
     <link rel="stylesheet" href="css/estilo.css">
 
     <style>
+        .container{
+            width: 100%;
+        }
+        .contenedorUser{
+            width: 100px;
+            margin-left: 20px;
+            margin-right: 20px;
+
+        }
+
+        .texto{
+            color: black;
+            font-size: large;
+        }
+
+        div{
+            text-align: center;
+        }
         header {
+            width: 100%;
+            margin-bottom: 40px;
             position: sticky;
             top: 10px;
         }
@@ -16,19 +36,22 @@
         .header {
             display: flex;
             flex:1 1 0;
-            justify-content: space-between;
             align-items: center;
         }
         .cajaheader{
-            width: 120px;
+            width: 90px;
             text-align: center;
         }
+
         .flechaatras {
-            margin-left: 7px;
-            margin-top: 7px;
+
             text-align: left;
-            height: 5vh;
-            position: relative;
+            height: 4vh;
+
+        }
+
+        .logo {
+            width: 100px;
         }
 
     .mapasesnores{
@@ -67,17 +90,18 @@
         margin-bottom:15px;
     }
     .icono{
-        width: 120px;
+        width: 90px;
         margin-left: 30px;
     }
     .boton{
         font-weight: 600;
         color:black;
         background-color: #32753d;
-        border-radius: 18px;
+        border-radius: 10px;
         border: 10px solid #32753d;
         font-size: large;
     }
+
 
     </style>
 </head>
@@ -87,17 +111,21 @@
         <div class="cajaheader">
             <a href="../../index.html" class="flechaatras"><img src="icon/previous.svg" alt="atras" class="flechaatras"></a>
         </div>
+        <div class="contenedorUser">
+            <div class="texto">Usuario</div>
+        </div>
 
         <div>
-            <a href="#quienessomos" class="logogti"><img src="icon/logoGTI.svg" alt=""></a>
+            <a href="#quienessomos"><img src="icon/logoGTI.svg" alt="nuestro logo" class="logo"></a>
         </div>
+
     </div>
 </header>
 
 
 
 
-
+<div class="container">
     <div class="mapasesnores">
         <img src="icon/iconfinder_Maps_and_Navigation_location_pin_map_6611414.svg" alt="calendario" class="icono">
         <button class="boton" >Tus sensores</button>
@@ -122,7 +150,7 @@
         <img src="icon/comunicar.svg" alt="calendario" class="icono">
         <button class="boton">Contactanos</button>
     </div>
-
+</div>
 
 </body>
 </html>

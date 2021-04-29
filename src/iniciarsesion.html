@@ -5,7 +5,7 @@
     <title>Iniciar Sesión</title>
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="app/css/estilo.css">
     <style>
         div{
             text-align: center;
@@ -93,40 +93,44 @@
 </head>
 
 <body>
-<img src="image/fondo_login.jpg" alt="fondo_login" class="fondo">
+<img src="app/image/fondo_login.jpg" alt="fondo_login" class="fondo">
 <header>
     <div class="header">
         <div class="cajaheader">
-            <a href="../../index.html" class="flechaatras"><img src="icon/previous.svg" alt="atras" class="flechaatras"></a>
+            <a href="../index.html" class="flechaatras"><img src="app/icon/previous.svg" alt="atras" class="flechaatras"></a>
         </div>
 
         <div>
-            <a href="formulariocontacto.html"class="botonmorado">Contactanos</a>
+            <a href="formulariocontacto.html" class="botonmorado">Contactanos</a>
         </div>
 
         <div>
-            <a href="informacion.html#quienessomos"><img src="icon/logoGTI.svg" alt="nuestro logo" class="logo"></a>
+            <a href="informacion.html#quienessomos"><img src="app/icon/logoGTI.svg" alt="nuestro logo" class="logo"></a>
         </div>
     </div>
 </header>
 <br>
 <div class="contenedor_candado">
-    <img src="icon/padlock.svg" alt="candado" class="candado">
+    <img src="app/icon/padlock.svg" alt="candado" class="candado">
 </div>
 <br>
 <div class="login">
-    <form action="#">
+    <form>
+
     <label><p class="texto">Usuario</p></label>
-    <input type="text" placeholder="Escriba aquí..."  class="contenedor-texto" required>
+    <input type="text" placeholder="Escriba aquí..." name="nombre" class="contenedor-texto" required>
     <label><p >Contraseña</p></label>
-    <input type="text" placeholder="Escriba aquí..."  class="contenedor-text" required>
+    <input type="password" placeholder="Escriba aquí..."  class="contenedor-text" name="contrasenya" required>
     <br>
     <br>
-    <button class="botonmorado centrado">Entrar</button>
+        <input type="submit" value="Iniciar Sesion">
+        <!--<button class="botonmorado centrado">Entrar</button>  -->
         <br>
         <p>Si ha olvidado su contraseña pulse el botón de "Contactanos".</p>
     </form>
 </div>
+<div id="output"></div>
+<script src="api/v1.0/login.js"></script>
 
 </body>
 </html>

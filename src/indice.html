@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Indice | Menú</title>
@@ -38,47 +38,38 @@
 
         }
 
+        .cajaindice{
+            margin-left: 3rem;
+        }
 
-
-        .iconomenu{
-            margin-right:25px;
-            width: 150px;
+        .texto1indice{
+            color: white;
+            font-size: 150px;
+            font-family: Arial;
         }
 
         a{
-            text-decoration: none;
-        }
-
-        .indice {
-            width: 100%;
-            height: 100vh;
-            margin-top:50px;
-            flex-direction: row;
-        }
-
-        .caja{
-            background-color: darkseagreen;
-            border-radius:15px;
-            display: flex;
-            margin: 50px auto 100px auto;
-            width: 100%;
-            height: 10%;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .texto{
             color: white;
-            margin-left: 2rem;
+            font-size: 70px;
             text-decoration: none;
-            font-family: 'Helvetica', 'Arial', sans-serif;
-            border: white;
-            font-size: 2.75em;
-            font-weight: bold;
-            padding: 1em 1em;
-            border-radius: 55px;
-            box-shadow: 8px 5px 8px #999;
-            background-color:#633B54; /*darkseagreen*/
+            opacity: 75%;
+            font-family: Arial;
         }
+        .caja1indice{
+            margin-top: 5rem;
+            margin-left: 3rem;
+            margin-bottom: 5rem;
+        }
+
+        .textoindice{
+            color: white;
+            font-size: 70px;
+            display: flex;
+            margin-top:30px;
+            opacity: 75%;
+            font-family: Arial;
+        }
+
     </style>
 
 </head>
@@ -90,34 +81,24 @@
     <div><a href="index.html"><img src="app/icon/x_blanco.png" class="menu"></a></div>
 </header>
 
-<section class="indice">
+<div class="cajaindice">
+    <h2 class="texto1indice">Indice.</h2>
+</div>
 
-    <div class="caja">
-        <div><a href="iniciarsesion.html"><h2 class="texto botonInformate">INICIAR SESION</h2></a></div>
-        <div><a href="iniciarsesion.html"><img src="app/icon/iniciarsesion_blanco.png " alt="INICIAR SESION FOTO" class="iconomenu"></a></div>
-    </div>
+<div class="cajaindice">
+    <a href="iniciarsesion.html">Iniciar Sesión</a>
+</div>
 
-    <div class="caja">
-        <div ><a href="index.html#ofrecer"><h2 class="texto">¿QUÉ OFRECEMOS?</h2></a></div>
-        <div><a href="index.html#ofrecer"><img src="app/icon/ofrecer.png " alt="QUE OFRECEMOS FOTO" class="iconomenu"></a></div>
-    </div>
+<div class="caja1indice">
+    <a class="textoindice" href="index.html#ofrecer"> ¿Qué ofrecemos?</a>
+    <a class="textoindice" href="index.html#muestra"> ¿Cómo se muestran los datos?</a>
+    <a class="textoindice" href="index.html#funciona"> ¿Cómo funciona?</a>
+</div>
 
-    <div class="caja">
-        <div ><a href="index.html#funciona"><h2 class="texto">¿CÓMO FUNCIONA?</h2></a></div>
-        <div><a href="index.html#funciona"><img src="app/icon/comofunciona_blanco.png" alt="FOTO COMO FUNCIONA" class="iconomenu"></a></div>
-    </div>
+<div class="cajaindice">
+    <a href="formulariocontacto.html">Contáctanos</a>
+</div>
 
-    <div class="caja">
-        <div ><a href="index.html#muestra"><h2 class="texto">¿CÓMO VER LOS DATOS?</h2></a></div>
-        <div><a href="index.html#muestra"><img src="app/icon/mostraratos_blanco.png" alt="FOTO MUESTRA DATOS" class="iconomenu"></a></div>
-    </div>
-
-    <div class="caja">
-        <div ><a href="formulariocontacto.html"><h2 class="texto">CONTACTANOS</h2></a></div>
-        <div><a href="formulariocontacto.html"><img src="app/icon/contactar_blanco.png" alt="FOTO CONTACTO" class="iconomenu"></a></div>
-    </div>
-
-</section>
 
 
 

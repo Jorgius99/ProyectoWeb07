@@ -2,7 +2,6 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <!-- <link rel="stylesheet" type="text/css" href="app/css/estilo.css" media="screen"/> -->
     <title>Contacto</title>
 </head>
 <style>
@@ -19,6 +18,15 @@
         height: 8.5rem;
 
     }
+    form{
+        text-decoration: none;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
     body{
         background-color: #0d1a27;
         margin: 0;
@@ -46,7 +54,9 @@
         position: relative;
         left: -2px;
     }
-
+    article{
+        height: 150px;
+    }
     h1{
         text-align: center;
         position: relative;
@@ -71,6 +81,52 @@
 
     }
 
+    .contenedornombre{
+        text-decoration: none;
+        margin: 5rem 2rem 2rem 2rem;
+        width: 80%;
+        padding: 30px 30px 30px 30px;
+        height: 15%;
+        border: white solid 2px;
+        border-radius: 15px;
+        background-color: #0d1a27;
+        color: white;
+        font:400 50px Verdana;
+
+    }
+    form input[type="text"] {
+        text-align: initial;
+        width: 80%;
+        height: 15%;
+        border: 2px solid #f6f6f6;
+        border-radius: 15px;
+        margin: 5rem 2rem 2rem 2rem;
+        display: inline-block;
+        position: relative;
+    }
+    h1{
+        margin-top: 20rem;
+        margin-left: 2.5rem;
+        color:white;
+        font-family: Verdana;
+        font-size: 100px;
+    }
+    .boton{
+        font-family: 'Helvetica', 'Arial', sans-serif;
+        color: white;
+        border: white;
+        width: 80%;
+        font-size: 2.75em;
+        font-weight: bold;
+        padding: 1em 2em;
+        margin-top: 50px;
+        margin-bottom: 60px;
+        border-radius: 20px;
+        position: relative;
+        box-shadow: 3px 5px 2px #999;
+        background-color:#633B54;
+    }
+
 </style>
 <body>
 <header>
@@ -78,25 +134,15 @@
     </a>
     <div><a href="indice.html"><img src="app/icon/menu_blanco.png" class="menu"></a></div>
 </header>
-<br>
-<br>
+<article class="titulo"><h1>Contacte con nosotros.</h1></article>
 <br>
 <div class="formulario">
     <form action="#" id="bloque-contactanos">
-        <div class="contenedor-bloque-buscar">
-            <h2>CONTACTA CON NOSOTROS</h2>
-            <label><p>Nombre</p></label>
-            <input type="text" placeholder="Escriba aquí..." required>
-            <label><p>Apellidos</p></label>
-            <input type="text" placeholder="Escriba aquí..." required>
-            <label><p>Correo</p></label>
-            <input type="email" placeholder="Escriba aquí..." required>
-            <label><p>Motivo</p></label>
-            <textarea name="Motivo" class="motivo"></textarea>
-            <br>
-            <br>
-            <button class="botonverde" id="botonverde">Contáctanos</button>
-        </div>
+            <input type="text" class="contenedornombre" placeholder="Nombre" required>
+            <input type="text" class="contenedornombre" placeholder="Apellidos" required>
+            <input type="email" class="contenedornombre" placeholder="Email" required>
+            <textarea name="Motivo" placeholder="Motivo" class="contenedornombre"></textarea>
+             <input type="submit" value="Contactanos" class="boton">
     </form>
 </div>
 

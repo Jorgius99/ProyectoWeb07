@@ -32,7 +32,7 @@
             flex: 1 1 0;
 
         }
-        .logo{
+        .contenedorLogo{
             display: flex;
             height: 100%;
             width: 60%;
@@ -95,7 +95,7 @@
         .container2{
             margin-top: 400px;
         }
-        .bajar{
+        .contenedorFlecha{
             position: relative;
             height: 350px;
             width: 102%;
@@ -106,12 +106,13 @@
             background-color: #0d1a27;
             opacity: 0.85;
         }
-        .botonBajar{
+        .flechaBajar{
             position: relative;
-            height: 6vh;
-            margin-bottom: 6.5rem;
+            width: 13rem;
+            height: 9vh;
+            margin-bottom: 0.5rem;
         }
-        .queOfrecemos{
+        .seccionQue_ofrecemos{
             margin-top: 200px;
             background-color: darkseagreen;
             width: 102%;
@@ -126,30 +127,30 @@
             background-color: darkseagreen;
             width: 102%;
         }
-        .iconoOfrecer{
+        .contenedorIcono{
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .ofrecer{
+        .Icono{
             margin-top: 20px;
             position: relative;
             height: 8.5vh;
         }
-        .contenedorOfrecer{
+        .contenedorInformación{
             display: flex;
             justify-content: space-between;
             height: 35vh;
 
         }
-        .sensorFoto{
+        .imagenInformacio{
             height: 15vh;
             width: 20vh;
             margin-top: 40px;
             margin-left: 15px;
         }
-        .Foto2{
+        .imagenInformacio2{
             height: 15vh;
             width: 20vh;
             margin-top: 40px;
@@ -184,26 +185,32 @@
 </head>
 <body>
 <img src="app/image/masinformacion.jpg" class="fondo">
+
+<!-- Aquí empieza el header, que contiene el logo y el menú -->
+
 <header>
-    <a href="#" class="logo"><img src="app/icon/logoGTI.svg" class="logoGti"><span class="triangulo"></span>
+    <a href="#" class="contenedorLogo"><img src="app/icon/logoGTI.svg" class="logoGti"><span class="triangulo"></span>
     </a>
     <div><a href="indice.html"><img src="app/icon/menu_blanco.png" class="menu"></a></div>
 </header>
+
+<!-- Aquí está el contenido de la landing page, con el texto de reclamo, el CTA y la flecha que indica que se puede bajar -->
 
 <div class="container">
     <div class="container2">
         <div><h1>¿QUIERES AUMENTAR LA PRODUCTIVIDAD DE TU CAMPO AHORRANDO COSTES?</h1></div>
         <div class="boton"><button class="botonInformate">Contactanos</button></div>
-        <div class="bajar"><a><img src="app/icon/flechablanca.png"class="botonBajar"></a></div>
+        <div class="contenedorFlecha"><a><img src="app/icon/flechablanca.png"class="flechaBajar"></a></div>
     </div>
-
 </div>
 
-<section class="queOfrecemos" id="ofrecer">
-    <div class="iconoOfrecer"><img src="app/icon/ofrecer.svg" class="ofrecer"></div>
-    <div class="tituloOfrecer"><h2>¿Qué ofrecemos?</h2></div>
-    <div class="contenedorOfrecer">
-        <div class="sensor"><img src="app/image/sensor.jpeg" class="sensorFoto"></div>
+<!-- Aqui hay un contenedor con información que contiene lo que ofrecemos, un icono, una foto y un texto -->
+
+<section class="seccionQue_ofrecemos" id="ofrecer">
+    <div class="contenedorIcono"><img src="app/icon/ofrecer.svg" class="Icono"></div>
+    <div><h2>¿Qué ofrecemos?</h2></div>
+    <div class="contenedorInformación">
+        <div><img src="app/image/sensor.jpeg" class="imagenInformacio"></div>
         <div class="texto1"><p>Nuestras sondas están equipadas con una serie de sensores capaces de monitorizar de
             manera
             óptima y profesional todo tipo de campos y plantaciones de forma económica; accediendo a los datos de manera
@@ -213,24 +220,30 @@
             a tus necesidades.</p></div>
     </div>
 </section>
+
+<!-- Aqui hay un contenedor con información que contiene el funcionamiento, un icono, una foto y un texto -->
+
 <section class="section2" id="funciona">
-    <div class="iconoOfrecer"><img src="app/icon/ajustes-de-engranajes.svg" class="ofrecer"></div>
-    <div class="tituloOfrecer"><h2>¿Cómo funciona?</h2></div>
-    <div class="contenedorOfrecer">
+    <div class="contenedorIcono"><img src="app/icon/ajustes-de-engranajes.svg" class="Icono"></div>
+    <div><h2>¿Cómo funciona?</h2></div>
+    <div class="contenedorInformación">
         <div class="texto2"><p>Nuestras sondas cuentan con sensores que recogen datos directamente del campo y los envían a
             una nube a la cual se puede acceder de manera remota para poder obsevar la evolución del campo. Se pueden
             monitorizar datos como la luminosidad, la salinidad de la tierra, la humedad relativa, y la temperatura
             ambiente, así como la posición exacta de la sonda a través de un geoposicionador. Cuenta también con un
             giroscopio que funciona a modo de alarma antirrobo, ya que cuenta con una bocina que alerta de movimientos
             inusuales.</p></div>
-        <div class="sensor"><img src="app/image/plantitas.jpg" class="Foto2"></div>
+        <div><img src="app/image/plantitas.jpg" class="imagenInformacio2"></div>
     </div>
 </section>
+
+<!-- Aqui hay un contenedor con información que contiene como se muestran los datos, un icono, una foto y un texto -->
+
 <section class="section3" id="muestra">
-    <div class="iconoOfrecer"><img src="app/icon/bar-chart.svg" class="ofrecer"></div>
-    <div class="tituloOfrecer"><h2>¿Cómo se muestran los datos?</h2></div>
-    <div class="contenedorOfrecer">
-        <div class="sensor"><img src="app/image/grafica.png" class="sensorFoto"></div>
+    <div class="contenedorIcono"><img src="app/icon/bar-chart.svg" class="Icono"></div>
+    <div><h2>¿Cómo se muestran los datos?</h2></div>
+    <div class="contenedorInformación">
+        <div><img src="app/image/grafica.png" class="imagenInformacio"></div>
         <div class="texto1"><p>Se puede acceder a todos los datos recopilados por los sensores a través de nuestra propia
             página web, que cuenta con una interfaz sencilla en la que se muestra la nube de datos por medio de gráficas y
             mapas elaborados con la información recopilada por las sondas.</p></div>

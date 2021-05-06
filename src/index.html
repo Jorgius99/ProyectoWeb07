@@ -95,6 +95,7 @@
         }
         .container2{
             margin-top: 400px;
+
         }
         .contenedorFlecha{
             position: relative;
@@ -189,17 +190,20 @@
             color: white;
             font-size: 150px;
             font-family: Arial;
+            z-index: 1;
         }
         a{
             color: white;
             font-size: 70px;
             text-decoration: none;
             font-family: Arial;
+            z-index: 1;
         }
         .caja1indice{
             margin-top: 5rem;
             margin-left: 3rem;
             margin-bottom: 5rem;
+            z-index: 1;
         }
         .textoindice{
             color: white;
@@ -208,6 +212,7 @@
             margin-top:30px;
             opacity: 70%;
             font-family: Arial;
+            z-index: 1;
         }
 
 
@@ -218,10 +223,12 @@
             transform: rotate(30deg) translate(80%, -580%) scale3d(-1, -1, 1);
             transform: matrix();
             transition: all 1.5s;
+            z-index: 1;
         }
         .indice:target{
             visibility:visible;
             opacity:1;
+            z-index: 1;
         }
         .indice:target .menu_indice{
             position: fixed;
@@ -229,12 +236,19 @@
             visibility: visible;
             background: #0d1a27;
             height: 100%;
+            z-index: 1;
         }
         .indice{
             visibility: hidden;
             opacity: 0;
             transition: all 1s;
             position: fixed;
+            z-index: 1;
+        }
+
+        .imagen{
+            justify-content: right;
+            margin: 90%;
         }
         <!------------------------------------------------------------------------------------------------------------->
 
@@ -257,10 +271,8 @@
     <div id="indice" class="indice">
         <nav class="menu_indice">
 
+            <a class="imagen" href="index.html"><img  src="app/icon/x_blanco.png" alt="foto"></a>
 
-        <div class="imagen">
-             <a href="index.html"><img  src="app/icon/x_blanco.png" alt=""></a>
-        </div>
         <div class="cajaindice">
             <h2 class="texto1indice">Indice.</h2>
         </div>

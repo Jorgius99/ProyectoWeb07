@@ -10,7 +10,7 @@
         }
         header{
 
-            height: 120px;
+            z-index: 3;
             width:102%;
             background-color:#0d1a27;
             display: flex;
@@ -58,19 +58,28 @@
         h1{
             text-align: center;
             position: relative;
-            font-family: "Candara";
+            font-family:Helvetica;
             font-size: 55px;
             color: #002f01;
         }
         h2{
             text-align: center;
             position: relative;
-            font-family: "Candara";
+            font-family:Helvetica;;
             font-size: 70px;
-            color: black;
+            color: white;
+        }
+        .titulo1{
+            color: darkseagreen;
+        }
+        .titulo2{
+            color: purple;
+        }
+        .seccionQue_ofrecemos{
+            margin-top: 100px;
         }
         .botonInformate{
-            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-family:Helvetica;
             border: white;
             font-size: 2.75em;
             font-weight: bold;
@@ -116,21 +125,7 @@
             height: 9vh;
             margin-bottom: 0.5rem;
         }
-        .seccionQue_ofrecemos{
-            margin-top: 200px;
-            background-color: darkseagreen;
-            width: 102%;
-        }
-        .section2{
-            margin-top: 150px;
-            background-color: plum;
-            width: 102%;
-        }
-        .section3{
-            margin-top: 150px;
-            background-color: darkseagreen;
-            width: 102%;
-        }
+
         .contenedorIcono{
             width: 100%;
             display: flex;
@@ -163,17 +158,17 @@
         .texto1{
             height: 30vh;
             width: 500px;
-            font-family: "Candara";
+            font-family:Helvetica;
             font-size: 35px;
-            color: black;
+            color: white;
         }
         .texto2{
             margin-left: 30px;
             height: 30vh;
             width: 500px;
-            font-family: "Candara";
+            font-family:Helvetica;
             font-size: 30px;
-            color: black;
+            color: white;
         }
         .menu {
             margin-left: 7px;
@@ -183,6 +178,35 @@
             height: 3vh;
             position: relative;
         }
+        .f1{
+            margin-left: 50px;
+            display: flex;
+            color: white;
+            font-family: Helvetica;
+            font-size: small;
+            flex-direction: column;
+            width: 50%;
+        }
+        .f2{
+            display: flex;
+            flex-direction: column;
+            color: white;
+            width: 50%;
+        }
+        h5{
+            font-size: medium;
+        }
+        .f3{
+            display: flex;
+            justify-content: flex-end;
+        }
+        footer{
+            display: flex;
+            justify-content: space-around;
+            width: 100vw;
+            height: auto;
+            margin-bottom: 200px;
+        }
 
         <!------------------------------------------------------------------------------------------------------------->
         .cajaindice{
@@ -191,14 +215,14 @@
         .texto1indice{
             color: white;
             font-size: 150px;
-            font-family: Arial;
+            font-family:Helvetica;
             z-index: 1;
         }
         a{
             color: white;
             font-size: 70px;
             text-decoration: none;
-            font-family: Arial;
+            font-family:Helvetica;
             z-index: 1;
         }
         .caja1indice{
@@ -213,7 +237,7 @@
             display: flex;
             margin-top:30px;
             opacity: 70%;
-            font-family: Arial;
+            font-family:Helvetica;
             z-index: 1;
         }
 
@@ -287,6 +311,7 @@
             <a class="textoindice" href="index.html#ofrecer"> ¿Qué ofrecemos?</a>
             <a class="textoindice" href="index.html#muestra"> ¿Cómo se muestran los datos?</a>
             <a class="textoindice" href="index.html#funciona"> ¿Cómo funciona?</a>
+            <a class="textoindice" href="index.html#somos"> ¿Quienes somos?</a>
         </div>
 
         <div class="cajaindice">
@@ -305,7 +330,7 @@
 <div class="container">
     <div class="container2">
         <div><h1>¿QUIERES AUMENTAR LA PRODUCTIVIDAD DE TU CAMPO REDUCIENDO COSTES?</h1></div>
-        <div class="boton"><button class="botonInformate">Contáctanos</button></div>
+        <div class="boton"><a class="botonInformate" href="formulariocontacto.html">Contáctanos</a></div>
         <div class="contenedorFlecha"><a href="#ofrecer"><img src="app/icon/flechablanca.png"class="flechaBajar"></a></div>
     </div>
 </div>
@@ -313,8 +338,8 @@
 <!-- Aqui hay un contenedor con información que contiene lo que ofrecemos, un icono, una foto y un texto -->
 
 <section class="seccionQue_ofrecemos" id="ofrecer">
-    <div class="contenedorIcono"><img src="app/icon/ofrecer.svg" class="Icono"></div>
-    <div><h2>¿Qué ofrecemos?</h2></div>
+    <div class="contenedorIcono"><img src="app/icon/ofrecer_color.svg" class="Icono"></div>
+    <div><h2 class="titulo1">¿Qué ofrecemos?</h2></div>
     <div class="contenedorInformación">
         <div><img src="app/image/sensor.jpeg" class="imagenInformacio"></div>
         <div class="texto1"><p>Nuestras sondas están equipadas con una serie de sensores capaces de monitorizar de
@@ -330,8 +355,8 @@
 <!-- Aqui hay un contenedor con información que contiene el funcionamiento, un icono, una foto y un texto -->
 
 <section class="section2" id="funciona">
-    <div class="contenedorIcono"><img src="app/icon/ajustes-de-engranajes.svg" class="Icono"></div>
-    <div><h2>¿Cómo funciona?</h2></div>
+    <div class="contenedorIcono"><img src="app/icon/funcionamiento__color.svg" class="Icono"></div>
+    <div><h2 class="titulo2">¿Cómo funciona?</h2></div>
     <div class="contenedorInformación">
         <div class="texto2"><p>Nuestras sondas cuentan con sensores que recogen datos directamente del campo y los envían a
             una nube a la cual se puede acceder de manera remota para poder obsevar la evolución del campo. Se pueden
@@ -346,8 +371,8 @@
 <!-- Aqui hay un contenedor con información que contiene como se muestran los datos, un icono, una foto y un texto -->
 
 <section class="section3" id="muestra">
-    <div class="contenedorIcono"><img src="app/icon/bar-chart.svg" class="Icono"></div>
-    <div><h2>¿Cómo se muestran los datos?</h2></div>
+    <div class="contenedorIcono"><img src="app/icon/mostrardatos_color.svg" class="Icono"></div>
+    <div><h2 class="titulo1">¿Cómo se muestran los datos?</h2></div>
     <div class="contenedorInformación">
         <div><img src="app/image/grafica.png" class="imagenInformacio"></div>
         <div class="texto1"><p>Se puede acceder a todos los datos recopilados por los sensores a través de nuestra propia
@@ -355,5 +380,28 @@
             mapas elaborados con la información recopilada por las sondas.</p></div>
     </div>
 </section>
+
+<section class="section4" id="somos">
+    <div class="contenedorIcono"><img src="app/icon/quienesSomos_color.svg" class="Icono"></div>
+    <div><h2 class="titulo2">¿Quienes somos?</h2></div>
+    <div class="contenedorInformación">
+        <div class="texto2"><p>Somos una StartUp dedicada a la monitorización profesional de plantaciones y campos de
+            explotación agrícolas. Hemos desarollado una serie de productos de accesible alcance para todo tipo de
+            usuarios capaces de responder de forma automática y garantizando siempre la calidad ofrecida por los mismos.</p></div>
+        <div><img src="app/image/Alvaro.jpeg" class="imagenInformacio2"></div>
+    </div>
+</section>
+
+<footer>
+    <div class="f1"><p>Todos los derechos reservados</p>
+        <p>Página realizada por el grupo 7</p>
+    </div>
+    <div class="f2">
+        <h5>Nuestras redes sociales</h5>
+        <div class="f3"><a href="www.facebook.com"><img src="app/icon/facebook.svg" alt="facebook" class="menu"></a>
+            <a href="www.instagram.com"><img src="app/icon/instagram.svg" alt="instagram" class="menu"></a></div>
+    </div>
+</footer>
+
 </body>
 </html>

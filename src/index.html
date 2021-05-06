@@ -179,8 +179,67 @@
             text-align: left;
             height: 3vh;
             position: relative;
-
         }
+
+        <!------------------------------------------------------------------------------------------------------------->
+        .cajaindice{
+            margin-left: 3rem;
+        }
+        .texto1indice{
+            color: white;
+            font-size: 150px;
+            font-family: Arial;
+        }
+        a{
+            color: white;
+            font-size: 70px;
+            text-decoration: none;
+            font-family: Arial;
+        }
+        .caja1indice{
+            margin-top: 5rem;
+            margin-left: 3rem;
+            margin-bottom: 5rem;
+        }
+        .textoindice{
+            color: white;
+            font-size: 70px;
+            display: flex;
+            margin-top:30px;
+            opacity: 70%;
+            font-family: Arial;
+        }
+
+
+        <!------------------------------------------------------------------------------------------------------------->
+        .menu_indice{
+            position: relative;
+            visibility: hidden;
+            transform: rotate(30deg) translate(80%, -580%) scale3d(-1, -1, 1);
+            transform: matrix();
+            transition: all 1.5s;
+        }
+        .indice:target{
+            visibility:visible;
+            opacity:1;
+        }
+        .indice:target .menu_indice{
+            position: fixed;
+            transform: rotate(0deg) ;
+            visibility: visible;
+            background: #0d1a27;
+            height: 100%;
+        }
+        .indice{
+            visibility: hidden;
+            opacity: 0;
+            transition: all 1s;
+            position: fixed;
+        }
+        <!------------------------------------------------------------------------------------------------------------->
+
+
+        <!------------------------------------------------------------------------------------------------------------->
 
     </style>
 </head>
@@ -192,7 +251,39 @@
 <header>
     <a href="#" class="contenedorLogo"><img src="app/icon/logoGTI.svg" class="logoGti"><span class="triangulo"></span>
     </a>
-    <div><a href="indice.html"><img src="app/icon/menu_blanco.png" class="menu"></a></div>
+    <div><a href="#indice"><img src="app/icon/menu_blanco.png" class="menu"></a></div>
+
+<!----------------------------------------------MENU------------------------------------------------------------------->
+    <div id="indice" class="indice">
+        <nav class="menu_indice">
+
+
+        <div class="imagen">
+             <a href="index.html"><img  src="app/icon/x_blanco.png" alt=""></a>
+        </div>
+        <div class="cajaindice">
+            <h2 class="texto1indice">Indice.</h2>
+        </div>
+
+        <div class="cajaindice">
+            <a class="textoindice" href="iniciarsesion.html">Iniciar Sesión</a>
+        </div>
+
+        <div class="caja1indice">
+            <a class="textoindice" href="index.html#ofrecer"> ¿Qué ofrecemos?</a>
+            <a class="textoindice" href="index.html#muestra"> ¿Cómo se muestran los datos?</a>
+            <a class="textoindice" href="index.html#funciona"> ¿Cómo funciona?</a>
+        </div>
+
+        <div class="cajaindice">
+            <a class="textoindice" href="formulariocontacto.html">Contáctanos</a>
+        </div>
+
+        </nav>
+    </div>
+    <!----------------------------------------------------------------------------------------------------------------->
+
+
 </header>
 
 <!-- Aquí está el contenido de la landing page, con el texto de reclamo, el CTA y la flecha que indica que se puede bajar -->

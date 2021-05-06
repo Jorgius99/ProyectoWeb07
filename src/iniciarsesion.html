@@ -3,133 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <title>Iniciar Sesión</title>
-    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" href="app/css/estilo.css">
+
+
     <style>
-        div{
-            text-align: center;
+        html{
+            background-color:#0d1a27;
         }
-        header {
-            position: sticky;
-            top: 10px;
-        }
-
-        .header {
-            display: flex;
-            flex:1 1 0;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-        }
-        .cajaheader{
-            width: 120px;
-            text-align: center;
-        }
-
-        .login{
-            margin: 1rem 0.2rem;
-            position: relative;
-
-        }
-        .flechaatras {
-            margin-left: 7px;
-            margin-top: 7px;
-            text-align: left;
-            height: 5vh;
-            position: relative;
-        }
-
-        .logo {
-            margin: auto;
-            width: 100px;
-        }
-
-        .candado{
-            width: 35%;
-        }
-        .contenedor_candado{
-            text-align: center;
-            margin: 1rem 0.2rem;
+        header{
             height: 120px;
+            width:102%;
+            background-color:#0d1a27;
+            display: flex;
+            justify-content: space-between;
             position: relative;
+            height: 8.5rem;
 
         }
-        form {
-            border: solid ;
-            background-color: #8FB159;
-            box-shadow: #002f01 2px 5px 10px;
-            text-align: center;
-            border-radius: 10px;
-            margin: auto;
+        .logo{
+            display: flex;
+            height: 100%;
+            width: 60%;
         }
-        .fondo{
-            height:100vh ;
-            width: 100%;
-            object-fit:cover ;
-            position: absolute;
+        .logoGti{
 
-        }
-        form label {
-            width: 190px;
+            text-align: left;
+            background-color: white;
+            text-decoration: none;
+            color: white;
             font-weight: bold;
-            position: relative;
-            text-align: center;
+            display: block;
+            flex: 1 1 0;
         }
 
+        .triangulo {
+            border-left: 9.38rem solid white;
+            border-top: 4.26rem solid transparent;
+            border-bottom: 4.26rem solid transparent;
+            position: relative;
+            left: -2px;
+        }
+        .menu {
+            margin-left: 7px;
+            margin-right: 50px;
+            margin-top: 30px;
+            text-align: left;
+            height: 3vh;
+            position: relative;
+        }
+        /*aqui empieza el css de mi página*/
+        article{
+            height: 150px;
+        }
+        h1{
+            margin-top: 20rem;
+            margin-left: 2rem;
+            color:white;
+            font-family: Verdana;
+            font-size: 100px;
+        }
+        .boton{
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            color: white;
+            border: white;
+            width: 80%;
+            font-size: 2.75em;
+            font-weight: bold;
+            padding: 1em 2em;
+            margin-top: 50px;
+            margin-bottom: 60px;
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 3px 5px 2px #999;
+            background-color:#633B54;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        .login{
+            width: 100%;
+            height: 50rem;
+        }
+        form{
+            text-decoration: none;
+            height: 100%;
+            width: 100%;
+            align-items: center;
+        }
+
+        .contenedornombre{
+            text-decoration: none;
+            margin: 5rem 2rem 2rem 2rem;
+            width: 80%;
+            height: 15%;
+            border: white solid 2px;
+            border-radius: 15px;
+            background-color: #0d1a27;
+            color: white;
+            font:400 50px Verdana;
+
+        }
+        .contenedorcontrasenya{
+            text-decoration: none;
+            margin: 5rem 2rem 2rem 2rem;
+            width: 80%;
+            height: 15%;
+            border: white solid 2px;
+            border-radius: 15px;
+            background-color: #0d1a27;
+            color: white;
+            font: 50px Verdana;
+
+        }
         form input[type="text"] {
-            text-align: center;
-            width: 184px;
-            padding: 3px 10px;
-            border: 1px solid #f6f6f6;
-            border-radius: 3px;
-            background-color: #f6f6f6;
-            margin: 8px 0;
+            text-align: initial;
+            width: 80%;
+            height: 15%;
+            border: 2px solid #f6f6f6;
+            border-radius: 15px;
+            margin: 5rem 2rem 2rem 2rem;
             display: inline-block;
             position: relative;
         }
+
 
     </style>
 </head>
 
 <body>
-<img src="app/image/fondo_login.jpg" alt="fondo_login" class="fondo">
 <header>
-    <div class="header">
-        <div class="cajaheader">
-            <a href="index.html" class="flechaatras"><img src="app/icon/previous.svg" alt="atras" class="flechaatras"></a>
-        </div>
-
-        <div>
-            <a href="formulariocontacto.html" class="botonmorado">Contactanos</a>
-        </div>
-
-        <div>
-            <a href="informacion.html#quienessomos"><img src="app/icon/logoGTI.svg" alt="nuestro logo" class="logo"></a>
-        </div>
-    </div>
+    <a href="index.html" class="logo"><img src="app/icon/logoGTI.svg" class="logoGti"><span class="triangulo"></span></a>
+    <div><a href="indice.html"><img src="app/icon/menu_blanco.png" class="menu"></a></div>
 </header>
-<br>
-<div class="contenedor_candado">
-    <img src="app/icon/padlock.svg" alt="candado" class="candado">
-</div>
-<br>
+<article class="titulo"><h1>Inicie Sesión.</h1></article>
 <div class="login">
     <form>
+        <input type="text" placeholder="  Usuario" name="nombre" class="contenedornombre" required>
+        <input type="password" placeholder="   Contraseña"  class="contenedorcontrasenya" name="contrasenya" required>
 
-    <label><p class="texto">Usuario</p></label>
-    <input type="text" placeholder="Escriba aquí..." name="nombre" class="contenedor-texto" required>
-    <label><p >Contraseña</p></label>
-    <input type="password" placeholder="Escriba aquí..."  class="contenedor-text" name="contrasenya" required>
-    <br>
-    <br>
-        <input type="submit" value="Entrar" class="botonmorado">
-        <br>
-        <p>Si ha olvidado su contraseña pulse el botón de "Contactanos".</p>
+        <input type="submit" value="Entrar" class="boton">
     </form>
 </div>
 <div id="output"></div>
 <script src="api/v1.0/login.js"></script>
-<button class="botonmorado centrado">Entrar</button>
 </body>
 </html>

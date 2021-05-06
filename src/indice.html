@@ -21,7 +21,6 @@
             justify-content: space-between;
             position: relative;
             height: 8.5rem;
-
         }
         .logo{
             display: flex;
@@ -54,22 +53,41 @@
             height: 3vh;
             position: relative;
         }
+        .logoGti{
 
+            text-align: left;
+            background-color: white;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            display: block;
+            flex: 1 1 0;
+
+        }
+        .logo{
+            display: flex;
+            height: 100%;
+            width: 60%;
+        }
+        .triangulo {
+            border-left: 9.38rem solid white;
+            border-top: 4.26rem solid transparent;
+            border-bottom: 4.26rem solid transparent;
+            position: relative;
+            left: -2px;
+        }
         .cajaindice{
             margin-left: 3rem;
         }
-
         .texto1indice{
             color: white;
             font-size: 150px;
             font-family: Arial;
         }
-
         a{
             color: white;
             font-size: 70px;
             text-decoration: none;
-            opacity: 75%;
             font-family: Arial;
         }
         .caja1indice{
@@ -77,33 +95,33 @@
             margin-left: 3rem;
             margin-bottom: 5rem;
         }
-
         .textoindice{
             color: white;
             font-size: 70px;
             display: flex;
             margin-top:30px;
-            opacity: 75%;
+            opacity: 70%;
             font-family: Arial;
         }
-
     </style>
 
 </head>
 <body>
 
-
 <header>
-    <a href="index.html" class="logo"><img src="app/icon/logoGTI.svg" class="logoGti"><span class="triangulo"></span></a>
-    <div><a href="indice.html"><img src="app/icon/menu_blanco.png" class="menu"></a></div>
+    <a href="index.html" class="logo"><img src="app/icon/logoGTI.svg" class="logoGti"><span class="triangulo"></span>
+    </a>
+    <div><a href="index.html"><img src="app/icon/x_blanco.png" class="menu"></a></div>
 </header>
 
+<section class="indice">
+
 <div class="cajaindice">
-    <h2 class="texto1indice">Índice.</h2>
+    <h2 class="texto1indice">Indice.</h2>
 </div>
 
 <div class="cajaindice">
-    <a href="iniciarsesion.html">Iniciar Sesión</a>
+    <a class="textoindice" href="iniciarsesion.html">Iniciar Sesión</a>
 </div>
 
 <div class="caja1indice">
@@ -113,12 +131,10 @@
 </div>
 
 <div class="cajaindice">
-    <a href="formulariocontacto.html">Contáctanos</a>
+    <a class="textoindice" href="formulariocontacto.html">Contáctanos</a>
 </div>
 
-
-
-
+</section>
 
 </body>
 </html>

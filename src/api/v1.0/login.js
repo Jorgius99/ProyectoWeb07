@@ -5,7 +5,6 @@ document.querySelector("form").addEventListener("submit", function (event){
     console.log(dataLogin.get("nombre"));
     console.log(dataLogin.get("contrasenya"));
 
-
     fetch( 'http://localhost/src/api/v1.0/index.php', {
         method:"POST",
         body:dataLogin
@@ -25,7 +24,5 @@ document.querySelector("form").addEventListener("submit", function (event){
                 location.href = "../src/app/paginagerente.html"
             }, 3000);
         }
-
         })
 });
-

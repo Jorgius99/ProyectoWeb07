@@ -3,140 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Contacto</title>
+    <link rel="stylesheet" href="app/css/formulariocontacto.css">
 </head>
 <style>
-    html{
-        background-color:#0d1a27;
-    }
-    header{
-        height: 120px;
-        width:102%;
-        background-color:#0d1a27;
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        height: 8.5rem;
 
-    }
-    form{
-        text-decoration: none;
-        height: 100%;
-        width: 100%;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-    }
-
-    body{
-        background-color: #0d1a27;
-        margin: 0;
-    }
-    .logoGti{
-
-        text-align: left;
-        background-color: white;
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-        display: block;
-        flex: 1 1 0;
-
-    }
-    .logo{
-        display: flex;
-        height: 100%;
-        width: 60%;
-    }
-    .triangulo {
-        border-left: 9.38rem solid white;
-        border-top: 4.26rem solid transparent;
-        border-bottom: 4.26rem solid transparent;
-        position: relative;
-        left: -2px;
-    }
-
-    h1{
-        text-align: center;
-        position: relative;
-        font-family: Helvetica;
-        font-size: 55px;
-        color: #002f01;
-
-    }
-    h2{
-        text-align: center;
-        position: relative;
-        font-family: Helvetica;
-        font-size: 70px;
-        color: black;
-    }
-    .menu {
-        margin-left: 7px;
-        margin-right: 50px;
-        margin-top: 30px;
-        text-align: left;
-        height: 3vh;
-        position: relative;
-
-    }
-
-    .contenedornombre{
-        text-decoration: none;
-        margin: 5rem 2rem 2rem 2rem;
-        width: 80%;
-        padding: 30px 30px 30px 30px;
-        height: 15%;
-        border: white solid 2px;
-        border-radius: 15px;
-        background-color: #0d1a27;
-        color: white;
-        font:400 50px Helvetica;
-
-    }
-    form input[type="text"] {
-        text-align: initial;
-        width: 80%;
-        height: 15%;
-        border: 2px solid #f6f6f6;
-        border-radius: 15px;
-        margin: 3rem 2rem 2rem 2rem;
-        display: inline-block;
-        position: relative;
-        font-family: Helvetica;
-    }
-    h1{
-        margin-left: 2.5rem;
-        color:white;
-        font-family: Helvetica;
-        font-size: 100px;
-        text-align: left;
-    }
-    .boton{
-        font-family: Helvetica;
-        color: white;
-        border: white;
-        width: 80%;
-        font-size: 2.75em;
-        font-weight: bold;
-        padding: 1em 2em;
-        margin-top: 50px;
-        margin-bottom: 60px;
-        border-radius: 20px;
-        position: relative;
-        box-shadow: 3px 5px 2px #999;
-        background-color:#633B54;
-    }
-    article{
-        margin-top: 200px;
-    }
 
 </style>
 <body>
+<!--                                                Header                                                           -->
 <header>
     <a href="index.html" class="logo"><img src="app/icon/logoGTI.svg" class="logoGti"><span class="triangulo"></span>
     </a>
     <div><a href="indice.html"><img src="app/icon/x_blanco.png" class="menu"></a></div>
 </header>
+<!--                                         Inicio del formulario                                                   -->
 <article class="titulo"><h1>Contacte con nosotros.</h1></article>
 <br>
 <div class="formulario">
@@ -144,8 +24,8 @@
             <input type="text" class="contenedornombre" placeholder="Nombre" required>
             <input type="text" class="contenedornombre" placeholder="Apellidos" required>
             <input type="email" class="contenedornombre" placeholder="Email" required>
-            <textarea name="Motivo" placeholder="Motivo" class="contenedornombre"></textarea>
-             <input type="submit" value="Contactanos" class="boton">
+            <textarea name="Motivo" placeholder="Motivo" class="contenedormotivo"></textarea>
+             <input type="submit" value="Contáctanos" class="boton">
     </form>
 </div>
 

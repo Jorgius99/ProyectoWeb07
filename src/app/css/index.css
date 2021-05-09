@@ -34,7 +34,7 @@ body{
     width: 60%;
 }
 .triangulo {
-    border-left: 9.38rem solid white;
+    border-left: 5.38rem solid white;
     border-top: 4.26rem solid transparent;
     border-bottom: 4.26rem solid transparent;
     position: relative;

@@ -5,7 +5,7 @@ document.querySelector("form").addEventListener("submit", function (event){
     console.log(dataLogin.get("nombre"));
     console.log(dataLogin.get("contrasenya"));
 
-    fetch( 'http://localhost/src/api/v1.0/index.php', {
+    fetch( '../src/api/v1.0/index.php', {
         method:"POST",
         body:dataLogin
     }).then(function (respuesta){
@@ -22,7 +22,7 @@ document.querySelector("form").addEventListener("submit", function (event){
             document.getElementById("output").textContent = "bienvenido ," + datos.nombre + "!";
             setTimeout(function (){
                 location.href = "../src/app/paginagerente.html"
-            }, 3000);
+            }, 300);
         }
         })
 });

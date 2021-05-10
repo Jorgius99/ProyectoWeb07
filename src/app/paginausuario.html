@@ -1,159 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Página usuario registrado</title>
-    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/estilo.css">
-
     <style>
-        .container{
-            width: 100%;
+        html{
+            margin: 0;
+            background-color:#0d1a27;
         }
-        .contenedorUser{
-            width: 100px;
-            margin-left: 20px;
-            margin-right: 20px;
-
-        }
-
-        .texto{
-            color: black;
-            font-size: large;
-        }
-
-        div{
-            text-align: center;
-        }
-        header {
-            width: 100%;
-            margin-bottom: 40px;
-            position: sticky;
-            top: 10px;
-        }
-
-        .header {
+        /*Aqui empieza el header*/
+        header{
+            height: 120px;
+            width:102%;
+            background-color:#0d1a27;
             display: flex;
-            flex:1 1 0;
-            align-items: center;
-        }
-        .cajaheader{
-            width: 90px;
-            text-align: center;
-        }
+            justify-content: space-between;
+            position: relative;
+            height: 8.5rem;
 
-        .flechaatras {
+        }
+        .logo{
+            display: flex;
+            height: 100%;
+            width: 60%;
+        }
+        .logoGti{
 
             text-align: left;
-            height: 4vh;
+            background-color: white;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            display: block;
+            flex: 1 1 0;
+        }
+
+        .triangulo {
+            border-left: 5.38rem solid white;
+            border-top: 4.26rem solid transparent;
+            border-bottom: 4.26rem solid transparent;
+            position: relative;
+            left: -2px;
+        }
+        .menu {
+            margin-left: 7px;
+            margin-right: 50px;
+            margin-top: 30px;
+            text-align: left;
+            height: 3vh;
+            position: relative;
+        }
+        /*Aqui acaba el header*/
+
+        h1{
+            font-family: Helvetica;
+            font-size: 125px;
+            color:white;
+            margin-left: 65px;
+        }
+        p{
+            font-family: Helvetica;
+            font-size: 55px;
+            color:white;
+            text-align: center;
+            margin: 0;
 
         }
 
-        .logo {
-            width: 100px;
+        /*Aqui empieza el footer*/
+
+        footer{
+            border-top: 5px solid white;
+            height: 300px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            bottom: 0;
+            position: fixed;
+
         }
-
-    .mapasesnores{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom:15px;
-        margin-right: 15px;
-
-    }
-   .graficos{
-       display: flex;
-       margin-bottom:15px;
-       justify-content: space-between;
-       align-items: center;
-       margin-bottom:15px;
-       margin-right: 15px;
-   }
-    .clima{
-        display: flex;
-        margin-bottom:15px;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom:15px;
-        margin-right: 15px;
-    }
-    .calendario{
-        display: flex;
-        margin-bottom:15px;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom:15px;
-        margin-right: 15px;
-    }
-    .contacto{
-        display: flex;
-        margin-bottom:15px;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom:15px;
-        margin-right: 15px;
-    }
-    .icono{
-        width: 90px;
-        margin-left: 30px;
-    }
-    .boton{
-        font-weight: 600;
-        color:black;
-        background-color: #32753d;
-        border-radius: 10px;
-        border: 10px solid #32753d;
-        font-size: large;
-    }
-
+        .iconoFooter{
+            margin-top: 20px;
+            position: relative;
+            height: 6.5vh;
+            margin-left: 65px;
+            margin-right: 65px;
+        }
+        .contenedorFooter{
+            margin-right: 35px;
+        }
 
     </style>
 </head>
 <body>
-<header>
-    <div class="header">
-        <div class="cajaheader">
-            <a href="../index.html" class="flechaatras"><img src="icon/previous.svg" alt="atras" class="flechaatras"></a>
+<!-- Aqui empieza el header, que es comun en casi todas las paginas de la web -->
+    <header>
+    <a href="index.html" class="logo"><img src="icon/logoGTI.svg" class="logoGti"><span class="triangulo"></span></a>
+    <div><a href="index.html#indice"><img src="icon/menu_blanco.png" class="menu"></a></div>
+    </header>
+<h1> Hola <?php $a=tabla1.usuario; <h1>$a</h1> ?></h1>
+    <footer>
+        <div class="contenedorFooter">
+            <a><img src="icon/mapa_color.svg" class="iconoFooter"></a>
+            <p>Sensores</p>
         </div>
-        <div class="contenedorUser">
-            <div class="texto">Usuario</div>
+        <div class="contenedorFooter">
+            <a><img src="icon/calendario_color.svg" class="iconoFooter"></a>
+            <p>Calendario</p>
         </div>
-
-        <div>
-            <a href="#quienessomos"><img src="icon/logoGTI.svg" alt="nuestro logo" class="logo"></a>
-        </div>
-
-    </div>
-</header>
+    </footer>
 
 
-<div class="container">
-    <div class="mapasesnores">
-        <img src="icon/iconfinder_Maps_and_Navigation_location_pin_map_6611414.svg" alt="calendario" class="icono">
-        <button class="boton" >Tus sensores</button>
-    </div>
-
-    <div class="graficos">
-        <img src="icon/bar-chart.svg" alt="calendario" class="icono">
-        <button class="boton" >Gráficos y datos</button>
-    </div>
-
-    <div class="clima">
-        <img src="icon/clima.svg" alt="calendario" class="icono">
-        <button class="boton">Meteorología</button>
-    </div>
-
-    <div class="calendario">
-        <img src="icon/appointment.svg" alt="calendario" class="icono">
-        <button class="boton">Calendario</button>
-    </div>
-
-    <div class="contacto">
-        <img src="icon/comunicar.svg" alt="calendario" class="icono">
-        <button class="boton">Contactanos</button>
-    </div>
-</div>
 
 </body>
 </html>

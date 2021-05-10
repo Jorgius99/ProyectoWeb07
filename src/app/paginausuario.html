@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <title>Usuario | GTI</title>
     <style>
-        html{
+        html {
             margin: 0;
-            background-color:#0d1a27;
+            background-color: #0d1a27;
+        }
+        body{
+            margin:0px;
         }
         /*Aqui empieza el header*/
-        header{
+        header {
             height: 120px;
-            width:102%;
-            background-color:#0d1a27;
+            width: 102%;
+            background-color: #0d1a27;
             display: flex;
             justify-content: space-between;
             position: relative;
             height: 8.5rem;
 
         }
-        .logo{
+
+        .logo {
             display: flex;
             height: 100%;
             width: 60%;
         }
-        .logoGti{
+
+        .logoGti {
 
             text-align: left;
             background-color: white;
@@ -40,6 +47,7 @@
             position: relative;
             left: -2px;
         }
+
         .menu {
             margin-left: 7px;
             margin-right: 50px;
@@ -48,26 +56,40 @@
             height: 3vh;
             position: relative;
         }
+
         /*Aqui acaba el header*/
 
-        h1{
+        h1 {
             font-family: Helvetica;
             font-size: 125px;
-            color:white;
-            margin-left: 65px;
+            color: white;
+
         }
-        p{
+
+        p {
             font-family: Helvetica;
             font-size: 55px;
-            color:white;
+            color: white;
             text-align: center;
             margin: 0;
 
         }
 
+        .saludo {
+            width: 50vw;
+            height: auto;
+            margin-left: 65px;
+        }
+
+        .mapaSensores {
+            width: 100vw;
+            height: auto;
+            max-height: 50vh;
+        }
+
         /*Aqui empieza el footer*/
 
-        footer{
+        footer {
             border-top: 5px solid white;
             height: 300px;
             width: 100%;
@@ -78,14 +100,16 @@
             position: fixed;
 
         }
-        .iconoFooter{
+
+        .iconoFooter {
             margin-top: 20px;
             position: relative;
             height: 6.5vh;
             margin-left: 65px;
             margin-right: 65px;
         }
-        .contenedorFooter{
+
+        .contenedorFooter {
             margin-right: 35px;
         }
 
@@ -93,22 +117,26 @@
 </head>
 <body>
 <!-- Aqui empieza el header, que es comun en casi todas las paginas de la web -->
-    <header>
+<header>
     <a href="index.html" class="logo"><img src="icon/logoGTI.svg" class="logoGti"><span class="triangulo"></span></a>
     <div><a href="index.html#indice"><img src="icon/menu_blanco.png" class="menu"></a></div>
-    </header>
-<h1> Hola <?php $a=tabla1.usuario; <h1>$a</h1> ?></h1>
-    <footer>
-        <div class="contenedorFooter">
-            <a><img src="icon/mapa_color.svg" class="iconoFooter"></a>
-            <p>Sensores</p>
-        </div>
-        <div class="contenedorFooter">
-            <a><img src="icon/calendario_color.svg" class="iconoFooter"></a>
-            <p>Calendario</p>
-        </div>
-    </footer>
+</header>
+<article class="saludo">
+    <h1> Hola <?php $Nombre=tabla1.usuario; echo($Nombre) ?></h1>
+</article>
+<section class="mapaSensores">
 
+</section>
+<footer>
+    <div class="contenedorFooter">
+        <a href="paginausuario.html"><img src="icon/mapa_color.svg" class="iconoFooter"></a>
+        <p>Sensores</p>
+    </div>
+    <div class="contenedorFooter">
+        <a href="#"><img src="icon/calendario_color.svg" class="iconoFooter"></a>
+        <p>Calendario</p>
+    </div>
+</footer>
 
 
 </body>

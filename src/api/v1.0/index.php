@@ -7,7 +7,6 @@ if($metodo ==='POST') {
 
     $nombre = $_POST['nombre'];
     $contrasenya = $_POST['contrasenya'];
-
     $serverNombre = "localhost";
     $userNombre = "root";
     $password = "";

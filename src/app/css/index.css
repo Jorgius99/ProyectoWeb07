@@ -9,7 +9,6 @@ header{
     display: flex;
     justify-content: space-between;
     position: sticky;
-    top: 0;
     height: 8.5rem;
 
 }
@@ -201,30 +200,42 @@ footer{
     margin-bottom: 200px;
 }
 
-<!------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
     .cajaindice{
         margin-left: 3rem;
     }
-.texto1indice{
-    color: white;
-    font-size: 150px;
-    font-family:Helvetica;
-    z-index: 1;
-}
-a{
+
+    .texto1indice{
+        color: white;
+        font-size: 150px;
+        font-family:Helvetica;
+        z-index: 1;
+    }
+
+    a{
     color: white;
     font-size: 70px;
     text-decoration: none;
     font-family:Helvetica;
     z-index: 1;
-}
-.caja1indice{
+    }
+
+    .caja1indice{
     margin-top: 5rem;
     margin-left: 3rem;
-    margin-bottom: 5rem;
+    margin-bottom: 20%;
     z-index: 1;
-}
-.textoindice{
+    }
+
+    .textoindice{
     color: white;
     font-size: 70px;
     display: flex;
@@ -232,41 +243,46 @@ a{
     opacity: 70%;
     font-family:Helvetica;
     z-index: 1;
-}
+    }
+
+    .textoindice2{
+        opacity: 70%;
+    }
 
 
-<!------------------------------------------------------------------------------------------------------------->
     .menu_indice{
         position: relative;
         visibility: hidden;
         transform: rotate(30deg) translate(80%, -580%) scale3d(-1, -1, 1);
         transform: matrix();
-        transition: all 1.5s;
+        transition: all 0.75s;
         z-index: 1;
     }
-.indice:target{
+
+    .indice:target{
     visibility:visible;
     opacity:1;
     z-index: 1;
-}
-.indice:target .menu_indice{
+    }
+
+    .indice:target .menu_indice{
     position: fixed;
     transform: rotate(0deg) ;
     visibility: visible;
     background: #0d1a27;
     height: 100%;
     z-index: 1;
-}
-.indice{
+    }
+
+    .indice{
     visibility: hidden;
     opacity: 0;
     transition: all 1s;
     position: fixed;
     z-index: 1;
-}
+    }
 
-.imagen{
+    .imagen{
     justify-content: right;
     margin: 90%;
-}
-<!------------------------------------------------------------------------------------------------------------->
+    }

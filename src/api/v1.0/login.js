@@ -1,7 +1,9 @@
+console.log(document.querySelector("form"))
+
 document.querySelector("form").addEventListener("submit", function (event){
-    //console.log;
+    console.log(event);
     event.preventDefault();
-    let dataLogin = new FormData(event.target);
+    let dataLogin = new FormData(event.target)  ;
     console.log(dataLogin.get("nombre"));
     console.log(dataLogin.get("contrasenya"));
 
@@ -13,16 +15,10 @@ document.querySelector("form").addEventListener("submit", function (event){
             return respuesta.json();
         }
     }).then(function (datos){
-        if(dataLogin.get("nombre")=="usuario" && dataLogin.get("contrasenya")=="1234"){
-            document.getElementById("output").textContent = "bienvenido ," + datos.nombre + "!";
-            setTimeout(function (){
-                window.location = "../src/app/paginausuario.html"
-            }, 3000);
+        if(datos.rol === 'usuario'){
+            window.location = "../src/app/paginausuario.html"
         }else{
-            document.getElementById("output").textContent = "bienvenido ," + datos.nombre + "!";
-            setTimeout(function (){
-                location.href = "../src/app/paginagerente.html"
-            }, 300);
+            location.href = "../src/app/paginagerente.html"
         }
         })
 });

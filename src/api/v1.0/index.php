@@ -2,32 +2,34 @@
 
 $metodo = $_SERVER['REQUEST_METHOD'];
 
-
 if($metodo ==='POST') {
 
     $nombre = $_POST['nombre'];
     $contrasenya = $_POST['contrasenya'];
+
+
     $serverNombre = "localhost";
     $userNombre = "root";
     $password = "";
-    $dbNombre = "pruebapagweb";
+    $dbNombre = "proyectoweb007";
     $conn = mysqli_connect($serverNombre, $userNombre, $password, $dbNombre);
     if (!$conn) {
+        http_response_code(500);
         die("Error: " . mysqli_connect_error());
     }
-    $sql = "SELECT * FROM `usuarios` WHERE `nombre` = '$nombre' and `contrasenya` = '$contrasenya'";
+    $sql = "SELECT * FROM `login` WHERE `usuario`='$nombre' AND `contrasenya`='$contrasenya'";
     $result = mysqli_query($conn, $sql);//
 
     if (mysqli_num_rows($result) > 0) {
         while ($fila = mysqli_fetch_assoc($result)) {
 
             $respuesta = [];
-            $respuesta["id"] = $fila ["id"];
-            $respuesta["nombre"] = $fila ["nombre"];
+            $respuesta["usuario"] = $fila ["usuario"];
+            $respuesta["contrasenya"] = $fila ["contrasenya"];
             $respuesta["rol"] = $fila ["rol"];
 
             $_SESSION["id"] = $fila["id"];
-            $_SESSION["nombre"] = $fila["nombre"];
+            $_SESSION["usuario"] = $fila["usuario"];
             $_SESSION["rol"] = $fila["rol"];
 
             header('Content-Type: application/json;');

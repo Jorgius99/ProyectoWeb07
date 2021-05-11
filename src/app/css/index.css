@@ -211,6 +211,9 @@ footer{
 
     .cajaindice{
         margin-left: 3rem;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 21rem;
     }
 
     .texto1indice{
@@ -235,18 +238,10 @@ footer{
     z-index: 1;
     }
 
-    .textoindice{
-    color: white;
-    font-size: 70px;
-    display: flex;
-    margin-top:30px;
-    opacity: 70%;
-    font-family:Helvetica;
-    z-index: 1;
-    }
 
     .textoindice2{
         opacity: 70%;
+        margin-left: 2rem;
     }
 
 
@@ -271,6 +266,7 @@ footer{
     visibility: visible;
     background: #0d1a27;
     height: 100%;
+        width: 100%;
     z-index: 1;
     }
 
@@ -283,6 +279,55 @@ footer{
     }
 
     .imagen{
-    justify-content: right;
-    margin: 90%;
+        margin: 2rem 2rem;
+        margin-left: 88%;
+        width: 5rem;
+        height: 5rem;
     }
+
+    .ofrecer{
+        display: flex;
+        justify-content: space-between;
+    }
+    .textoofrecer{
+        opacity: 75%;
+        margin-right: 12rem;
+    }
+    .icono{
+        width: 8rem;
+        height: 8rem;
+        opacity: 80%;
+    }
+    .datos{
+        display: flex;
+        justify-content: space-between;
+    }
+    .funciona{
+        display: flex;
+        justify-content: space-between;
+    }
+    .textomostrar{
+        opacity: 75%;
+        margin-right: 6rem;
+    }
+    .textofunciona{
+        opacity: 80%;
+        margin-right: 13rem;
+    }
+    .somos{
+        display: flex;
+        justify-content: space-between;
+    }
+    .textosomos{
+        opacity: 75%;
+        margin-right: 12rem;
+    }
+    .contacto{
+        display: flex;
+        justify-content: space-between;
+    }
+    .textocontacto{
+        opacity: 75%;
+        margin-right: 23rem;
+    }
+

@@ -112,6 +112,13 @@
         .contenedorFooter {
             margin-right: 35px;
         }
+        #map {
+            width: 960px;
+            height: 60vh;
+            border: solid 5px white;
+            margin-left: 16px;
+        }
+
 
     </style>
 </head>
@@ -124,9 +131,99 @@
 <article class="saludo">
     <h1> Hola <?php $Nombre=tabla1.usuario; echo($Nombre) ?></h1>
 </article>
-<section class="mapaSensores">
+<section id="map"></section>
+<button onclick="addMarker()">Añadir</button>
+<input type="number" id="lat">
+<input type="number" id="lng">
+<script>
+    let map;
+    function initMap() {
+        //console.log("Google Maps cargado!!");
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 38.995574, lng: -0.165385},
+            zoom: 20
+        });
 
-</section>
+        let polygon = new google.maps.Polygon({
+            paths: [
+                {lat: 38.996243, lng: -0.168021},
+                {lat: 38.995574, lng: -0.165385},
+                {lat: 38.99519397844055, lng: -0.16646701588141416},
+                ],
+            strokeColor: "#ff8000",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#ff8000",
+            fillOpacity: 0.35,
+            map: map
+        });
+
+
+
+
+        var marker = new google.maps.Marker({
+            position:{lat: 38.996243, lng: -0.168021},
+            label: "1",
+            animation: google.maps.Animation.DROP,
+            map: map
+        });
+        var markerUno = new google.maps.Marker({
+            position:{lat: 38.995574, lng: -0.165385},
+            label: "1",
+            animation: google.maps.Animation.DROP,
+            map: map
+        });
+        var markerDos = new google.maps.Marker({
+            position:{lat: 38.99519397844055, lng: -0.16646701588141416},
+            label: "1",
+            animation: google.maps.Animation.DROP,
+            map: map
+        });
+        let bounds = new google.maps.LatLngBounds();
+        polygon.getPath().getArray().forEach(function (v) {
+            bounds.extend(v);
+        })
+
+    map.fitBounds(bounds);
+    }
+    map.setTilt(0);
+    map = new google.maps.Map(document.getElementById('map'), {
+//...
+        mapTypeId: 'hybrid',
+        styles: [
+            {
+                featureType: 'poi',
+                stylers: [{visibility: 'off'}]
+            },
+            {
+                featureType: 'transit',
+                stylers: [{visibility: 'off'}]
+            }
+        ],
+        mapTypeControl: false,
+        streetViewControl: false,
+        rotateControl: false,
+    });
+
+
+    function addMarker(){
+        let lat= parseFloat(document.getElementById('lat').value);
+        let lng= parseFloat(document.getElementById('lng').value);
+        let marker = new google.maps.Marker({
+            position: {lat: lat, lng: lng},
+            label: "1",
+            animation: google.maps.Animation.DROP,
+            map: map
+        });
+        map.panTo(marker.getPosition());
+    }
+
+
+
+</script>
+<script
+        src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
 <footer>
     <div class="contenedorFooter">
         <a href="paginausuario.html"><img src="icon/mapa_color.svg" class="iconoFooter"></a>

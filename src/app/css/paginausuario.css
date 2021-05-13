@@ -80,6 +80,29 @@ p {
     height: auto;
     max-height: 50vh;
 }
+#map {
+    width: 960px;
+    height: 45vh;
+    border: solid 5px white;
+    margin-left: 16px;
+}
+.botonSensor{
+    width: 300px;
+    height: 85px;
+    position: relative;
+    color: white;
+    font-size: 60px;
+    font-family: Helvetica;
+    border: 2px solid white;
+    border-radius: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:#633B54;
+}
 
 /*Aqui empieza el footer*/
 
@@ -106,26 +129,4 @@ footer {
 .contenedorFooter {
     margin-right: 35px;
 }
-#map {
-    width: 960px;
-    height: 50vh;
-    border: solid 5px white;
-    margin-left: 16px;
-}
-.botonSensor{
-    width: 300px;
-    height: 85px;
-    position: relative;
-    color: white;
-    font-size: 60px;
-    font-family: Helvetica;
-    border: 2px solid white;
-    border-radius: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color:#633B54;
-}
+

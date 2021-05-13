@@ -132,18 +132,8 @@ map = new google.maps.Map(document.getElementById('map'), {
 
 
 function campouno(){
-    let marker = new google.maps.Marker({
-        position: {lat: 39.504190778174824, lng: -0.38770595220488785},
-        label: "1",
-        map: map
-    });
-    map.panTo(marker.getPosition());
+    map.panTo({lat: 39.504190778174824, lng: -0.38770595220488785});
 }
 function campodos(){
-    let marker = new google.maps.Marker({
-        position: {lat:39.57505638155333, lng:   -0.33814007627762116},
-        label: "1",
-        map: map
-    });
-    map.panTo(marker.getPosition());
+    map.panTo({lat:39.57505638155333, lng:   -0.33814007627762116});
 }

@@ -31,7 +31,12 @@ header{
     display: block;
     flex: 1 1 0;
 }
-
+#output{
+    font-family: Helvetica;
+    color: red;
+    margin-left: 20px;
+    font-size: 30px;
+}
 .triangulo {
     border-left: 5.38rem solid white;
     border-top: 4.26rem solid transparent;

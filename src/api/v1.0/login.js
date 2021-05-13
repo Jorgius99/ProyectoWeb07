@@ -14,10 +14,17 @@ document.querySelector("form").addEventListener("submit", function (event){
         if(respuesta.ok){
             return respuesta.json();
         }
+        else{
+            document.getElementById("output").textContent = "Nombre de usuario o contraseña incorrectos";
+        }
     }).then(function (datos){
-        if(datos.rol === 'usuario'){
+        if(datos.usuario == 'user1'){
             window.location = "../src/app/paginausuario.html"
-        }else{
+        }
+        if(datos.usuario == 'user2'){
+            location.href = "../src/app/paginausuarioDos.html"
+        }
+        if (datos.usuario=='admin'){
             location.href = "../src/app/paginagerente.html"
         }
         })

@@ -1,8 +1,10 @@
 html{
     background-color:#0d1a27;
+    margin: 0;
 }
+
 header{
-    height: 120px;
+    margin: 0;
     width:102%;
     background-color:#0d1a27;
     display: flex;
@@ -22,7 +24,7 @@ form{
 
 body{
     background-color: #0d1a27;
-    margin: 0;
+    margin: 0px;
 }
 .logoGti{
 
@@ -41,7 +43,7 @@ body{
     width: 60%;
 }
 .triangulo {
-    border-left: 9.38rem solid white;
+    border-left: 5.38rem solid white;
     border-top: 4.26rem solid transparent;
     border-bottom: 4.26rem solid transparent;
     position: relative;
@@ -121,6 +123,7 @@ h1{
 }
 article{
     margin-top: 200px;
+    margin-left: 25px;
 }
 textarea{
     text-decoration: none;

@@ -41,4 +41,3 @@ if($metodo ==='POST') {
         die();
     }
 }
-

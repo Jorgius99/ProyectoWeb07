@@ -1,3 +1,4 @@
+
 <?php
 
 $metodo = $_SERVER['REQUEST_METHOD'];

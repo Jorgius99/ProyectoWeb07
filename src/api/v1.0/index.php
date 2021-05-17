@@ -3,6 +3,8 @@
 
 $metodo = $_SERVER['REQUEST_METHOD'];
 
+session_start();
+
 if($metodo ==='POST') {
 
     $nombre = $_POST['nombre'];
@@ -10,9 +12,9 @@ if($metodo ==='POST') {
 
 
     $serverNombre = "localhost";
-    $userNombre = "dmesmun_dmesmun";
-    $password = "Proyectoweb_007";
-    $dbNombre = "dmesmun_proyectoweb007";
+    $userNombre = "root";
+    $password = "";
+    $dbNombre = "proyectoweb007";
     $conn = mysqli_connect($serverNombre, $userNombre, $password, $dbNombre);
     if (!$conn) {
         http_response_code(500);
@@ -25,13 +27,16 @@ if($metodo ==='POST') {
         while ($fila = mysqli_fetch_assoc($result)) {
 
             $respuesta = [];
+            $respuesta["id"] = $fila ["id"];
+            $respuesta["rol"] = $fila ["rol"];
             $respuesta["usuario"] = $fila ["usuario"];
             $respuesta["contrasenya"] = $fila ["contrasenya"];
-            $respuesta["rol"] = $fila ["rol"];
+
 
             $_SESSION["id"] = $fila["id"];
             $_SESSION["usuario"] = $fila["usuario"];
             $_SESSION["rol"] = $fila["rol"];
+            $_SESSION["nombre"] = $fila["nombre"];
 
             header('Content-Type: application/json;');
             echo json_encode($respuesta);

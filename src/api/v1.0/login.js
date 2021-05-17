@@ -13,19 +13,16 @@ document.querySelector("form").addEventListener("submit", function (event){
         body:dataLogin
     }).then(function (respuesta){
         if(respuesta.ok){
-            return respuesta.json();
+           return respuesta.json();
         }
         else{
             document.getElementById("output").textContent = "Nombre de usuario o contraseña incorrectos";
         }
     }).then(function (datos){
-        if(datos.usuario == 'user1'){
+        if(datos.id !== '1'){
             window.location = "../src/app/paginausuario.html"
         }
-        if(datos.usuario == 'user2'){
-            location.href = "../src/app/paginausuarioDos.html"
-        }
-        if (datos.usuario=='admin'){
+        else {
             location.href = "../src/app/paginagerente.html"
         }
         })

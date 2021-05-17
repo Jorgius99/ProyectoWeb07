@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <title>Gerente | GTI</title>
     <link rel="stylesheet" type="text/css" href="css/paginagerente.css">
+    <style>
+        .nombre{
+            font-size: 70px;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -12,10 +18,7 @@
     <div><a href="../index.html"><img src="icon/menu_blanco.png" class="menu"></a></div>
 </header>
 <div class="saludo">
-    <h1> Hola <?php
-
-echo $nombre
-?> </h1>
+    <h1> Hola <div id="output" class="nombre"></div></h1>
 </div>
 <section class="tablausuarios">
     <!-- Aqui va a ir la tabla de usuarios -->
@@ -31,6 +34,6 @@ echo $nombre
         <p>Calendario</p>
     </div>
 </footer>
-<script src="../api/v1.0/login.js"></script>
+<script src="../api/v1.0/nombreFake.js"></script>
 </body>
 </html>

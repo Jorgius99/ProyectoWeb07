@@ -11,18 +11,23 @@ if ($metodo == 'GET') {
         http_response_code(500);
         die("Error: " . mysqli_connect_error());
     }
-    $sql = "SELECT * FROM `login`";
+    $sql = "SELECT * FROM `login` WHERE `rol`='usuario'";
     $result = mysqli_query($conn, $sql);
-    while ($fila = mysqli_fetch_assoc($result)) {
+    $resultado=array();
+    $i=0;
+    while ($fila = mysqli_fetch_array($result)) {
         $respuesta = [];
         $respuesta["nombre"] = $fila ["nombre"];
         $respuesta["correo"] = $fila ["correo"];
         $respuesta["telefono"] = $fila ["telefono"];
-        $respuesta["DNI/NIF"] = $fila ["DNI/NIF"];
-        echo json_encode($respuesta);
-        echo " ";
+        $respuesta["DNI"] = $fila ["DNI/NIF"];
+        $resultado[$i]=$respuesta;
+        $i++;
+
     }
-    //echo json_encode($respuesta);
+    echo json_encode($resultado);
+
+
 
 }
 

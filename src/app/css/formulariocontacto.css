@@ -4,30 +4,16 @@ html{
 }
 
 header{
-    margin: 0;
-    width:102%;
-    background-color:#0d1a27;
+    height: 10rem;
     display: flex;
     justify-content: space-between;
-    position: relative;
-    height: 8.5rem;
-
 }
-form{
-    text-decoration: none;
-    height: 100%;
-    width: 100%;
-    align-items: center;
+.logo{
     display: flex;
-    flex-direction: column;
-}
-
-body{
-    background-color: #0d1a27;
-    margin: 0px;
+    height: 45%;
+    width: 60%;
 }
 .logoGti{
-
     text-align: left;
     background-color: white;
     text-decoration: none;
@@ -37,27 +23,30 @@ body{
     flex: 1 1 0;
 
 }
-.logo{
+
+form{
     display: flex;
-    height: 100%;
-    width: 60%;
+    flex-direction: column;
+    text-decoration: none;
+    height: 75%;
+    width: 75%;
+    align-items: center;
+    margin: 0 auto;
 }
+
+body{
+    background-color: #0d1a27;
+    margin: 0px;
+}
+
 .triangulo {
-    border-left: 5.38rem solid white;
-    border-top: 4.26rem solid transparent;
-    border-bottom: 4.26rem solid transparent;
+    border-left: 4.5rem solid white;
+    border-top: 2rem solid transparent;
+    border-bottom: 2rem solid transparent;
     position: relative;
-    left: -2px;
+    left: -4px;
 }
 
-h1{
-    text-align: center;
-    position: relative;
-    font-family: Helvetica;
-    font-size: 55px;
-    color: #002f01;
-
-}
 h2{
     text-align: center;
     position: relative;
@@ -72,68 +61,180 @@ h2{
     text-align: left;
     height: 3vh;
     position: relative;
-
 }
-
+.padre{
+    display: flex;
+    flex-direction: column;
+}
 .contenedornombre{
     text-decoration: none;
-    margin: 5rem 2rem 2rem 2rem;
-    width: 80%;
-    padding: 30px 30px 30px 30px;
-    height: 15%;
+    margin: 3rem 2rem 2rem 2rem;
+    width: 25rem;
+    height: 3.5rem;
     border: white solid 2px;
     border-radius: 15px;
     background-color: #0d1a27;
     color: white;
-    font:400 50px Helvetica;
+    font:400 20px Helvetica;
+}
 
-}
-form input[type="text"] {
-    text-align: initial;
-    width: 80%;
-    height: 15%;
-    border: 2px solid #f6f6f6;
-    border-radius: 15px;
-    margin: 3rem 2rem 2rem 2rem;
-    display: inline-block;
-    position: relative;
-    font-family: Helvetica;
-}
 h1{
-    margin-left: 2.5rem;
+    text-align: center;
+    margin: 0 auto;
     color:white;
     font-family: Helvetica;
-    font-size: 100px;
-    text-align: left;
+    font-size: 50px;
 }
 .boton{
     font-family: Helvetica;
     color: white;
     border: white;
-    width: 80%;
-    font-size: 2.75em;
+    width: 25.5rem;
+    font-size: 1.25em;
     font-weight: bold;
-    padding: 1em 2em;
-    margin-top: 50px;
+    padding: 1em 0.5em;
+    margin-top: 1.5rem;
     margin-bottom: 60px;
     border-radius: 20px;
     position: relative;
     box-shadow: 3px 5px 2px #999;
     background-color:#633B54;
 }
-article{
-    margin-top: 200px;
-    margin-left: 25px;
+form input[type="text"] {
+    text-align: initial;
+    border: 2px solid #f6f6f6;
+    border-radius: 10px;
+    margin: 1rem 2rem 1rem 2rem;
+    display: inline-block;
+    position: relative;
 }
 textarea{
     text-decoration: none;
-    margin: 5rem 2rem 2rem 2rem;
-    width: 80%;
-    padding: 30px 30px 30px 30px;
-    height: 300px;
+    margin: 1rem 2rem 0.5rem 2rem;
+    width: 23rem;
+    padding: 15px 15px 15px 15px;
+    height: 9rem;
     border: white solid 2px;
     border-radius: 15px;
     background-color: #0d1a27;
     color: white;
-    font:400 50px Helvetica;
+    font:400 25px Helvetica;
+}
+@media(max-width:590px){
+
+    header{
+
+        background-color:#0d1a27;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        height: 8.5rem;
+
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        height: 75%;
+        width: 75%;
+        align-items: center;
+    }
+
+    body{
+        background-color: #0d1a27;
+        margin: 0;
+    }
+    .logo{
+        display: flex;
+        height: 50%;
+        width: 65%;
+    }
+    .logoGti{
+
+        text-align: left;
+        background-color: white;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        display: block;
+        flex: 1 1 0;
+    }
+    .triangulo {
+        border-left: 4.2rem solid white;
+        border-top: 2rem solid transparent;
+        border-bottom: 2rem solid transparent;
+        position: relative;
+        left: -2px;
+    }
+
+
+    .menu {
+        margin-left: 7px;
+        margin-right: 50px;
+        margin-top: 30px;
+        text-align: left;
+        height: 3vh;
+        position: relative;
+    }
+
+    .contenedornombre{
+        text-decoration: none;
+        margin: 5rem 2rem 2rem 2rem;
+        width: 20rem;
+        height: 10rem;
+        border: white solid 2px;
+        border-radius: 15px;
+        background-color: #0d1a27;
+        color: white;
+        font:400 20px Helvetica;
+
+    }
+    form input[type="text"] {
+        text-align: initial;
+        width: 20rem;
+        height: 3.5rem;
+        border: 2px solid #f6f6f6;
+        border-radius: 15px;
+        margin: 1rem 2rem 1rem 2rem;
+        display: inline-block;
+        position: relative;
+        font-family: Helvetica;
+    }
+    h1{
+       margin: 0 auto;
+        color:white;
+        font-family: Helvetica;
+        font-size: 3rem;
+    }
+    .boton{
+        font-family: Helvetica;
+        color: white;
+        border: white;
+        width: 20rem;
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 1em 2em;
+        margin-top: 2rem;
+        margin-bottom: 60px;
+        border-radius: 20px;
+        position: relative;
+        box-shadow: 3px 5px 2px #999;
+        background-color:#633B54;
+    }
+    article{
+        margin-top: 200px;
+        margin-left: 25px;
+    }
+    textarea{
+        text-decoration: none;
+        margin: 1.5rem 2rem 0.25rem 2rem;
+        width: 18rem;
+        padding: 15px 15px 15px 15px;
+        height: 7rem;
+        border: white solid 2px;
+        border-radius: 15px;
+        background-color: #0d1a27;
+        color: white;
+        font:400 20px Helvetica;
+    }
 }

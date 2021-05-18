@@ -29,7 +29,6 @@ header{
 .padre{
     display: flex;
     flex-direction: column;
-
 }
 #output{
     font-family: Helvetica;
@@ -93,6 +92,7 @@ form{
     height: 75%;
     width: 75%;
     align-items: center;
+
 }
 
 .contenedornombre{

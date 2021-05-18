@@ -11,13 +11,12 @@ document.querySelector("form").addEventListener("submit", function (event){
         method:"POST",
         body:dataContacto
 
-    }).then(function (respuesta){
-        if(respuesta.ok){
-            return respuesta.json();
-        }
-        else{
-            document.getElementById("output").textContent = "Por favor, complete el formulario";
-        }
     })
+        .then(function (res) {
+
+            console.log(res);
+            res.json().then(data => console.log(data))
+
+        })
 
 });

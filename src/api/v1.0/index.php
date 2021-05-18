@@ -37,6 +37,7 @@ if($metodo ==='POST') {
             echo json_encode($respuesta);
 
         }
+
     } else {
         http_response_code(401);
         die();

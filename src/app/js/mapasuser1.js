@@ -5,6 +5,7 @@ function initMap() {
         center: {lat: 38.995574, lng: -0.165385},
         zoom: 20
     });
+
     let polygon = new google.maps.Polygon({
         paths: [
             {lat: 39.504033493444815, lng: -0.3899375500121187},
@@ -21,10 +22,14 @@ function initMap() {
     });
     let polygondos = new google.maps.Polygon({
         paths: [
+
+
+
             {lat:39.57505638155333, lng:   -0.33814007627762116},
             {lat:39.57540298919848, lng:  -0.3389127644099399},
             {lat:39.57631343621285, lng:  -0.3379500709959377},
             {lat:39.576035177536326, lng:  -0.33723121769008735},
+
         ],
         strokeColor: "#ff8000",
         strokeOpacity: 0.8,
@@ -124,6 +129,8 @@ map = new google.maps.Map(document.getElementById('map'), {
     streetViewControl: false,
     rotateControl: false,
 });
+
+
 function campouno(){
     map.panTo({lat: 39.504190778174824, lng: -0.38770595220488785});
 }

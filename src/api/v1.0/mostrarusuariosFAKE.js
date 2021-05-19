@@ -5,19 +5,32 @@ fetch('../api/v1.0/mostrarusuarios.php', {
 
 }).then(function (respuesta) {
 
-        if (respuesta.ok) {
-            return respuesta.json()
-        }
+    if (respuesta.ok) {
+        return respuesta.json()
+    }
 
-    }).then(function (datos) {
+}).then(function (datos) {
 
-        /*
-        main tabla
-         */
-    console.log(datos)
+    /*
+    main tabla
+     */
+
+    for (let i = 0; i < datos.length; i++) {
+        console.log(datos[i].nombre)
+        console.log(datos[i].correo)
+        console.log(datos[i].DNI)
+        console.log(datos[i].telefono)
+
+
+
+
+    }
+
+
 
 
     /*
+<<<<<<< HEAD
 =======
 
 // JavaScript para mostrar en el gerente los usuarios que tiene registrados en la página
@@ -66,6 +79,11 @@ fetch( '../src/api/v1.0/mostrarusuarios.php', {
         fin main
          */
     })
+=======
+    fin main
+     */
+})
+>>>>>>> develop
 
 
 

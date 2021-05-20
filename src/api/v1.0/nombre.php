@@ -1,4 +1,4 @@
-<?php
+        <?php
 $metodo = $_SERVER['REQUEST_METHOD'];
 
 session_start();

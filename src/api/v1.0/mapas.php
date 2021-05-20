@@ -2,11 +2,8 @@
 $metodo = $_SERVER['REQUEST_METHOD'];
 
 session_start();
-
-if($metodo ==='POST') {
-
-$coordenadaX = $_POST['coordenadaX'];
-$coordenadaY = $_POST['coordenadaY'];
+$idUser=$_SESSION["id"];
+if($metodo ==='GET') {
 
 
 $serverNombre = "localhost";
@@ -18,31 +15,20 @@ if (!$conn) {
 http_response_code(500);
 die("Error: " . mysqli_connect_error());
 }
-$sql = "SELECT * FROM `parcela` WHERE `coordenadaX`='$coordenadaX' AND `coordenadaY`='$coordenadaY'";
+$sql = "SELECT * FROM `parcela` WHERE `idUsuario`='$idUser'";
 $result = mysqli_query($conn, $sql);//
-
-if (mysqli_num_rows($result) > 0) {
-while ($fila = mysqli_fetch_assoc($result)) {
+    $resultado=array();
+    $i=0;
+while ($fila = mysqli_fetch_array($result)) {
 
 $respuesta = [];
 $respuesta["idParcela"] = $fila ["idParcela"];
-$respuesta["idUsuario"] = $fila ["idUsuario"];
 $respuesta["coordenadaX"] = $fila ["coordenadaX"];
 $respuesta["coordenadaY"] = $fila ["coordenadaY"];
-
-
-$_SESSION["idParcela"] = $fila["idParcela"];
-$_SESSION["idUsuario"] = $fila["idUsuario"];
-$_SESSION["coordenadaX"] = $fila["coordenadaX"];
-$_SESSION["coordenadaY"] = $fila["coordenadaY"];
-
-header('Content-Type: application/json;');
-echo json_encode($respuesta);
+$resultado[$i]=$respuesta;
+$i++;
 
 }
+    echo json_encode($resultado);
 
-} else {
-http_response_code(401);
-die();
-}
 }

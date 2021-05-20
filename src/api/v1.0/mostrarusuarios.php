@@ -21,8 +21,8 @@ if ($metodo == 'GET') {
         $respuesta["correo"] = $fila ["correo"];
         $respuesta["telefono"] = $fila ["telefono"];
         $respuesta["DNI"] = $fila ["DNI/NIF"];
-        $resultado[$i]=$respuesta;
-        $i++;
+            $resultado[$i]=$respuesta;
+            $i++;
 
     }
     echo json_encode($resultado);

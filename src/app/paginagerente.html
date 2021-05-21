@@ -5,7 +5,7 @@
     <title>Gerente | GTI</title>
     <link rel="stylesheet" type="text/css" href="css/paginagerente.css">
     <style>
-        .nombre{
+        .nombre {
             font-size: 70px;
             color: white;
         }
@@ -18,11 +18,36 @@
     <div><a href="../index.html"><img src="icon/menu_blanco.png" class="menu"></a></div>
 </header>
 <div class="saludo">
-    <h1> Hola <div id="output" class="nombre"></div></h1>
+    <h1> Hola
+        <div id="output" class="nombre"></div>
+    </h1>
 </div>
 <section class="tablausuarios">
     <!-- Aqui va a ir la tabla de usuarios -->
-
+    <table>
+        <thead>
+        <tr>
+            <th class="txttabla">NOMBRE</th>
+            <th class="txttabla">CORREO</th>
+            <th class="txttabla">TELEFONO</th>
+            <th class="txttabla">DNI/NIF</th>
+        </tr>
+        </thead>
+        <tbody id="tablausuarios">
+        <tr>
+            <td>Paco</td>
+            <td>user1@gti.com</td>
+            <td>658741295</td>
+            <td>35412654S</td>
+        </tr>
+        <tr>
+            <td>Roberto</td>
+            <td>user2@gti.com</td>
+            <td>613245644</td>
+            <td>64521354D</td>
+        </tr>
+        </tbody>
+    </table>
 </section>
 
 <script src="../api/v1.0/nombreFake.js"></script>

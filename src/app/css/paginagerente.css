@@ -71,12 +71,27 @@ p {
     height:auto;
     margin-left: 65px;
 }
-.tablausuarios{
-    border: 1px solid white;
-    width: 100vw;
-    height: auto;
-    max-height: 50vh;
+
+.txttabla{
+    color: white;
+    size: 2rem;
 }
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-family: sans-serif;
+
+}
+th {
+    border-bottom: solid 2px white;
+}
+td {
+    border-bottom: solid 1px white;
+    color: white;
+    padding: 1rem 4rem;
+}
+
 /*footer*/
 footer {
     border-top: 5px solid white;

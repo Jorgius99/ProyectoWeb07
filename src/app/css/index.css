@@ -1,13 +1,29 @@
+
+
+
+.fondo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10%;
+    position: relative;
+}
+
 html{
     background-color:#0d1a27;
+    width: 100%;
 }
 header{
-
     z-index: 3;
-    width:102%;
+    width:100%;
     background-color:#0d1a27;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: sticky;
     height: 8.5rem;
 
@@ -39,47 +55,68 @@ body{
     position: relative;
     left: -2px;
 }
-
-.container{
-    height:72vh ;
-    width: 100%;
-    position: relative;
-    align-items: center;
-    margin: auto;
+.menu{
+    width: 3rem;
+    margin-right: 3rem;
 }
 h1{
-    text-align: center;
+    margin-top: 5%;
+    font-size: 3rem;
+    font-family: Helvetica;
     position: relative;
-    font-family:Helvetica;
-    font-size: 55px;
+    text-align: center;
     color: #002f01;
+    z-index: 2;
 }
-h2{
-    text-align: center;
+.boton{
+    width: 100%;
+    height: 7rem;
     position: relative;
-    font-family:Helvetica;;
-    font-size: 70px;
-    color: white;
-    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.titulo1{
-    color: white;
-    font-size: 120px;
-    margin-left: 120px;
-    margin-right: 30px;
-    text-align: left;
+.botonInformate{
+    font-family:Helvetica;
+    border: white;
+    font-size: 2.15rem;
+    font-weight: bold;
+    padding: 1em 2em;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    border-radius: 55px;
+    position: relative;
+    box-shadow: 8px 5px 8px #999;
+    background-color:#633B54;
+}
+.contenedorFlecha{
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    background-color: #0d1a27;
+    opacity: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%
+}
+.flechaBajar{
+    width: 10rem;
+    margin-bottom: 5.5rem;
     z-index: 2;
     position: relative;
 }
-.contenedorTitulo{
-    margin-top: 100px;
+.seccionQue_ofrecemos{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10%;
+    position: relative;
 }
-.containerInfo{
-    margin-top: 50vh;
-    width: 6000px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.fondoInfo{
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    position: absolute;
 }
 .titulo2{
     color: black;
@@ -90,125 +127,36 @@ h2{
     z-index: 2;
     position: relative;
 }
-.seccionQue_ofrecemos{
-    margin-top: 200px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.botonInformate{
-    font-family:Helvetica;
-    border: white;
-    font-size: 2.75em;
-    font-weight: bold;
-    padding: 1em 2em;
-    margin-top: 100px;
-    margin-bottom: 60px;
-    border-radius: 55px;
-    position: relative;
-    box-shadow: 8px 5px 8px #999;
-    background-color:#633B54; /*darkseagreen*/
-}
-.fondo{
-    height:100vh ;
-    width: 102%;
-    object-fit: cover;
-    position: absolute;
-}
-.fondoInformacion{
-    /*height: 100vh;*/
-    z-index: 1;
-    width: 102%;
-    display: flex;
-    margin-top: 0;
-    position: absolute;
-}
-.fondoInfo{
-   height: 95vh;
-    width: 102%;
-    position: absolute;
-    object-fit: cover;
-
-}
-.boton{
-    position: relative;
-    margin-top: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.container2{
-    margin-top: 400px;
-
-}
-.contenedorFlecha{
-    position: relative;
-    height: 350px;
-    width: 102%;
-    margin-top: 520px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0d1a27;
-    opacity: 0.85;
-    margin-bottom: 0;
-}
-.contenedorFlechaInfo{
-    margin-top: 400px;
+.titulo1{
+    color: white;
+    font-size: 120px;
+    margin-left: 120px;
+    margin-right: 30px;
+    text-align: left;
     z-index: 2;
     position: relative;
-    height: 350px;
-    width: 106%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0d1a27;
-    opacity: 0.85;
-
-}
-.flechaBajar{
-    position: relative;
-    width: 13rem;
-    height: 9vh;
-    margin-bottom: 0.5rem;
 }
 
-.contenedorIcono{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0;
-}
-.Icono{
-    margin-top: 20px;
-    position: relative;
-    height: 8.5vh;
-}
 .contenedorInformación{
-    margin-top: 600px;
     display: flex;
     flex-direction: column;
     height: 35vh;
     width: 85vw;
     align-items: center;
     background-color: #0d1a27;
-    z-index: 3;
     border-radius: 10px;
     opacity: 80%;
+    margin-left: 7%;
 }
-
 .texto1{
 
-    z-index: 3;
     height: 30vh;
     width: 80vw;
     font-family:Helvetica;
-    font-size: 60px;
+    font-size: 37px;
     color: white;
     position: relative;
-margin-bottom: 500px;
+
 
 
 }
@@ -217,175 +165,218 @@ margin-bottom: 500px;
     height: 30vh;
     width: 500px;
     font-family:Helvetica;
-    font-size: 30px;
+    font-size: 37px;
     color: white;
 }
-.menu {
-    margin-left: 7px;
-    margin-right: 50px;
-    margin-top: 30px;
-    text-align: left;
-    height: 3vh;
+.contenedorFlechaInfo{
     position: relative;
-}
-.f1{
-    margin-left: 50px;
     display: flex;
-    color: white;
-    font-family: Helvetica;
-    font-size: 30px;
-    flex-direction: column;
-    width: 50%;
-}
-.f2{
-    display: flex;
-    flex-direction: column;
-    color: white;
-    width: 50%;
-    font-size: 30px;
-}
-h5{
-    font-size: 30px;
-}
-.f3{
-    display: flex;
-    justify-content: flex-end;
-}
-footer{
-    display: flex;
-    justify-content: space-around;
-    width: 100vw;
-    height: auto;
-    margin-bottom: 200px;
+    align-items: center;
+    justify-content: center;
+    background-color: #0d1a27;
+    opacity: 70%;
+    margin-top: 5%;
 }
 
+@media(max-width:850px){
+    header{
+        height: 5rem;
 
-
-
-
-
-
-
-
-
-    .cajaindice{
-        margin-left: 3rem;
-        display: flex;
-        justify-content: space-between;
-        margin-right: 21rem;
+    }
+    .triangulo{
+        border-left: 3rem solid white;
+        border-top: 2.55rem solid transparent;
+        border-bottom: 2.55rem solid transparent;
+        top: -1px;
+    }
+    .titulo1{
+        font-size: 4rem;
+    }
+    .titulo2{
+        font-size: 4rem;
+    }
+    .texto1{
+        font-size: 30px;
+    }
+    .texto2{
+        font-size: 30px;
+    }
+    .contenedorFlechaInfo{
+        margin-top: 7rem;
+        height: 13rem
     }
 
-    .texto1indice{
-        color: white;
-        font-size: 150px;
-        font-family:Helvetica;
-        z-index: 1;
+
+}
+@media(max-width:650px){
+    h1{
+        margin-top: 10%;
+        font-size: 2rem;
+    }
+    .boton{
+        margin-top: 10%;
+    }
+    .contenedorFlecha{
+        margin-top: 12rem;
+        height: 12rem;
+    }
+    .flechaBajar{
+        margin-bottom: 1.5rem;
     }
 
-    a{
+
+}
+@media(max-width:550px){
+    .titulo1{
+        font-size: 4rem;
+    }
+    .titulo2{
+        font-size: 4rem;
+    }
+    .texto1{
+        font-size: 30px;
+    }
+    .texto2{
+        font-size: 30px;
+    }
+    .contenedorFlechaInfo{
+        margin-top: 6rem;
+        height: 10rem
+    }
+    .contenedorFlecha{
+        margin-top: 10%;
+        height: 9rem;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+.cajaindice{
+    margin-left: 3rem;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 21rem;
+}
+
+.texto1indice{
+    color: white;
+    font-size: 150px;
+    font-family:Helvetica;
+    z-index: 1;
+}
+
+a{
     color: white;
     font-size: 70px;
     text-decoration: none;
     font-family:Helvetica;
     z-index: 1;
-    }
+}
 
-    .caja1indice{
+.caja1indice{
     margin-top: 5rem;
     margin-left: 3rem;
     margin-bottom: 20%;
     z-index: 1;
-    }
+}
 
 
-    .textoindice2{
-        opacity: 70%;
-        margin-left: 2rem;
-    }
+.textoindice2{
+    opacity: 70%;
+    margin-left: 2rem;
+}
 
 
-    .menu_indice{
-        position: relative;
-        visibility: hidden;
-        transform: rotate(30deg) translate(80%, -580%) scale3d(-1, -1, 1);
-        transform: matrix();
-        transition: all 0.75s;
-        z-index: 1;
-    }
+.menu_indice{
+    position: relative;
+    visibility: hidden;
+    transform: rotate(30deg) translate(80%, -580%) scale3d(-1, -1, 1);
+    transform: matrix();
+    transition: all 0.75s;
+    z-index: 1;
+}
 
-    .indice:target{
+.indice:target{
     visibility:visible;
     opacity:1;
     z-index: 1;
-    }
+}
 
-    .indice:target .menu_indice{
+.indice:target .menu_indice{
     position: fixed;
     transform: rotate(0deg) ;
     visibility: visible;
     background: #0d1a27;
     height: 100%;
-        width: 100%;
+    width: 100%;
     z-index: 1;
-    }
+}
 
-    .indice{
+.indice{
     visibility: hidden;
     opacity: 0;
     transition: all 1s;
     position: fixed;
     z-index: 1;
-    }
+}
 
-    .imagen{
-        margin: 2rem 2rem;
-        margin-left: 88%;
-        width: 5rem;
-        height: 5rem;
-    }
+.imagen{
+    margin: 2rem 2rem;
+    margin-left: 88%;
+    width: 5rem;
+    height: 5rem;
+}
 
-    .ofrecer{
-        display: flex;
-        justify-content: space-between;
-    }
-    .textoofrecer{
-        opacity: 75%;
-        margin-right: 12rem;
-    }
-    .icono{
-        width: 8rem;
-        height: 8rem;
-        opacity: 80%;
-    }
-    .datos{
-        display: flex;
-        justify-content: space-between;
-    }
-    .funciona{
-        display: flex;
-        justify-content: space-between;
-    }
-    .textomostrar{
-        opacity: 75%;
-        margin-right: 6rem;
-    }
-    .textofunciona{
-        opacity: 80%;
-        margin-right: 13rem;
-    }
-    .somos{
-        display: flex;
-        justify-content: space-between;
-    }
-    .textosomos{
-        opacity: 75%;
-        margin-right: 12rem;
-    }
-    .contacto{
-        display: flex;
-        justify-content: space-between;
-    }
-    .textocontacto{
-        opacity: 75%;
-        margin-right: 23rem;
-    }
+.ofrecer{
+    display: flex;
+    justify-content: space-between;
+}
+.textoofrecer{
+    opacity: 75%;
+    margin-right: 12rem;
+}
+.icono{
+    width: 8rem;
+    height: 8rem;
+    opacity: 80%;
+}
+.datos{
+    display: flex;
+    justify-content: space-between;
+}
+.funciona{
+    display: flex;
+    justify-content: space-between;
+}
+.textomostrar{
+    opacity: 75%;
+    margin-right: 6rem;
+}
+.textofunciona{
+    opacity: 80%;
+    margin-right: 13rem;
+}
+.somos{
+    display: flex;
+    justify-content: space-between;
+}
+.textosomos{
+    opacity: 75%;
+    margin-right: 12rem;
+}
+.contacto{
+    display: flex;
+    justify-content: space-between;
+}
+.textocontacto{
+    opacity: 75%;
+    margin-right: 23rem;
+}

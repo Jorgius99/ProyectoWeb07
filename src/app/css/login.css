@@ -53,6 +53,9 @@ header{
 
 }
 /*aqui empieza el css de mi página*/
+a{
+    color: #f6f6f6;
+}
 h1{
    text-align: center;
     margin: 0 auto;

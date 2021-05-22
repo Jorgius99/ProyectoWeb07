@@ -7,12 +7,11 @@ document.querySelector("form").addEventListener("submit", function (event){
     let dataContacto = new FormData(event.target)  ;
 
 
-    fetch( '../src/api/v1.0/contacto.php', {
+    fetch( '../api/v1.0/contacto.php', {
         method:"POST",
         body:dataContacto
 
-    })
-        .then(function (res) {
+    }).then(function (res) {
 
             console.log(res);
             res.json().then(data => console.log(data))

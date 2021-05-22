@@ -8,7 +8,7 @@ document.querySelector("form").addEventListener("submit", function (event){
     console.log(dataLogin.get("nombre"));
     console.log(dataLogin.get("contrasenya"));
 
-    fetch( '../src/api/v1.0/index.php', {
+    fetch( '../api/v1.0/index.php', {
         method:"POST",
         body:dataLogin
     }).then(function (respuesta){

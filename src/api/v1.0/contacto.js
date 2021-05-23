@@ -1,9 +1,8 @@
-
 document.querySelector("form").addEventListener("submit", function (event){
     event.preventDefault();
 
-    let datacontacto = new FormData(event.target)  ;
-    fetch( '../api/v1.0/contacto.php', {
+    let datacontacto = new FormData(event.target);
+    fetch( '../src/api/v1.0/contacto.php', {
         method:"POST",
         body: datacontacto
     }).then(function (respuesta){

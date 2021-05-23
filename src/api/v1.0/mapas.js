@@ -1,4 +1,4 @@
-fetch('../api/v1.0/mapas.php', {
+fetch('../src/api/v1.0/mapas.php', {
     method: "GET"
 
 }).then(function (respuesta) {

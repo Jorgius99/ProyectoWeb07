@@ -22,25 +22,35 @@
         <div id="output" class="nombre"></div>
     </h1>
 </div>
-<div id="divtabla">
+<section class="tablausuarios">
     <!-- Aqui va a ir la tabla de usuarios -->
     <table>
         <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Correo</th>
-                <th>DNI</th>
-                <th>Teléfono</th>
-            </tr>
+        <tr>
+            <th class="txttabla">NOMBRE</th>
+            <th class="txttabla">CORREO</th>
+            <th class="txttabla">TELEFONO</th>
+            <th class="txttabla">DNI/NIF</th>
+        </tr>
         </thead>
-        <tbody id="tbody">
-
+        <tbody id="tablausuarios">
+        <tr>
+            <td>Paco</td>
+            <td>user1@gti.com</td>
+            <td>658741295</td>
+            <td>35412654S</td>
+        </tr>
+        <tr>
+            <td>Roberto</td>
+            <td>user2@gti.com</td>
+            <td>613245644</td>
+            <td>64521354D</td>
+        </tr>
         </tbody>
     </table>
-</div>
+</section>
 
-<script src="../api/v1.0/mostrarusuariosFAKE.js"></script>
 <script src="../api/v1.0/nombreFake.js"></script>
-
+<script src="../api/v1.0/mostrarusuariosFAKE.js"></script>
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 <?php
 
 $metodo = $_SERVER['REQUEST_METHOD'];
@@ -31,7 +30,6 @@ if($metodo ==='POST') {
             $respuesta["rol"] = $fila ["rol"];
             $respuesta["usuario"] = $fila ["usuario"];
             $respuesta["contrasenya"] = $fila ["contrasenya"];
-
 
             $_SESSION["id"] = $fila["id"];
             $_SESSION["usuario"] = $fila["usuario"];

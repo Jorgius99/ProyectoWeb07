@@ -8,7 +8,7 @@ document.querySelector("form").addEventListener("submit", function (event){
     console.log(dataLogin.get("nombre"));
     console.log(dataLogin.get("contrasenya"));
 
-    fetch( '../api/v1.0/index.php', {
+    fetch( '../src/api/v1.0/index.php', {
         method:"POST",
         body:dataLogin
     }).then(function (respuesta){
@@ -19,7 +19,7 @@ document.querySelector("form").addEventListener("submit", function (event){
             document.getElementById("output").textContent = "Nombre de usuario o contraseña incorrectos";
         }
     }).then(function (datos){
-        if(datos.id !== '1'){
+        if(datos.rol !== 'admin'){
             window.location = "../src/app/paginausuario.html"
         }
         else {

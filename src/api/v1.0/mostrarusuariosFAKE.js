@@ -18,6 +18,15 @@ fetch( '../api/v1.0/mostrarusuarios.php', {
 
     }
 
+    let tableBody = document.getElementById('tbody');
 
+    for (let i = 0; i < datos.length; i++) {
+        let varnombre = `<td>${datos[i].nombre}</td>`;
+        let varcorreo = `<td>${datos[i].correo}</td>`;
+        let varDNI = `<td>${datos[i].DNI}</td>`;
+        let vartelefono = `<td>${datos[i].telefono}</td>`;
 
+        tableBody.innerHTML += `<td>${varnombre + varcorreo + varDNI + vartelefono}</td>`;
+    }
 })
+

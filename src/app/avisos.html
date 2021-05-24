@@ -2,36 +2,24 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Gerente | GTI</title>
+    <title>avisos</title>
     <link rel="stylesheet" type="text/css" href="css/paginagerente.css">
-    <style>
-        .nombre {
-            font-size: 70px;
-            color: white;
-        }
-    </style>
 </head>
-
 <body>
+
 <header>
     <a href="../index.html" class="logo"><img src="icon/logoGTI.svg" class="logoGti"><span class="triangulo"></span></a>
     <div><a href="anyadiruser.html"><img src="icon/menu_blanco.png" class="menu"></a></div>
 </header>
-<div class="saludo">
-    <h1> Hola
-        <div id="output" class="nombre"></div>
-    </h1>
-</div>
-<!-- Aqui va a ir la tabla de usuarios -->
 <div id="divtabla">
     <!-- Aqui va a ir la tabla de usuarios -->
     <table>
         <thead>
         <tr>
             <th>Nombre</th>
+            <th>Apellidos</th>
             <th>Correo</th>
-            <th>DNI</th>
-            <th>Teléfono</th>
+            <th>Motivo</th>
         </tr>
         </thead>
         <tbody id="tbody">
@@ -39,8 +27,8 @@
         </tbody>
     </table>
 </div>
-<a href="avisos.html"><p>ver avisos cick aqui</p></a>
-<script src="../api/v1.0/mostrarusuariosFAKE.js"></script>
-<script src="../api/v1.0/nombreFake.js"></script>
+
+3
+<script src="../api/v1.0/recibircontactofake.js"></script>
 </body>
 </html>

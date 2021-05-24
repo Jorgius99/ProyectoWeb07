@@ -1,9 +1,11 @@
 <?php
+session_start();
 $metodo = $_SERVER['REQUEST_METHOD'];
 
-session_start();
-$idParcela=$_SESSION["idParcela"];
+$idParcela=$_SESSION["Parcelas"].["idParcela"];
+
 if($metodo ==='GET') {
+
     $serverNombre = "localhost";
     $userNombre = "root";
     $password = "";

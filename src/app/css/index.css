@@ -207,6 +207,7 @@ h1{
     }
 
 
+
 }
 @media(max-width:650px){
     h1{
@@ -253,21 +254,20 @@ h1{
 
 
 
-.cajaindice{
-    margin-left: 3rem;
-    display: flex;
-    justify-content: space-between;
-    margin-right: 21rem;
-}
+/*
+MENU CSS
+ */
 
-.texto1indice{
+.texto1indice{ /* MENU */
     color: white;
     font-size: 150px;
     font-family:Helvetica;
     z-index: 1;
+    margin-top: -6rem;
+    margin-left: 5%;
 }
 
-a{
+a{ /* ENLACES */
     color: white;
     font-size: 70px;
     text-decoration: none;
@@ -275,21 +275,18 @@ a{
     z-index: 1;
 }
 
-.caja1indice{
-    margin-top: 5rem;
+.caja1indice{ /* INICIAR SESION ... CONTACTANOS */
     margin-left: 3rem;
-    margin-bottom: 20%;
     z-index: 1;
 }
 
-
-.textoindice2{
+.textoindice2{ /* INICIAR SESSION */
     opacity: 70%;
     margin-left: 2rem;
 }
 
 
-.menu_indice{
+.menu_indice{ /* NAV CONTIENE ALL */
     position: relative;
     visibility: hidden;
     transform: rotate(30deg) translate(80%, -580%) scale3d(-1, -1, 1);
@@ -298,13 +295,13 @@ a{
     z-index: 1;
 }
 
-.indice:target{
+.indice:target{ /* TRANSICION */
     visibility:visible;
     opacity:1;
     z-index: 1;
 }
 
-.indice:target .menu_indice{
+.indice:target .menu_indice{ /* TRANSICION */
     position: fixed;
     transform: rotate(0deg) ;
     visibility: visible;
@@ -314,7 +311,7 @@ a{
     z-index: 1;
 }
 
-.indice{
+.indice{ /* DIV INDICE */
     visibility: hidden;
     opacity: 0;
     transition: all 1s;
@@ -323,58 +320,130 @@ a{
     margin-top: -8.5rem;
 }
 
-.imagen{
+.imagen{ /* CRUZ */
     margin: 2rem 2rem;
-    margin-left: 88%;
-    width: 5rem;
-    height: 5rem;
+    margin-left: 95%;
+    width: 3rem;
+    height: 3rem;
 }
 
-.ofrecer{
+.ofrecer{ /* LI OFRECER */
     display: flex;
-    justify-content: space-between;
+
 }
-.textoofrecer{
+.textoofrecer{ /* TEXTO OFRECER*/
     opacity: 75%;
     margin-right: 12rem;
 }
-.icono{
+.icono{ /* ICONO */
     width: 8rem;
     height: 8rem;
     opacity: 80%;
 }
-.datos{
+.datos{ /* LI DATOS */
     display: flex;
-    justify-content: space-between;
+
 }
-.funciona{
+.funciona{ /* LI FUNCIONA */
     display: flex;
-    justify-content: space-between;
+
 }
-.textomostrar{
+.textomostrar{ /* TEXTO COMO SE MUESTRAN */
     opacity: 75%;
     margin-right: 6rem;
 }
-.textofunciona{
+.textofunciona{ /* TEXTO COMO FUNCIONA */
     opacity: 80%;
     margin-right: 13rem;
 }
-.somos{
+.somos{ /* LI SOMOS */
     display: flex;
-    justify-content: space-between;
+
 }
-.textosomos{
+.textosomos{ /* TEXTO QUIENES SOMOS */
     opacity: 75%;
     margin-right: 12rem;
 }
-.contacto{
+.contacto{ /* LI CONTACTO*/
     display: flex;
-    justify-content: space-between;
-    margin-top: 5rem;
+
 }
-.textocontacto{
+.textocontacto{ /* TEXTO CONTACTO */
     opacity: 75%;
     margin-right: 23rem;
+}
+
+.columna{/* div columnad*/
+    display: flex;
+    flex:1 1 0;
+}
+
+@media(max-width: 850px){
+
+    .indice{
+        margin-bottom: -3.5rem;
+    }
+    .columna{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .icono{
+        width: 4rem;
+        height: 4rem;
+        opacity: 80%;
+    }
+
+    .texto1indice{
+        color: white;
+        font-size: 60px;
+        font-family:Helvetica;
+        z-index: 1;
+        margin-top: -3rem;
+    }
+
+    .imagen{
+        margin: 1rem 1rem;
+        margin-left: 90%;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .textoindice2{
+        opacity: 70%;
+        margin-left: 2rem;
+        font-size: 45px;
+    }
+
+    .textoofrecer{
+        opacity: 70%;
+        margin-left: 2rem;
+        font-size: 45px;
+    }
+
+    .textomostrar{
+        opacity: 70%;
+        margin-left: 2rem;
+        font-size: 45px;
+    }
+
+    .textofunciona{
+        opacity: 70%;
+        margin-left: 2rem;
+        font-size: 45px;
+    }
+
+    .textosomos{
+        opacity: 70%;
+        margin-left: 2rem;
+        font-size: 45px;
+    }
+
+    .textocontacto{
+        opacity: 70%;
+        margin-left: 2rem;
+        font-size: 45px;
+    }
 }
 
 
@@ -384,13 +453,13 @@ a{
         height: 4rem;
         opacity: 80%;
     }
-
     .texto1indice{
         color: white;
         font-size: 75px;
         font-family:Helvetica;
         z-index: 1;
-        margin-top: -5rem;
+        margin-top: -3rem;
+        text-align: center;
     }
 
     .imagen{
@@ -437,18 +506,19 @@ a{
     }
 
     .caja1indice{
-        margin-top: 2rem;
         margin-left: 3rem;
         margin-bottom: 1rem;
         z-index: 1;
-        padding: 1.5rem;
     }
-
     .contacto{
         margin-top:-0.10rem;
     }
 
     .indice{
-        margin-top: -5rem;
+        margin-top: -9rem;
+    }
+    .columna{
+        display:flex;
+        flex-direction:column ;
     }
 }

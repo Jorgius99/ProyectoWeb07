@@ -3,6 +3,7 @@ $metodo = $_SERVER['REQUEST_METHOD'];
 
 session_start();
 $idUser = $_SESSION["id"];
+
 if ($metodo === 'GET') {
 
 
@@ -27,12 +28,7 @@ if ($metodo === 'GET') {
         $respuesta["coordenadaY"] = $fila ["coordenadaY"];
         $resultado[$i] = $respuesta;
         $i++;
-        $_SESSION["Parcelas"]=$respuesta["idParcela"];
-
     }
-
-
-
     echo json_encode($resultado);
 
 

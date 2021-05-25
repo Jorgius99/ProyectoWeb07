@@ -27,7 +27,6 @@ function iniciarMapa() {
             for (let i = 0; i < datos.length; i++) {
                 var x = datos[i].coordenadaX
                 var y = datos[i].coordenadaY
-
                 //console.log(typeof x)
                 //console.log(typeof y)
                 parseFloat(y)
@@ -45,10 +44,7 @@ function iniciarMapa() {
                     // add click event
                     google.maps.event.addListener(marker, 'click', function () {
                         map.panTo({lat: parseFloat(x), lng: parseFloat(y)})
-                        console.log(marker)
-                        var aux=marker;
-
-                        iniciarsensores(aux);
+                        iniciarsensores(marker.label);
 
                         infowindow = new google.maps.InfoWindow({
                             content: 'Campo ' + datos[i].idParcela,
@@ -84,8 +80,7 @@ function iniciarMapa() {
 
 function iniciarsensores(idParcela) {
 
-
-    fetch('../api/v1.0/sensores.php', {
+    fetch('../api/v1.0/sensores.php?$parcela=' + idParcela, {
         method: "GET",
 
     }).then(function (respuesta) {
@@ -95,36 +90,44 @@ function iniciarsensores(idParcela) {
         }
 
     }).then(function (sensores) {
-        console.log(JSON.stringify(sensores))
+        //console.log(JSON.stringify(sensores))
+
         for (let i = 0; i < sensores.length; i++) {
-            console.log(sensores[i].coodenadaX)
-            console.log(sensores[i].coodenadaY)
+            console.log(sensores[i].coordenadaX)
+            console.log(sensores[i].coordenadaY)
         }
+
+        var sensorX =[]
+        var sensorY=[]
 
         for (let i = 0; i < 3; i++) {
-            var sensorX = sensores[i].coordenadaX
-            var sensorY = sensores[i].coordenadaY
-            let polygon = new google.maps.Polygon({
-                paths: [
-                    {lat: parseFloat(sensorX), lng: parseFloat(sensorY)},
-
-                ],
-                strokeColor: "#ff8000",
-                strokeOpacity: 0.8,
-                strokeWeight: 2,
-                fillColor: "#ff8000",
-                fillOpacity: 0.35,
-                map: map
-            });
+            sensorX.push(sensores[i].coordenadaX)
+            sensorY.push(sensores[i].coordenadaY)
         }
-        let bounds = new google.maps.LatLngBounds();
+        console.log(sensorX,sensorY)
+        let polygon = new google.maps.Polygon({
+
+            paths: [
+                {lat: parseFloat(sensorX[0]), lng: parseFloat(sensorY[0])},
+                {lat: parseFloat(sensorX[1]), lng: parseFloat(sensorY[1])},
+                {lat: parseFloat(sensorX[2]), lng: parseFloat(sensorY[2])},
+                {lat: parseFloat(sensorX[3]), lng: parseFloat(sensorY[3])},
+
+            ],
+            strokeColor: "#ff8000",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#ff8000",
+            fillOpacity: 0.35,
+            map: map
+        });
         polygon.getArray().forEach(function (v) {
             bounds.extend(v);
         })
         map.fitBounds(bounds);
-        /*
-        aqui acaba
-         */
+
+        let bounds = new google.maps.LatLngBounds();
+
 
     })
 }

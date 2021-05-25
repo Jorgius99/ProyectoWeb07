@@ -1,8 +1,8 @@
 <?php
-session_start();
+
 $metodo = $_SERVER['REQUEST_METHOD'];
 
-$idParcela=$_SESSION["Parcelas"].["idParcela"];
+$idParcela = $_GET['$parcela'];
 
 if($metodo ==='GET') {
 

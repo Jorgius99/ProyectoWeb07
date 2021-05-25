@@ -20,7 +20,7 @@ if ($metodo == 'POST') {
         die("Error: " . mysqli_connect_error());
     }
 
-    $sql = "INSERT INTO `contacto` (`idPeticiones`, `Nombre`, `Apellido`, `correo`, `motivo`) VALUES (NULL, '$Nombre', '$Apellido', '$correo', '$motivo');";
+    $sql = "INSERT INTO `contacto` (`idPeticiones`, `Nombre`, `Apellido`, `correo`, `motivo`) VALUES (NULL, '$Nombre', '$Apellido', '$correo', '$motivo')";
     $result = mysqli_query($conn, $sql);//
 
     if (mysqli_num_rows($result) > 0) {

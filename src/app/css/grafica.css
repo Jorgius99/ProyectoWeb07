@@ -1,0 +1,91 @@
+body{
+    background:#0d1a27;
+}
+.grafica{
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px white;
+}
+
+#myfirstchart{
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    width: 3rem;
+    height: 3rem;
+}
+
+
+header{
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    height: 45%;
+    width: 60%;
+}
+.logoGti{
+    text-align: left;
+    background-color: white;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: block;
+    flex: 1 1 0;
+}
+.triangulo {
+    border-left: 4.5rem solid white;
+    border-top: 2rem solid transparent;
+    border-bottom: 2rem solid transparent;
+    position: relative;
+    left: -4px;
+}
+
+.botonInformate{
+    font-family:Helvetica;
+    border: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 1em 2em;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    border-radius: 55px;
+    position: relative;
+    box-shadow: 8px 5px 8px #999;
+    background-color:#633B54;
+    text-decoration: none;
+    color: black;
+}
+.botongenerar{
+    font-family:Helvetica;
+    border: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 1em 2em;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    border-radius: 55px;
+    position: relative;
+    box-shadow: 8px 5px 8px #999;
+    background-color:#633B54;
+    text-decoration: none;
+    color: black;
+}
+.botones{
+    display: flex;
+    justify-content: center;
+}
+
+.botongenerarsensor{
+    display: flex;
+    justify-content: center;
+}

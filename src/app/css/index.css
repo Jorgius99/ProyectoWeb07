@@ -253,12 +253,6 @@ h1{
 
 
 
-
-
-
-
-
-
 .cajaindice{
     margin-left: 3rem;
     display: flex;
@@ -326,6 +320,7 @@ a{
     transition: all 1s;
     position: fixed;
     z-index: 1;
+    margin-top: -8.5rem;
 }
 
 .imagen{
@@ -375,8 +370,85 @@ a{
 .contacto{
     display: flex;
     justify-content: space-between;
+    margin-top: 5rem;
 }
 .textocontacto{
     opacity: 75%;
     margin-right: 23rem;
+}
+
+
+@media(max-width: 650px){
+    .icono{
+        width: 4rem;
+        height: 4rem;
+        opacity: 80%;
+    }
+
+    .texto1indice{
+        color: white;
+        font-size: 75px;
+        font-family:Helvetica;
+        z-index: 1;
+        margin-top: -5rem;
+    }
+
+    .imagen{
+        margin: 1rem 1rem;
+        margin-left: 88%;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .textoindice2{
+        opacity: 70%;
+        margin-left: 2rem;
+        font-size: 50px;
+    }
+
+    .textoofrecer{
+        opacity: 70%;
+        margin-left: 2rem;
+        font-size: 50px;
+    }
+
+    .textomostrar{
+        opacity: 70%;
+        margin-left: 2rem;
+        font-size: 50px;
+    }
+
+    .textofunciona{
+        opacity: 70%;
+        margin-left: 2rem;
+        font-size: 50px;
+    }
+
+    .textosomos{
+        opacity: 70%;
+        margin-left: 2rem;
+        font-size: 50px;
+    }
+
+    .textocontacto{
+        opacity: 70%;
+        margin-left: 2rem;
+        font-size: 50px;
+    }
+
+    .caja1indice{
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 1rem;
+        z-index: 1;
+        padding: 1.5rem;
+    }
+
+    .contacto{
+        margin-top:-0.10rem;
+    }
+
+    .indice{
+        margin-top: -5rem;
+    }
 }

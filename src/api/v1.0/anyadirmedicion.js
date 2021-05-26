@@ -11,7 +11,13 @@ function obtenerMedicion() {
     }
 
 }
-
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+var idSensor = getParameterByName('sensor');
 function f1() {
 
     var medicion = obtenerMedicion()
@@ -23,10 +29,13 @@ function f1() {
     datasensor.append("humedad", medicion.humedad.toString());
     datasensor.append("luminosidad", medicion.luminosidad.toString());
     datasensor.append("salinidad", medicion.salinidad.toString());
+    datasensor.append("idsensor", idSensor.toString());
 
-    var datos = JSON.stringify(medicion)
+
 //?temp=' + medicion.temperatura +'&'+ 'hum=' + medicion.humedad +';'+ '$lum='+
 //     medicion.luminosidad +';'+ '$sal=' + medicion.salinidad +';'
+
+
     fetch('../src/api/v1.0/anyadirmedicion.php', {
         method: "POST",
         body:datasensor

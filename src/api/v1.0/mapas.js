@@ -1,8 +1,4 @@
-
-
-let mapaGoogle;
-
-function iniciarmapa() {
+function iniciarMapa() {
     fetch('../api/v1.0/mapas.php', {
         method: "GET"
 
@@ -17,13 +13,13 @@ function iniciarmapa() {
         //    console.log(datos[i].coordenadaX);
         //   console.log(datos[i].coordenadaY);
         //}
-
+        let map;
 
         function initMap() {
-            mapaGoogle.setTilt(0);
+            map.setTilt(0);
             //console.log("Google Maps cargado!!");
 
-            mapaGoogle = new google.maps.Map(document.getElementById('map'), {
+            map = new google.maps.Map(document.getElementById('map'), {
                 center: {lat: 40.41691146311564, lng: -3.703518517408268},
                 zoom: 6.5
             });
@@ -39,25 +35,24 @@ function iniciarmapa() {
                     position: {lat: parseFloat(x), lng: parseFloat(y)},
                     label: datos[i].idParcela,
                     animation: google.maps.Animation.DROP,
-                    map: mapaGoogle,
+                    map: map,
                 });
 
                 (function (marker, i) {
                     // add click event
                     google.maps.event.addListener(marker, 'click', function () {
-                        mapaGoogle.panTo({lat: parseFloat(x), lng: parseFloat(y)})
-                        iniciarsensores(marker.label);
-
+                        map.panTo({lat: parseFloat(x), lng: parseFloat(y)})
+                        iniciarsensores(marker.label);//esto es anónimo¿
                         infowindow = new google.maps.InfoWindow({
                             content: 'Campo ' + datos[i].idParcela,
                         });
-                        infowindow.open(mapaGoogle, marker);
+                        infowindow.open(map, marker);
                     });
                 })(marker, i);
             }
 
         }
-        mapaGoogle = new google.maps.Map(document.getElementById('map'), {
+        map = new google.maps.Map(document.getElementById('map'), {
             mapTypeId: 'hybrid',
             styles: [
                 {
@@ -87,61 +82,58 @@ function iniciarsensores(idParcela) {
         }
 
     }).then(function (sensores) {
+        //console.log(JSON.stringify(sensores))
+/*
+        for (let i = 0; i < sensores.length; i++) {
+            console.log(sensores[i].coordenadaX)
+            console.log(sensores[i].coordenadaY)
+        }
 
-        let vertices=[]
-        sensores.forEach(function (vert){
-            let punto={
-                lat: parseFloat(vert.coordenadaX),
-                lng: parseFloat(vert.coordenadaY)
-            }
-            vertices.push(punto)
+ */
+        var sensorY=[]
+        var sensorX=[]
 
-            let m=new google.maps.Marker({
-                position:punto,
-                label: vert.idSensor,
-                map: mapaGoogle,
-            });
-            google.maps.event.addListener(m, 'click', function () {
-                location.href="../Grafica.html?sensor="+vert.idSensor;
-            });
+        for (let i = 0; i < 4; i++) {
+            sensorX.push(sensores[i].coordenadaX)
+            sensorY.push(sensores[i].coordenadaY)
+        }
+        //console.log(sensorX)
+        var y=[]
+        var x=[]
+        for (let i = 0; i < 4; i++) {
+             x.push(parseFloat(sensorX));
+             y.push(parseFloat(sensorY));
 
-        });
 
+        }
+        //console.log(x,typeof (x[2]))
         let polygon = new google.maps.Polygon({
-            paths: [vertices],
+            paths: [
+                {lat:x[0] , lng: y[0]},
+                {lat:x[1] , lng: y[1]},
+                {lat:x[2] , lng: y[2]},
+                {lat:x[3] , lng: y[3]},
+            ],
             strokeColor: "#ff8000",
             strokeOpacity: 0.8,
             strokeWeight: 2,
             fillColor: "#ff8000",
             fillOpacity: 0.35,
-            map: mapaGoogle
+            map: map
         });
 
         let bounds = new google.maps.LatLngBounds();
         polygon.getPath().getArray().forEach(function (v){
             bounds.extend(v);
         })
-  //  }
-        mapaGoogle.fitBounds(bounds);
-
-        console.log(mapaGoogle)
-
-    //polygon.setMap(map)
     })
+    map.fitBounds(bounds);
+
+   // polygon.setMap(map)
+   // })
 }
-
 //main
+iniciarMapa()
 
 
 
-//crear cuadros de texto en las cosas
-/*
-  var popup = new google.maps.InfoWindow();
-
-      poligono.addListener('click', function (e) {
-        popup.setContent('Contenido');
-        popup.setPosition(e.latLng);
-        popup.open(miMapa);
-      });
-
- */

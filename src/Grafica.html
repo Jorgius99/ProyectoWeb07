@@ -6,6 +6,7 @@
     <!-- Aqui va la librería que usaremos para mostrar las gráficas -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
     <link rel="stylesheet" href="../src/app/css/grafica.css">
+
 </head>
 <body>
 
@@ -31,11 +32,10 @@
     </div>
 </div>
 
-<section class="botongenerarsensor">
-    <button onclick="f1()" class="botonInformate">Generar mediciones</button>
+<div class="botongenerarsensor">
+    <a href="#" class="botongenerar">Generar mediciones</a>
+</div>
 
-</section>
-<div id="output" style="color: red" style="font-size: 90px" ></div>
 
 
 
@@ -50,6 +50,5 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 <!-- Este es el script del js de los datos de las gráficas -->
 <script src="../src/api/v1.0/graficaFake.js"></script>
-<script src="../src/api/v1.0/anyadirmedicion.js"></script>
 </body>
 </html>

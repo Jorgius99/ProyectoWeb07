@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-05-2021 a las 18:18:07
+-- Tiempo de generación: 26-05-2021 a las 19:11:40
 -- Versión del servidor: 10.4.18-MariaDB
 -- Versión de PHP: 8.0.3
 
@@ -102,7 +102,8 @@ CREATE TABLE `parcela` (
 
 INSERT INTO `parcela` (`idParcela`, `idUsuario`, `coordenadaX`, `coordenadaY`) VALUES
 (1, 2, 39.576238701019, -0.3364573088961),
-(2, 2, 39.503250196592, -0.3870998287232);
+(2, 2, 39.503250196592, -0.3870998287232),
+(3, 3, 38.03978342833709, -3.8649893322831876);
 
 -- --------------------------------------------------------
 
@@ -128,8 +129,12 @@ INSERT INTO `sensores` (`idParcela`, `idSensor`, `coordenadaX`, `coordenadaY`) V
 (1, 4, 39.57559510615759, -0.33830536676585343),
 (2, 5, 39.50413561101254, -0.38781680087104325),
 (2, 6, 39.503878251223746, -0.3898806354362547),
-(2, 7, 39.50299356968079, -0.38489824694044117),
-(2, 8, 39.50162631241765, -0.3856487322368817);
+(2, 7, 39.50162631241765, -0.3856487322368817),
+(2, 8, 39.50299356968079, -0.38489824694044117),
+(3, 9, 38.040103263724035, -3.8701436190624703),
+(3, 10, 38.042536769333786, -3.8667533070091773),
+(3, 11, 38.039951166938245, -3.860723701395409),
+(3, 12, 38.03706126798721, -3.8624617727645028);
 
 --
 -- Índices para tablas volcadas
@@ -159,7 +164,8 @@ ALTER TABLE `mediciones`
 -- Indices de la tabla `parcela`
 --
 ALTER TABLE `parcela`
-  ADD PRIMARY KEY (`idParcela`) USING BTREE;
+  ADD PRIMARY KEY (`idParcela`) USING BTREE,
+  ADD KEY `parcela_ibfk_2` (`idUsuario`);
 
 --
 -- Indices de la tabla `sensores`
@@ -200,7 +206,7 @@ ALTER TABLE `parcela`
 -- AUTO_INCREMENT de la tabla `sensores`
 --
 ALTER TABLE `sensores`
-  MODIFY `idSensor` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idSensor` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Restricciones para tablas volcadas

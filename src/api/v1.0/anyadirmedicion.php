@@ -3,31 +3,12 @@ $metodo = $_SERVER['REQUEST_METHOD'];
 
 session_start();
 
-//$idSensor=$_SESSION["idsensor"];
-//$medicion=array();
-/*
-$tempe = $_GET['$temp'];
-$hume = $_GET['$hum'];
-$sali = $_GET['$sal'];
-$lumi = $_GET['$lum'];
-*/
-$temp = $_POST["temperatura"];
-$hum = $_POST["humedad"];
-$sal = $_POST["salinidad"];
-$lum = $_POST["luminosidad"];
+$idSensor=$_SESSION["idsensor"];
 if ($metodo === 'POST') {
-
-
-
-    //$medicion = json_decode($_GET['medicion']);
-
-
-
-    /*
-    $hum=$_POST['humedad'];
-    $sal=$_POST['salinidad'];
-    $lum=$_POST['luminosidad'];
-    */
+$temp=$_POST['temperatura'];
+$hum=$_POST['humedad'];
+$sal=$_POST['salinidad'];
+$lum=$_POST['luminosidad'];
 
     $serverNombre = "localhost";
     $userNombre = "root";
@@ -38,8 +19,11 @@ if ($metodo === 'POST') {
         http_response_code(500);
         die("Error: " . mysqli_connect_error());
     }
-    $sql = "INSERT INTO `mediciones` (`idSensor`, `idMedicion`, `temperatura`, `humedad`, `salinidad`, `luminosidad`) VALUES (6, NULL ,'$temp','$hum','$sal','$lum')";
-    $result = mysqli_query($conn, $sql);
+    $sql = "INSERT INTO `contacto` (`idSensor`, `idMedicion`, `temperatura`, `humedad`, `salinidad`, `luminosidad`) VALUES ('$idSensor', NULL ,'$temp','$hum','$sal','$lum')";
+    $result = mysqli_query($conn, $sql);//
+    echo $result;
+
+
 
 
 }

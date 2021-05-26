@@ -3,52 +3,28 @@ function obtenerMedicion() {
     var hum = Math.random() * (100 - 10) + 10;
     var lum = Math.random() * (100 - 10) + 10;
     var sal = Math.random() * (100 - 10) + 10;
-    return {
-        temperatura: Math.round(temp),
-        humedad: Math.round(hum),
-        luminosidad: Math.round(lum),
-        salinidad: Math.round(sal)
-    }
+    return {temperatura: temp, humedad: hum, luminosidad: lum, salinidad: sal}
 
 }
 
-function f1() {
+document.querySelector("a").addEventListener("submit", function (event) {
 
     var medicion = obtenerMedicion()
-    console.log(medicion)
-    //document.getElementById("output").textContent = medicion;
-   let datasensor = new FormData();
-
-    datasensor.append("temperatura", medicion.temperatura.toString());
-    datasensor.append("humedad", medicion.humedad.toString());
-    datasensor.append("luminosidad", medicion.luminosidad.toString());
-    datasensor.append("salinidad", medicion.salinidad.toString());
-
-    var datos = JSON.stringify(medicion)
-//?temp=' + medicion.temperatura +'&'+ 'hum=' + medicion.humedad +';'+ '$lum='+
-//     medicion.luminosidad +';'+ '$sal=' + medicion.salinidad +';'
-    fetch('../src/api/v1.0/anyadirmedicion.php', {
+    let datasensor = new FormData(medicion.target);
+    fetch('../api/v1.0/sensores.php', {
         method: "POST",
-        body:datasensor
+        body: datasensor
 
-    }
-).
-    then(function (respuesta) {
+    }).then(function (respuesta) {
 
         if (respuesta.ok) {
             document.getElementById("output").textContent = "Tarea realizada con éxito";
         } else {
-            document.getElementById("output").textContent = "Algo ha fallado";
+            document.getElementById("output").textContent = "Algo ha falado";
         }
 
+
     })
-}
-
-/*
-document.querySelector("a").addEventListener("submit", function (event) {
-
 
 
 })
-
- */

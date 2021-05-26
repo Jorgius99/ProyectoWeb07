@@ -141,3 +141,21 @@ footer {
 .contenedorFooter {
     margin-right: 35px;
 }
+.boton{
+    font-family: Helvetica;
+    color: white;
+    border: white;
+    width: 80%;
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 1em 0.5em;
+    margin-top: 1.5rem;
+    margin-bottom: 60px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 3px 5px 2px #999;
+    background-color:#633B54;
+}
+.cosasGerente{
+    border: solid white;
+}

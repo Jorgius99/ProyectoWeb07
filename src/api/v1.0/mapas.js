@@ -37,11 +37,12 @@ function iniciarMapa() {
                     animation: google.maps.Animation.DROP,
                     map: map,
                 });
+
                 (function (marker, i) {
                     // add click event
                     google.maps.event.addListener(marker, 'click', function () {
                         map.panTo({lat: parseFloat(x), lng: parseFloat(y)})
-                        iniciarsensores(marker.label);
+                        iniciarsensores(marker.label);//esto es anónimo¿
                         infowindow = new google.maps.InfoWindow({
                             content: 'Campo ' + datos[i].idParcela,
                         });
@@ -120,12 +121,29 @@ function iniciarsensores(idParcela) {
             fillOpacity: 0.35,
             map: map
         });
-        let bounds = new google.maps.LatLngBounds();
+
+        /*let bounds = new google.maps.LatLngBounds();
         polygon.getPath().getArray().forEach(function (v){
             bounds.extend(v);
         })
     })
     map.fitBounds(bounds);
+    */
+    polygon.setMap(map)
+    })
 }
 //main
 iniciarMapa()
+
+
+//crear cuadros de texto en las cosas
+/*
+  var popup = new google.maps.InfoWindow();
+
+      poligono.addListener('click', function (e) {
+        popup.setContent('Contenido');
+        popup.setPosition(e.latLng);
+        popup.open(miMapa);
+      });
+
+ */

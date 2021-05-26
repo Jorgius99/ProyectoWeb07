@@ -23,7 +23,6 @@ if ($metodo == 'GET') {
         $respuesta["DNI"] = $fila ["DNI/NIF"];
             $resultado[$i]=$respuesta;
             $i++;
-
     }
     echo json_encode($resultado);
 

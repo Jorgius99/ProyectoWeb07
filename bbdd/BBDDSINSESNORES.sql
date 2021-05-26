@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-05-2021 a las 16:07:31
+-- Tiempo de generación: 26-05-2021 a las 18:18:07
 -- Versión del servidor: 10.4.18-MariaDB
 -- Versión de PHP: 8.0.3
 
@@ -34,6 +34,13 @@ CREATE TABLE `contacto` (
   `correo` varchar(255) DEFAULT NULL,
   `motivo` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `contacto`
+--
+
+INSERT INTO `contacto` (`idPeticiones`, `Nombre`, `Apellido`, `correo`, `motivo`) VALUES
+(1, 'Carlos', 'Ipiens', 'carlosipiens@gmail.com', 'Hola');
 
 -- --------------------------------------------------------
 
@@ -85,9 +92,17 @@ CREATE TABLE `mediciones` (
 CREATE TABLE `parcela` (
   `idParcela` int(255) NOT NULL,
   `idUsuario` int(255) NOT NULL,
-  `coordenadaX` varchar(255) NOT NULL,
-  `coordenadaY` varchar(255) NOT NULL
+  `coordenadaX` double NOT NULL,
+  `coordenadaY` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `parcela`
+--
+
+INSERT INTO `parcela` (`idParcela`, `idUsuario`, `coordenadaX`, `coordenadaY`) VALUES
+(1, 2, 39.576238701019, -0.3364573088961),
+(2, 2, 39.503250196592, -0.3870998287232);
 
 -- --------------------------------------------------------
 
@@ -97,10 +112,24 @@ CREATE TABLE `parcela` (
 
 CREATE TABLE `sensores` (
   `idParcela` int(255) NOT NULL,
-  `x` varchar(255) DEFAULT NULL,
-  `y` varchar(255) DEFAULT NULL,
-  `idSensor` int(255) NOT NULL
+  `idSensor` int(255) NOT NULL,
+  `coordenadaX` double NOT NULL,
+  `coordenadaY` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `sensores`
+--
+
+INSERT INTO `sensores` (`idParcela`, `idSensor`, `coordenadaX`, `coordenadaY`) VALUES
+(1, 1, 39.577586224283486, -0.3366147531718365),
+(1, 2, 39.57673898372259, -0.33502948769497815),
+(1, 3, 39.57504279455406, -0.33620944424892635),
+(1, 4, 39.57559510615759, -0.33830536676585343),
+(2, 5, 39.50413561101254, -0.38781680087104325),
+(2, 6, 39.503878251223746, -0.3898806354362547),
+(2, 7, 39.50299356968079, -0.38489824694044117),
+(2, 8, 39.50162631241765, -0.3856487322368817);
 
 --
 -- Índices para tablas volcadas
@@ -123,22 +152,21 @@ ALTER TABLE `login`
 -- Indices de la tabla `mediciones`
 --
 ALTER TABLE `mediciones`
-  ADD PRIMARY KEY (`idSensor`),
-  ADD UNIQUE KEY `idMedicion` (`idMedicion`) USING BTREE;
+  ADD PRIMARY KEY (`idMedicion`) USING BTREE,
+  ADD UNIQUE KEY `idSensor` (`idSensor`);
 
 --
 -- Indices de la tabla `parcela`
 --
 ALTER TABLE `parcela`
-  ADD PRIMARY KEY (`idUsuario`),
-  ADD UNIQUE KEY `idParcela` (`idParcela`) USING BTREE;
+  ADD PRIMARY KEY (`idParcela`) USING BTREE;
 
 --
 -- Indices de la tabla `sensores`
 --
 ALTER TABLE `sensores`
-  ADD PRIMARY KEY (`idParcela`),
-  ADD UNIQUE KEY `idSensor` (`idSensor`) USING BTREE;
+  ADD PRIMARY KEY (`idSensor`) USING BTREE,
+  ADD KEY `sensores_ibfk_4` (`idParcela`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -148,7 +176,7 @@ ALTER TABLE `sensores`
 -- AUTO_INCREMENT de la tabla `contacto`
 --
 ALTER TABLE `contacto`
-  MODIFY `idPeticiones` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `idPeticiones` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `login`
@@ -166,13 +194,13 @@ ALTER TABLE `mediciones`
 -- AUTO_INCREMENT de la tabla `parcela`
 --
 ALTER TABLE `parcela`
-  MODIFY `idParcela` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idParcela` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `sensores`
 --
 ALTER TABLE `sensores`
-  MODIFY `idSensor` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idSensor` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Restricciones para tablas volcadas

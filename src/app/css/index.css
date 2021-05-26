@@ -260,7 +260,7 @@ MENU CSS
 
 .texto1indice{ /* MENU */
     color: white;
-    font-size: 150px;
+    font-size: 100px;
     font-family:Helvetica;
     z-index: 1;
     margin-top: -6rem;
@@ -269,7 +269,7 @@ MENU CSS
 
 a{ /* ENLACES */
     color: white;
-    font-size: 70px;
+    font-size: 50px;
     text-decoration: none;
     font-family:Helvetica;
     z-index: 1;
@@ -280,6 +280,11 @@ a{ /* ENLACES */
     z-index: 1;
     width: 100%;
     height: 100%;
+    align-items:  center;
+}
+
+.columna{
+    justify-content: center;
 }
 
 .textoindice2{ /* INICIAR SESSION */
@@ -340,8 +345,8 @@ a{ /* ENLACES */
     text-decoration: underline;
 }
 .icono{ /* ICONO */
-    width: 8rem;
-    height: 8rem;
+    width: 4rem;
+    height: 4rem;
     opacity: 80%;
 }
 .datos{ /* LI DATOS */
@@ -386,10 +391,12 @@ a{ /* ENLACES */
     flex:1 1 0;
 }
 
-@media(max-width: 850px){
-
+@media (max-width:1100px) {
     .indice{
         margin-bottom: -3.5rem;
+    }
+    .menu_indice{
+        margin-top: -2rem;
     }
     .columna{
         display:flex;
@@ -404,7 +411,7 @@ a{ /* ENLACES */
 
     .texto1indice{
         color: white;
-        font-size: 60px;
+        font-size: 75px;
         font-family:Helvetica;
         z-index: 1;
         margin-top: -3rem;
@@ -420,37 +427,103 @@ a{ /* ENLACES */
     .textoindice2{
         opacity: 70%;
         margin-left: 2rem;
-        font-size: 45px;
+        font-size: 35px;
     }
 
     .textoofrecer{
         opacity: 70%;
         margin-left: 2rem;
-        font-size: 45px;
+        font-size: 35px;
     }
 
     .textomostrar{
         opacity: 70%;
         margin-left: 2rem;
-        font-size: 45px;
+        font-size: 35px;
     }
 
     .textofunciona{
         opacity: 70%;
         margin-left: 2rem;
-        font-size: 45px;
+        font-size: 35px;
     }
 
     .textosomos{
         opacity: 70%;
         margin-left: 2rem;
-        font-size: 45px;
+        font-size: 35px;
     }
 
     .textocontacto{
         opacity: 70%;
         margin-left: 2rem;
-        font-size: 45px;
+        font-size: 35px;
+    }
+}
+@media(max-width: 850px){
+
+    .indice{
+        margin-bottom: -3.5rem;
+    }
+    .columna{
+        display:flex;
+        flex-direction: column;
+    }
+    .icono{
+        width: 4rem;
+        height: 4rem;
+        opacity: 80%;
+    }
+
+    .texto1indice{
+        color: white;
+        font-size: 75px;
+        font-family:Helvetica;
+        z-index: 1;
+        margin-top: -3rem;
+    }
+
+    .imagen{
+        margin: 3rem 1rem;
+        margin-left: 88%;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .textoindice2{
+        opacity: 70%;
+        margin-left: 2rem;
+        font-size: 35px;
+    }
+
+    .textoofrecer{
+        opacity: 70%;
+        margin-left: 2rem;
+        font-size: 35px;
+    }
+
+    .textomostrar{
+        opacity: 70%;
+        margin-left: 2rem;
+        font-size: 35px;
+    }
+
+    .textofunciona{
+        opacity: 70%;
+        margin-left: 2rem;
+        font-size: 35px;
+    }
+
+    .textosomos{
+        opacity: 70%;
+        margin-left: 2rem;
+        font-size: 35px;
+    }
+
+    .textocontacto{
+        opacity: 70%;
+        margin-left: 2rem;
+        font-size: 35px;
     }
 }
 
@@ -471,7 +544,7 @@ a{ /* ENLACES */
     }
 
     .imagen{
-        margin: 1rem 1rem;
+        margin: 3rem 1rem;
         margin-left: 88%;
         width: 3rem;
         height: 3rem;
@@ -480,43 +553,48 @@ a{ /* ENLACES */
     .textoindice2{
         opacity: 70%;
         margin-left: 2rem;
-        font-size: 50px;
+        font-size: 45px;
     }
 
     .textoofrecer{
         opacity: 70%;
         margin-left: 2rem;
-        font-size: 50px;
+        font-size: 35px;
     }
 
     .textomostrar{
         opacity: 70%;
         margin-left: 2rem;
-        font-size: 50px;
+        font-size: 35px;
     }
 
     .textofunciona{
         opacity: 70%;
         margin-left: 2rem;
-        font-size: 50px;
+        font-size: 35px;
     }
 
     .textosomos{
         opacity: 70%;
         margin-left: 2rem;
-        font-size: 50px;
+        font-size: 35px;
     }
 
     .textocontacto{
         opacity: 70%;
         margin-left: 2rem;
-        font-size: 50px;
+        font-size: 35px;
     }
 
     .caja1indice{
         margin-left: 3rem;
-        margin-bottom: 1rem;
+        width: 100%;
+        height: 100%;
         z-index: 1;
+    }
+    .menu_indice{
+        width: 100%;
+        height: 100%;
     }
     .contacto{
         margin-top:-0.10rem;

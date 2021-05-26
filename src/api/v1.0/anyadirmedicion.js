@@ -3,14 +3,10 @@ function obtenerMedicion() {
     var hum = Math.random() * (100 - 10) + 10;
     var lum = Math.random() * (100 - 10) + 10;
     var sal = Math.random() * (100 - 10) + 10;
-    return {
-        temperatura: Math.round(temp),
-        humedad: Math.round(hum),
-        luminosidad: Math.round(lum),
-        salinidad: Math.round(sal)
-    }
+    return {temperatura: temp, humedad: hum, luminosidad: lum, salinidad: sal}
 
 }
+<<<<<<< HEAD
 function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -37,27 +33,27 @@ function f1() {
 
 
     fetch('../src/api/v1.0/anyadirmedicion.php', {
-        method: "POST",
-        body:datasensor
+=======
 
-    }
-).
-    then(function (respuesta) {
+document.querySelector("a").addEventListener("submit", function (event) {
+
+    var medicion = obtenerMedicion()
+    let datasensor = new FormData(medicion.target);
+    fetch('../api/v1.0/sensores.php', {
+>>>>>>> develop
+        method: "POST",
+        body: datasensor
+
+    }).then(function (respuesta) {
 
         if (respuesta.ok) {
             document.getElementById("output").textContent = "Tarea realizada con éxito";
         } else {
-            document.getElementById("output").textContent = "Algo ha fallado";
+            document.getElementById("output").textContent = "Algo ha falado";
         }
 
+
     })
-}
-
-/*
-document.querySelector("a").addEventListener("submit", function (event) {
-
 
 
 })
-
- */

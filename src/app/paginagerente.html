@@ -15,7 +15,7 @@
 <body>
 <header>
     <a href="../index.html" class="logo"><img src="icon/logoGTI.svg" class="logoGti"><span class="triangulo"></span></a>
-    <div><a href="anyadiruser.html"><img src="icon/menu_blanco.png" class="menu"></a></div>
+    <div><a href="../index.html"><img src="icon/x_blanco.png" class="menu"></a></div>
 </header>
 <div class="saludo">
     <h1> Hola
@@ -23,11 +23,12 @@
     </h1>
 </div>
 <!-- Aqui va a ir la tabla de usuarios -->
-<div id="divtabla">
+<div class="tabla" id="divtabla">
     <!-- Aqui va a ir la tabla de usuarios -->
     <table>
         <thead>
         <tr>
+            <th></th>
             <th>Nombre</th>
             <th>Correo</th>
             <th>DNI</th>
@@ -39,7 +40,10 @@
         </tbody>
     </table>
 </div>
-<a href="avisos.html"><p>ver avisos cick aqui</p></a>
+<div class="cosasGerente">
+    <a href="avisos.html" class="boton">Avisos</a>
+    <a href="anyadiruser.html" class="boton">Crear usuarios</a>
+</div>
 <script src="../api/v1.0/mostrarusuariosFAKE.js"></script>
 <script src="../api/v1.0/nombreFake.js"></script>
 </body>

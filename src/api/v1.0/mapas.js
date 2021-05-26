@@ -129,6 +129,7 @@ function iniciarsensores(idParcela) {
     //polygon.setMap(map)
     })
 }
+
 //main
 
 

@@ -11,6 +11,7 @@ function obtenerMedicion() {
     }
 
 }
+
 function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -39,7 +40,7 @@ function f1() {
 //     medicion.luminosidad +';'+ '$sal=' + medicion.salinidad +';'
 
 
-    fetch('../src/api/v1.0/anyadirmedicion.php', {
+    fetch('../api/v1.0/anyadirmedicion.php', {
         method: "POST",
         body:datasensor
 
@@ -48,9 +49,9 @@ function f1() {
     then(function (respuesta) {
 
         if (respuesta.ok) {
-            document.getElementById("output").textContent = "Tarea realizada con éxito";
+            //document.getElementById("output").textContent = "Tarea realizada con éxito";
         } else {
-            document.getElementById("output").textContent = "Algo ha fallado";
+            //document.getElementById("output").textContent = "Algo ha fallado";
         }
 
     })

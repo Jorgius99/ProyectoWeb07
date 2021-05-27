@@ -13,6 +13,8 @@ if($metodo =='POST') {
     $userNombre = "root";
     $password = "";
     $dbNombre = "proyectoweb007";
+
+
     $conn = mysqli_connect($serverNombre, $userNombre, $password, $dbNombre);
     if (!$conn) {
         http_response_code(500);

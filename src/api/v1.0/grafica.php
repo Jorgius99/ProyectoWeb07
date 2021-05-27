@@ -6,10 +6,13 @@ session_start();
 $idSensor = $_SESSION["id"];
 
 if ($metodo === 'GET') {
+
     $serverNombre = "localhost";
     $userNombre = "root";
     $password = "";
     $dbNombre = "proyectoweb007";
+
+
     $conn = mysqli_connect($serverNombre, $userNombre, $password, $dbNombre);
     if (!$conn) {
         http_response_code(500);

@@ -102,7 +102,7 @@ function iniciarsensores(idParcela) {
                 map: mapaGoogle,
             });
             google.maps.event.addListener(m, 'click', function () {
-                location.href="../Grafica.html?sensor="+vert.idSensor;
+                location.href="../app/Grafica.html?sensor="+vert.idSensor;
             });
 
         });

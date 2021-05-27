@@ -1,6 +1,4 @@
 
-
-
 .fondo{
     position: absolute;
     width: 100%;
@@ -529,4 +527,16 @@ a{ /* ENLACES */
         display:flex;
         flex-direction:column ;
     }
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.f1{
+    color: white;
+}
+.f3{
+    margin-left: 50rem;
 }

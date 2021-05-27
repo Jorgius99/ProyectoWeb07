@@ -6,10 +6,12 @@ html {
 body {
     margin: 0px;
 }
+h1 {
+    font-family: Helvetica;
+    font-size: 50px;
+    color: white;
 
-
-
-
+}
 
     /*Aqui empieza el header*/
     header {
@@ -58,12 +60,7 @@ body {
     }
 
     /*Aqui acaba el header*/
-    h1 {
-        font-family: Helvetica;
-        font-size: 125px;
-        color: white;
 
-    }
 
     p {
         font-family: Helvetica;
@@ -86,9 +83,16 @@ body {
         max-height: 50vh;
     }
 
+    .mapacaja{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
     #map {
-        width: 960px;
-        height: 45vh;
+        width: 50rem;
+        height: 40rem;
         border: solid 5px white;
         margin-left: 16px;
     }
@@ -110,29 +114,17 @@ body {
         margin-right: auto;
         background-color: #633B54;
     }
-
-    /*Aqui empieza el footer*/
-    footer {
-
-        height: 300px;
+@media(max-width: 500px){
+    .mapacaja{
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        bottom: 0;
-        position: fixed;
-
+        height: 100%;
+        border: 1px solid white;
     }
 
-    .iconoFooter {
-        margin-top: 20px;
-        position: relative;
-        height: 6.5vh;
-        margin-left: 65px;
-        margin-right: 65px;
+    #map {
+        width: 30rem;
+        height: 30rem;
+        border: solid 5px white;
+        margin-left: 16px;
     }
-
-    .contenedorFooter {
-        margin-right: 35px;
-    }
-
+}

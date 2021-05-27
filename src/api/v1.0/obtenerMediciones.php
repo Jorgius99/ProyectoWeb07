@@ -1,5 +1,6 @@
 <?php
 $metodo = $_SERVER['REQUEST_METHOD'];
+$id=$_GET['sensor'];
 if ($metodo == 'GET') {
 
     $serverNombre = "localhost";
@@ -11,18 +12,18 @@ if ($metodo == 'GET') {
         http_response_code(500);
         die("Error: " . mysqli_connect_error());
     }
-    $sql = "SELECT * FROM `login` WHERE `rol`='usuario'";
+    $sql = "SELECT * FROM `mediciones` WHERE `idSensor`='$id'";
     $result = mysqli_query($conn, $sql);
     $resultado=array();
     $i=0;
     while ($fila = mysqli_fetch_array($result)) {
         $respuesta = [];
-        $respuesta["nombre"] = $fila ["nombre"];
-        $respuesta["correo"] = $fila ["correo"];
-        $respuesta["telefono"] = $fila ["telefono"];
-        $respuesta["DNI"] = $fila ["DNI/NIF"];
-            $resultado[$i]=$respuesta;
-            $i++;
+        $respuesta["temperatura"] = $fila ["temperatura"];
+        $respuesta["humedad"] = $fila ["humedad"];
+        $respuesta["salinidad"] = $fila ["salinidad"];
+        $respuesta["luminosidad"] = $fila ["luminosidad"];
+        $resultado[$i]=$respuesta;
+        $i++;
 
     }
     echo json_encode($resultado);
@@ -30,4 +31,3 @@ if ($metodo == 'GET') {
 
 
 }
-

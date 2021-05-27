@@ -3,10 +3,14 @@ function obtenerMedicion() {
     var hum = Math.random() * (100 - 10) + 10;
     var lum = Math.random() * (100 - 10) + 10;
     var sal = Math.random() * (100 - 10) + 10;
-    return {temperatura: temp, humedad: hum, luminosidad: lum, salinidad: sal}
+    return {
+        temperatura: Math.round(temp),
+        humedad: Math.round(hum),
+        luminosidad: Math.round(lum),
+        salinidad: Math.round(sal)
+    }
 
 }
-<<<<<<< HEAD
 function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -14,6 +18,9 @@ function getParameterByName(name) {
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 var idSensor = getParameterByName('sensor');
+
+
+
 function f1() {
 
     var medicion = obtenerMedicion()
@@ -33,27 +40,27 @@ function f1() {
 
 
     fetch('../src/api/v1.0/anyadirmedicion.php', {
-=======
-
-document.querySelector("a").addEventListener("submit", function (event) {
-
-    var medicion = obtenerMedicion()
-    let datasensor = new FormData(medicion.target);
-    fetch('../api/v1.0/sensores.php', {
->>>>>>> develop
         method: "POST",
-        body: datasensor
+        body:datasensor
 
-    }).then(function (respuesta) {
+    }
+).
+    then(function (respuesta) {
 
         if (respuesta.ok) {
             document.getElementById("output").textContent = "Tarea realizada con éxito";
         } else {
-            document.getElementById("output").textContent = "Algo ha falado";
+            document.getElementById("output").textContent = "Algo ha fallado";
         }
 
-
     })
+}
+
+/*
+document.querySelector("a").addEventListener("submit", function (event) {
+
 
 
 })
+
+ */

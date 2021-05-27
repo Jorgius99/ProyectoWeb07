@@ -22,20 +22,21 @@
 
 <div class="botones">
     <div class="luminosidadYsalinidad">
-<a href="#" class="botonInformate">Luminosidad</a>
-<a href="#" class="botonInformate">Salinidad</a>
+<a href="#" class="botonInformate" id="lum">Luminosidad</a>
+<a href="#" class="botonInformate"id="sal">Salinidad</a>
     </div>
 
     <div class="temperaturaYhumedad">
-<a href="#" class="botonInformate">Temperatura</a>
-<a href="#" class="botonInformate">Humedad</a>
+<a href="#" class="botonInformate"id="temp">Temperatura</a>
+<a href="#" class="botonInformate"id="hum">Humedad</a>
     </div>
 </div>
 
-<div class="botongenerarsensor">
-    <a href="#" class="botongenerar">Generar mediciones</a>
-</div>
+<section class="botongenerarsensor">
+    <button onclick="f1()" class="botonInformate">Generar mediciones</button>
 
+</section>
+<div id="output" style="color: red" style="font-size: 90px" ></div>
 
 
 
@@ -50,5 +51,6 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 <!-- Este es el script del js de los datos de las gráficas -->
 <script src="../src/api/v1.0/graficaFake.js"></script>
+<script src="../src/api/v1.0/anyadirmedicion.js"></script>
 </body>
 </html>

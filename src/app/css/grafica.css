@@ -7,7 +7,7 @@ body{
     display: flex;
     align-items: center;
     position: relative;
-    border: solid 1px white;
+    border: 1px solid  white;
 }
 
 #myfirstchart{
@@ -57,7 +57,6 @@ header{
     font-size: 1.3rem;
     font-weight: bold;
     padding: 1em 2em;
-    margin-top: 10%;
     margin-bottom: 2%;
     border-radius: 55px;
     position: relative;
@@ -65,6 +64,8 @@ header{
     background-color:#633B54;
     text-decoration: none;
     color: black;
+    justify-content: center;
+    display: flex;
 }
 .botongenerar{
     font-family:Helvetica;
@@ -83,7 +84,7 @@ header{
 .botones{
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
 }
 
 .botones a{
@@ -93,7 +94,6 @@ header{
 .botongenerarsensor{
     display: flex;
     justify-content: center;
-    margin-top: 3rem;
 }
 
 @media(max-width: 850px){
@@ -103,7 +103,7 @@ header{
         display: flex;
         align-items: center;
         position: relative;
-        border: solid 1px white;
+
     }
 
     #myfirstchart{
@@ -118,7 +118,6 @@ header{
         font-size: 1rem;
         font-weight: bold;
         padding: 1em 2em;
-        margin-top: 10%;
         margin-bottom: 2%;
         border-radius: 50px;
         position: relative;
@@ -126,6 +125,8 @@ header{
         background-color:#633B54;
         text-decoration: none;
         color: black;
+        display: flex;
+        justify-content: center;
     }
     .botongenerar{
         font-family:Helvetica;
@@ -146,10 +147,6 @@ header{
         justify-content: center;
     }
 
-    .botones a{
-        margin: 1rem;
-    }
-
     .botongenerarsensor{
         display: flex;
         justify-content: center;
@@ -164,7 +161,7 @@ header{
         display: flex;
         align-items: center;
         position: relative;
-        border: solid 1px white;
+
     }
 
     #myfirstchart{
@@ -179,7 +176,6 @@ header{
         font-size: 1rem;
         font-weight: bold;
         padding: 1em 2em;
-        margin-top: 10%;
         margin-bottom: 2%;
         border-radius: 50px;
         position: relative;
@@ -216,6 +212,7 @@ header{
     .botongenerarsensor{
         display: flex;
         justify-content: center;
+
     }
 
 

@@ -18,6 +18,9 @@ header {
 
 }
 
+.tabla{
+    margin-bottom:10rem;
+}
 .logo {
     display: flex;
     height: 100%;
@@ -48,7 +51,8 @@ header {
     margin-right: 50px;
     margin-top: 30px;
     text-align: left;
-    height: 3vh;
+    width: 3rem;
+    height: 3rem;
     position: relative;
 }
 
@@ -85,6 +89,7 @@ table {
 }
 th {
     border-bottom: solid 2px white;
+    color: white;
 }
 td {
     border-bottom: solid 1px white;
@@ -92,30 +97,10 @@ td {
     padding: 1rem 4rem;
 }
 
-/* TABLA */
-/*
-.txttabla{
+thead{
+    justify-content: center;
     color: white;
-    size: 2rem;
 }
-
-table {
-    margin: 0 auto;
-    border-collapse: collapse;
-    font-family: sans-serif;
-
-}
-th {
-    border-bottom: solid 2px white;
-}
-td {
-    border-bottom: solid 1px white;
-    color: white;
-    padding: 1rem 4rem;
-}
-
-*/
-/* FIN TABLA */
 
 /*footer*/
 footer {
@@ -141,3 +126,27 @@ footer {
 .contenedorFooter {
     margin-right: 35px;
 }
+
+.cosasgerente{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 11rem;
+}
+
+.boton{
+    font-family:Helvetica;
+    border: white;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0.5em 0.5em;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: 2px 1px 2px #999;
+    background-color:#633B54;
+    text-decoration: none;
+    color: white;
+
+}
+

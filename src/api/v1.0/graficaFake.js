@@ -1,5 +1,3 @@
-
-
 function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -9,6 +7,7 @@ function getParameterByName(name) {
 
 var idSensor = getParameterByName('sensor');
 
+
 fetch('../src/api/v1.0/obtenerMediciones.php?sensor=' + idSensor, {
     method: "GET"
 }).then(function (respuesta) {
@@ -17,61 +16,78 @@ fetch('../src/api/v1.0/obtenerMediciones.php?sensor=' + idSensor, {
         return respuesta.json()
     }
 }).then(function a(datos) {
-   /* for (let i = 0; i < datos.length; i++) {
-        console.log("temperatura=" + datos[i].temperatura);
-        console.log("humedad=" + datos[i].humedad);
-        console.log("salinidad=" + datos[i].salinidad);
-        console.log("luminosidad=" + datos[i].luminosidad);
+    /* for (let i = 0; i < datos.length; i++) {
+         console.log("temperatura=" + datos[i].temperatura);
+         console.log("humedad=" + datos[i].humedad);
+         console.log("salinidad=" + datos[i].salinidad);
+         console.log("luminosidad=" + datos[i].luminosidad);
 
-    }
-    */
-    var t = function (event) {
-        var aux = []
-        for (let i = 0; i < datos.length; i++) {
-            aux.push({
-                year: i.toString(),
-                value: parseFloat(datos[i].temperatura)
-            })
-
-        }
-        //console.log(aux)
-        new Morris.Line({
-            element: 'myfirstchart',
-            data: aux,
-            xkey: 'year',
-            ykeys: ['value'],
-            labels: ['Value']
-        });
-        location.reload()
-    };
+     }
+     */
+var a=false;
     var bt = document.querySelector('#temp');
-    bt.addEventListener('click', t);
+    bt.addEventListener('click', function (event) {
+        if(a==false){
+            var aux = []
+            for (let i = 0; i < datos.length; i++) {
+                aux.push({
+                    year: i.toString(),
+                    value: parseFloat(datos[i].temperatura)
+                })
 
-   //-------------------------------------------------
-    var h = function (event) {
-       location.reload()
-        var aux = []
-        for (let i = 0; i < datos.length; i++) {
-            aux.push({
-                year: i.toString(),
-                value: parseFloat(datos[i].humedad)
-            })
+            }
+            //console.log(aux)
+            new Morris.Line({
+                element: 'myfirstchart',
+                data: aux,
+                xkey: 'year',
+                ykeys: ['value'],
+                labels: ['Value']
+            });
+            a=true;
+        }
+        else{
+            location.reload()
 
         }
-        //console.log(aux)
-        new Morris.Line({
-            element: 'myfirstchart',
-            data: aux,
-            xkey: 'year',
-            ykeys: ['value'],
-            labels: ['Value']
-        });
 
-    };
+    });
+
+    //-------------------------------------------------
     var bh = document.querySelector('#hum');
-    bh.addEventListener('click', h);
+    bh.addEventListener('click', function (event) {
+        if(a==false) {
+            var aux = []
+            for (let i = 0; i < datos.length; i++) {
+                aux.push({
+                    year: i.toString(),
+                    value: parseFloat(datos[i].humedad)
+                })
+
+            }
+            //console.log(aux)
+            new Morris.Line({
+                element: 'myfirstchart',
+                data: aux,
+                xkey: 'year',
+                ykeys: ['value'],
+                labels: ['Value']
+            });
+            a=true
+        }
+        else{
+            location.reload()
+        }
+
+
+    });
+
     //--------------------------------------------------
-    var s = function (event) {
+    var bs = document.querySelector('#sal');
+    bs.addEventListener('click', function (event) {
+if(a==false){
+
+
         var aux = []
         for (let i = 0; i < datos.length; i++) {
             aux.push({
@@ -88,34 +104,42 @@ fetch('../src/api/v1.0/obtenerMediciones.php?sensor=' + idSensor, {
             ykeys: ['value'],
             labels: ['Value']
         });
-        location.reload()
+        a=true;
+}
+else{
+    location.reload()
+}
 
-    };
-    var bs = document.querySelector('#sal');
-    bs.addEventListener('click', s);
+    });
     //-----------------------------------------------
-    var l = function (event) {
-        var aux = []
-        for (let i = 0; i < datos.length; i++) {
-            aux.push({
-                year: i.toString(),
-                value: parseFloat(datos[i].luminosidad)
-            })
-
-        }
-        //console.log(aux)
-        new Morris.Line({
-            element: 'myfirstchart',
-            data: aux,
-            xkey: 'year',
-            ykeys: ['value'],
-            labels: ['Value']
-        });
-        location.reload()
-
-    };
     var bl = document.querySelector('#lum');
-    bl.addEventListener('click', l);
+    bl.addEventListener('click', function (event) {
+        if(a==false){
+            var aux = []
+            for (let i = 0; i < datos.length; i++) {
+                aux.push({
+                    year: i.toString(),
+                    value: parseFloat(datos[i].luminosidad)
+                })
+
+            }
+
+            new Morris.Line({
+                element: 'myfirstchart',
+                data: aux,
+                xkey: 'year',
+                ykeys: ['value'],
+                labels: ['Value']
+            });
+            a=true
+        }
+        else{
+            location.reload()
+        }
+
+    });
+
+//---------------------------------------------------------
 
 
 })
@@ -223,7 +247,6 @@ function lum(datos) {
 
 
  */
-
 
 
 /*

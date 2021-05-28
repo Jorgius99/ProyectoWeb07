@@ -612,3 +612,13 @@ a{ /* ENLACES */
         flex-direction:column ;
     }
 }
+footer{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+.textoFooter{
+    font-size: 20px;
+    font-family: Helvetica;
+}

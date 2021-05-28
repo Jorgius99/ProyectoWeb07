@@ -1,5 +1,6 @@
-
-
+*, html, body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
 
 .fondo{
     position: absolute;
@@ -9,8 +10,19 @@
 .container{
     width: 100%;
     height: 100%;
-    margin-bottom: 10%;
+    margin-bottom: 0;
     position: relative;
+    height: calc(100vh - 8.5rem);
+}
+.container2{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    position: relative;
+    height: calc(100vh - 8.5rem);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 html{
@@ -60,13 +72,13 @@ body{
     margin-right: 3rem;
 }
 h1{
-    margin-top: 5%;
-    font-size: 3rem;
-    font-family: Helvetica;
+    font-size: 5.5rem;
     position: relative;
+    font-weight: 700;
     text-align: center;
-    color: #002f01;
+    color: #0d1a27;
     z-index: 2;
+    margin: 3rem 2.2rem;
 }
 .boton{
     width: 100%;
@@ -77,62 +89,66 @@ h1{
     justify-content: center;
 }
 .botonInformate{
-    font-family:Helvetica;
-    border: white;
-    font-size: 2.15rem;
-    font-weight: bold;
-    padding: 1em 2em;
-    margin-top: 10%;
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 2rem 4rem;
+    margin-top: 5%;
     margin-bottom: 2%;
-    border-radius: 55px;
+    border-radius: 400px;
     position: relative;
-    box-shadow: 8px 5px 8px #999;
-    background-color:#633B54;
+    -webkit-box-shadow: 0px 0px 35px 6px rgba(30,8,7,0.44); 
+box-shadow: 0px 0px 35px 6px rgba(30,8,7,0.44);
+    background-color:#FF4738;
 }
 .contenedorFlecha{
     position: relative;
     width: 100%;
-    height: 20rem;
+    height: 6rem;
     background-color: #0d1a27;
     opacity: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10%
+    margin-top: 0;
+}
+.contenedorFlecha > a{
+    height: 3rem;
 }
 .flechaBajar{
-    width: 10rem;
-    margin-bottom: 5.5rem;
+    width: 3rem;
+    margin-top: .5rem;
     z-index: 2;
     position: relative;
 }
 .seccionQue_ofrecemos{
     width: 100%;
-    height: 100%;
-    margin-bottom: 10%;
+    height: 100vh;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 .fondoInfo{
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     object-fit: cover;
     position: absolute;
+    filter: blur(4px) grayscale(30%);;
 }
 .titulo2{
-    color: black;
-    font-size: 120px;
-    margin-left: 120px;
-    margin-right: 30px;
-    text-align: left;
+    color: #0d1a27;
+    font-size: 100px;
+    margin: 3rem auto 0 auto;
+    text-align: center;
     z-index: 2;
     position: relative;
 }
 .titulo1{
     color: white;
-    font-size: 120px;
-    margin-left: 120px;
-    margin-right: 30px;
-    text-align: left;
+    font-size: 100px;
+    margin: 3rem auto 0 auto;
+    text-align: center;
     z-index: 2;
     position: relative;
 }
@@ -174,85 +190,10 @@ h1{
     align-items: center;
     justify-content: center;
     background-color: #0d1a27;
-    opacity: 70%;
-    margin-top: 5%;
+    opacity: 100%;
+    margin-top: 0%;
+    padding: 10px 0;
 }
-
-@media(max-width:850px){
-    header{
-        height: 5rem;
-
-    }
-    .triangulo{
-        border-left: 3rem solid white;
-        border-top: 2.55rem solid transparent;
-        border-bottom: 2.55rem solid transparent;
-        top: -1px;
-    }
-    .titulo1{
-        font-size: 4rem;
-    }
-    .titulo2{
-        font-size: 4rem;
-    }
-    .texto1{
-        font-size: 30px;
-    }
-    .texto2{
-        font-size: 30px;
-    }
-    .contenedorFlechaInfo{
-        margin-top: 7rem;
-        height: 13rem
-    }
-
-
-
-}
-@media(max-width:650px){
-    h1{
-        margin-top: 10%;
-        font-size: 2rem;
-    }
-    .boton{
-        margin-top: 10%;
-    }
-    .contenedorFlecha{
-        margin-top: 12rem;
-        height: 12rem;
-    }
-    .flechaBajar{
-        margin-bottom: 1.5rem;
-    }
-
-
-}
-@media(max-width:550px){
-    .titulo1{
-        font-size: 4rem;
-    }
-    .titulo2{
-        font-size: 4rem;
-    }
-    .texto1{
-        font-size: 30px;
-    }
-    .texto2{
-        font-size: 30px;
-    }
-    .contenedorFlechaInfo{
-        margin-top: 6rem;
-        height: 10rem
-    }
-    .contenedorFlecha{
-        margin-top: 10%;
-        height: 9rem;
-    }
-
-
-}
-
-
 
 /*
 MENU CSS
@@ -396,6 +337,18 @@ a{ /* ENLACES */
 }
 
 @media (max-width:1100px) {
+    h1{
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+    .titulo1{
+        margin-top: 5rem;
+        font-size: 5rem;
+    }
+    .titulo2{
+        margin-top: 5rem;
+        font-size: 5rem;
+    }
     .indice{
         margin-bottom: -3.5rem;
     }
@@ -464,6 +417,8 @@ a{ /* ENLACES */
         font-size: 35px;
     }
 }
+
+
 @media(max-width: 850px){
 
     .indice{
@@ -529,10 +484,75 @@ a{ /* ENLACES */
         margin-left: 2rem;
         font-size: 35px;
     }
+
+    header{
+        height: 5rem;
+    }
+    .triangulo{
+        border-left: 3rem solid white;
+        border-top: 2.55rem solid transparent;
+        border-bottom: 2.55rem solid transparent;
+        top: -1px;
+    }
+    h1{
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+    .titulo1{
+        font-size: 4rem;
+    }
+    .titulo2{
+        font-size: 4rem;
+    }
+    .texto1{
+        font-size: 30px;
+    }
+    .texto2{
+        font-size: 30px;
+    }
+    .contenedorFlechaInfo{
+        margin-top: 7rem;
+        height: 13rem
+    }
+
+
+
 }
+@media(max-width:650px){
+    h1{
+        padding-top: 2rem;
+        font-size: 3.6rem;
+        line-height: 3.6rem;
+    }
+    .boton{
+        margin-top: 10%;
+    }
+    .botonInformate{
+        font-size: 1.6rem;
+        padding: 1.5rem 2rem;
+        margin-top: 5%;
+        margin-bottom: 2%;
+    }
+    .contenedorFlecha{
+        margin-top: 12rem;
+        height: 12rem;
+    }
+    .flechaBajar{
+        margin-bottom: 1.5rem;
+    }
 
-
-@media(max-width: 650px){
+    /*h1{
+        font-size: 25px;
+        line-height: 25px;
+    }*/
+    .titulo1{
+        margin-top: 6rem;
+        font-size: 6rem;
+    }
+    .titulo2{
+        margin-top: 6rem;
+        font-size: 6rem;
+    }
     .icono{
         width: 4rem;
         height: 4rem;
@@ -621,4 +641,29 @@ footer{
 .textoFooter{
     font-size: 20px;
     font-family: Helvetica;
+}
+
+@media(max-width:550px){
+    .titulo1{
+        font-size: 4rem;
+    }
+    .titulo2{
+        font-size: 4rem;
+    }
+    .texto1{
+        font-size: 30px;
+    }
+    .texto2{
+        font-size: 30px;
+    }
+    .contenedorFlechaInfo{
+        margin-top: 6rem;
+        height: 10rem
+    }
+    .contenedorFlecha{
+        margin-top: 10%;
+        height: 9rem;
+    }
+
+
 }

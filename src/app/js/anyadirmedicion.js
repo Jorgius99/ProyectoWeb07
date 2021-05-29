@@ -3,11 +3,18 @@ function obtenerMedicion() {
     var hum = Math.random() * (100 - 10) + 10;
     var lum = Math.random() * (100 - 10) + 10;
     var sal = Math.random() * (100 - 10) + 10;
+    var Fecha= new Date()
+    var segundos=fecha.getSeconds()
+    var minutos=fecha.getMinutes()
+    var horas=fecha.getHours()
+    var tiempo=horas+":"+minutos+":"+segundos
     return {
         temperatura: Math.round(temp),
         humedad: Math.round(hum),
         luminosidad: Math.round(lum),
-        salinidad: Math.round(sal)
+        salinidad: Math.round(sal),
+        fecha: Fecha,
+        hora: tiempo
     }
 
 }
@@ -34,34 +41,26 @@ function f1() {
     datasensor.append("luminosidad", medicion.luminosidad.toString());
     datasensor.append("salinidad", medicion.salinidad.toString());
     datasensor.append("idsensor", idSensor.toString());
-
+    datasensor.append("fecha", medicion.fecha.toString())
+    datasensor.append("hora", medicion.hora.toString())
 
 //?temp=' + medicion.temperatura +'&'+ 'hum=' + medicion.humedad +';'+ '$lum='+
 //     medicion.luminosidad +';'+ '$sal=' + medicion.salinidad +';'
-
-
     fetch('../api/v1.0/anyadirmedicion.php', {
         method: "POST",
         body:datasensor
-
     }
 ).
     then(function (respuesta) {
-
         if (respuesta.ok) {
             //document.getElementById("output").textContent = "Tarea realizada con éxito";
         } else {
             //document.getElementById("output").textContent = "Algo ha fallado";
         }
-
     })
 }
-
 /*
 document.querySelector("a").addEventListener("submit", function (event) {
-
-
-
 })
 
  */

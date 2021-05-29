@@ -31,6 +31,7 @@ if ($metodo === 'GET') {
         $respuesta["salinidad"] = $fila ["salinidad"];
         $respuesta["luminosidad"] = $fila ["luminosidad"];
         $respuesta["hora"] = $fila ["hora"];
+        $respuesta["fecha"] = $fila ["fecha"];
         $resultado[$i] = $respuesta;
         $i++;
     }

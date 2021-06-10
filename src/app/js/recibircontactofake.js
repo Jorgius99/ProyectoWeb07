@@ -1,5 +1,5 @@
 
-fetch( '../api/v1.0/recibircontacto.php', {
+fetch( '../src/api/v1.0/recibircontacto.php', {
     method:"GET"
 }).then(function (respuesta) {
 

@@ -18,6 +18,9 @@ function iniciarmapa() {
         //   console.log(datos[i].coordenadaY);
         //}
 
+        /* pinchos
+        var markers=[];
+        pinchos*/
 
         function initMap() {
             mapaGoogle.setTilt(0);
@@ -40,6 +43,7 @@ function iniciarmapa() {
                     label: datos[i].idParcela,
                     animation: google.maps.Animation.DROP,
                     map: mapaGoogle,
+                    Marker:setZIndex(1),
                 });
 
                 (function (marker, i) {
@@ -56,7 +60,43 @@ function iniciarmapa() {
                 })(marker, i);
             }
 
+
+            /* pinchos
+            function addmarker(location){
+                var marker = new google.maps.Marker({
+                    position: location,
+                    map:mapaGoogle,
+                });
+                markers.push(marker);
+            }
+
+            function setMapOnAll(map) {
+                for (let i = 0; i < markers.length; i++) {
+                    markers[i].setMap(map);
+                }
+            }
+
+            function clearMarkers() {
+                setMapOnAll(null);
+            }
+
+            function showMarkers() {
+                setMapOnAll(map);
+            }
+             pinchos*/
+
+
+            /*
+            var marker1 = new google.maps.Marker({
+                position: event.latLng,
+                map: mapaGoogle,
+                collisionBehavior:
+                google.maps.CollisionBehavior.OPTIONAL_AND_HIDES_LOWER_PRIORITY,
+            });
+            */
+
         }
+
         mapaGoogle = new google.maps.Map(document.getElementById('map'), {
             mapTypeId: 'hybrid',
             styles: [
@@ -73,65 +113,74 @@ function iniciarmapa() {
             streetViewControl: false,
             rotateControl: false,
         });
+
+        function iniciarsensores(idParcela) {
+            fetch('../api/v1.0/sensores.php?$parcela=' + idParcela, {
+                method: "GET",
+
+            }).then(function (respuesta) {
+
+                if (respuesta.ok) {
+                    return respuesta.json()
+                }
+
+            }).then(function (sensores) {
+
+                var vertices=[]
+                sensores.forEach(function (vert){
+                    let punto={
+                        lat: parseFloat(vert.coordenadaX),
+                        lng: parseFloat(vert.coordenadaY),
+                        Marker:setZIndex(3),
+                    }
+                    vertices.push(punto)
+
+                    let m=new google.maps.Marker({
+                        position:punto,
+                        label: vert.idSensor,
+                        map: mapaGoogle,
+                        Marker:setZIndex(3),
+                    });
+
+                    google.maps.event.addListener(m, 'click', function () {
+                        location.href="../app/Grafica.html?sensor="+vert.idSensor;
+                        Marker:setZIndex(3);
+                    });
+
+                });
+
+                let polygon = new google.maps.Polygon({
+                    paths: [vertices],
+                    strokeColor: "#ff8000",
+                    strokeOpacity: 0.8,
+                    strokeWeight: 2,
+                    fillColor: "#ff8000",
+                    fillOpacity: 0.35,
+                    map: mapaGoogle,
+                    zIndex: 3,
+                });
+
+                let bounds = new google.maps.LatLngBounds();
+                polygon.getPath().getArray().forEach(function (v){
+                    bounds.extend(v);
+                })
+                //  }
+                mapaGoogle.fitBounds(bounds);
+
+                console.log(mapaGoogle)
+
+                //polygon.setMap(map)
+
+            })
+
+        }//Iniciar sensores
+
         initMap()
+
     })
 }
-function iniciarsensores(idParcela) {
-    fetch('../api/v1.0/sensores.php?$parcela=' + idParcela, {
-        method: "GET",
 
-    }).then(function (respuesta) {
-
-        if (respuesta.ok) {
-            return respuesta.json()
-        }
-
-    }).then(function (sensores) {
-
-        let vertices=[]
-        sensores.forEach(function (vert){
-            let punto={
-                lat: parseFloat(vert.coordenadaX),
-                lng: parseFloat(vert.coordenadaY)
-            }
-            vertices.push(punto)
-
-            let m=new google.maps.Marker({
-                position:punto,
-                label: vert.idSensor,
-                map: mapaGoogle,
-            });
-            google.maps.event.addListener(m, 'click', function () {
-                location.href="../app/Grafica.html?sensor="+vert.idSensor;
-            });
-
-        });
-
-        let polygon = new google.maps.Polygon({
-            paths: [vertices],
-            strokeColor: "#ff8000",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#ff8000",
-            fillOpacity: 0.35,
-            map: mapaGoogle
-        });
-
-        let bounds = new google.maps.LatLngBounds();
-        polygon.getPath().getArray().forEach(function (v){
-            bounds.extend(v);
-        })
-  //  }
-        mapaGoogle.fitBounds(bounds);
-
-        console.log(mapaGoogle)
-
-    //polygon.setMap(map)
-    })
-}
 //main
-
-
 
 //crear cuadros de texto en las cosas
 /*

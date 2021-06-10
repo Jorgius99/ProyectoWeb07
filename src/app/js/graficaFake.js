@@ -8,7 +8,7 @@ function getParameterByName(name) {
 var idSensor = getParameterByName('sensor');
 
 
-fetch('../api/v1.0/obtenerMediciones.php?sensor=' + idSensor, {
+fetch('../src/api/v1.0/obtenerMediciones.php?sensor=' + idSensor, {
     method: "GET"
 }).then(function (respuesta) {
 

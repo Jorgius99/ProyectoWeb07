@@ -5,7 +5,7 @@ document.querySelector("form").addEventListener("submit", function (event){
     let datausuarionuevo = new FormData(event.target)  ;
     if(datausuarionuevo.get("contrasenya")==datausuarionuevo.get("newContrasenya")){
 
-        fetch( '../api/v1.0/cambiarContraseña.php', {
+        fetch( '../src/api/v1.0/cambiarContraseña.php', {
             method:"POST",
             body: datausuarionuevo
         }).then(function (respuesta){

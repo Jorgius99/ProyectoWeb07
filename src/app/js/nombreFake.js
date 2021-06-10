@@ -1,4 +1,4 @@
-fetch('../api/v1.0/nombre.php', {
+fetch('../src/api/v1.0/nombre.php', {
     method: "GET"
 
 }).then(function (respuesta) {

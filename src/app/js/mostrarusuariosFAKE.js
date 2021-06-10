@@ -1,5 +1,5 @@
 
-fetch( '../api/v1.0/mostrarusuarios.php', {
+fetch( '../src/api/v1.0/mostrarusuarios.php', {
     method:"GET"
 }).then(function (respuesta) {
 

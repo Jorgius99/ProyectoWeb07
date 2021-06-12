@@ -6,8 +6,8 @@ session_start();
 
 if($metodo ==='POST') {
 
-    $nombre = $_POST['nombre'];
-    $contrasenya = $_POST['contrasenya'];
+    $nombre = $_POST['nombre_login'];
+    $contrasenya = $_POST['contrasenya_login'];
 
 
     $serverNombre = "localhost";

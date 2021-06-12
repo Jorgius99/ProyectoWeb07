@@ -1,190 +1,141 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <title>GTI | Inicio</title>
-
+    <title>Index | GTI</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="app/css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="app/css/index.css" rel="stylesheet">
 </head>
-
 <body>
-    <img src="app/image/masinformacion.jpg" class="fondo">
+<header>
+    <div class="contenedorLogo">
+        <a href="#"><img src="app/icon/logoGTI.svg" class="logoGti"></a>
+    </div>
+    <div class="contenedorMenu">
+        <a href="#" id="botonIniciarSesion"><img src="app/icon/iniciarSesion.svg" class="iniciasesion"></a>
+    </div>
+</header>
 
-    <!-- Aquí empieza el header, que contiene el logo y el menú -->
-
-    <header>
-        <a href="#" class="contenedorLogo"><img src="app/icon/logoGTI.svg" class="logoGti"><span
-                class="triangulo"></span>
-        </a>
-        <div><a href="#indice"><img src="app/icon/menu_blanco.png" class="menu"></a></div>
-
-        <!----------------------------------------------MENU------------------------------------------------------------------->
-        <div id="indice" class="indice">
-            <nav class="menu_indice">
-
-                <a href="index.html"><img class="imagen" src="app/icon/cerrar.svg" alt="foto"></a>
-
-                <div>
-                    <h2 class="texto1indice">Menú.</h2>
-                </div>
-
-
-                <ul class="caja1indice">
-
-                    <div class="columna">
-                        <div>
-                            <li class="sesion">
-                                <a href="iniciarsesion.html"><img src="app/icon/loginmenu.svg" alt="sesion"
-                                        class="icono"></a>
-                                <a class="textoindice2" href="iniciarsesion.html">Iniciar Sesión</a>
-                            </li>
-                            <br>
-                            <li class="ofrecer">
-                                <a href="index.html#ofrecer"><img src="app/icon/queofrecemosblanco.svg" alt="ofrecemos"
-                                        class="icono"></a>
-                                <a class="textoofrecer" href="index.html#ofrecer"> ¿Qué ofrecemos?</a>
-                            </li>
-
-                            <br>
-
-
-                            <li class="datos">
-                                <a href="index.html#muestra"><img src="app/icon/comosemuestranlosdatosblanco.svg"
-                                        alt="mostrar" class="icono"></a>
-                                <a class="textomostrar" href="index.html#muestra"> ¿Cómo se muestran?</a>
-                            </li>
-                        </div>
-                        <br>
-                        <div>
-                            <li class="funciona">
-                                <a href="index.html#funciona"><img src="app/icon/comofuncionablanco.svg" alt="funciona"
-                                        class="icono"></a>
-                                <a class="textofunciona" href="index.html#funciona"> ¿Cómo funciona?</a>
-                            </li>
-
-                            <br>
-                            <li class="somos">
-                                <a href="index.html#somos"><img src="app/icon/quienessomosblanco.svg" alt="somos"
-                                        class="icono"></a>
-                                <a class="textosomos" href="index.html#somos"> ¿Quienes somos?</a>
-                            </li>
-                            <br>
-                            <li class="contacto">
-                                <a href="formulariocontacto.html"><img src="app/icon/contactanosblanco.svg"
-                                        alt="contact" class="icono"></a>
-                                <a class="textocontacto" href="formulariocontacto.html">Contáctanos</a>
-                            </li>
-                        </div>
-                    </div>
-                </ul>
-
-            </nav>
+<section class="contenedorlogin" id="login">
+    <div class="login" >
+        <div class="cerr">
+            <a href="#" id="cerrariniciarsesion"><img src="app/icon/cerrar.svg" alt="cerrar" class="cerrar"></a>
         </div>
-        <!----------------------------------------------------------------------------------------------------------------->
+        <h1 class="is">Inicie sesión</h1>
+        <form class="formulario">
+
+            <input type="text" placeholder="Usuario*" name="nombre_login" class="contenedornombre" required>
+            <input type="password" placeholder="Contraseña*" name="contrasenya_login" class="contenedornombre" required>
+            <input type="submit" value="Entrar" class="botonlogin" id="botonlogin">
+            <a href="app/cambiarContraseña.html" class="olvidocontrasenya"> pulse aqui si has olvidado tu contraseña</a>
+            <div id="output_login" class="salida"></div>
+        </form>
+    </div>
+</section>
+
+<section class="landin">
+    <div class="principal"data-aos="fade-right"data-aos-duration="1500">
+        <h1 class="slogan">¿QUIERES AUMENTAR LA PRODUCTIVIDAD DE TU CAMPO REDUCIENDO COSTES?</h1>
+    </div>
+    <div class="principal_Imagen" data-aos="fade-down"data-aos-duration="1500">
+        <img src="app/icon/fotoPrincipal.svg" alt="Start up" class="imgp">
+    </div>
+    <div class="secundario"data-aos="fade-right"data-aos-duration="1500">
+        <h2 class="slogan2">Infórmate sobre el mejor sistema de monitorización del mercado</h2>
+    </div>
+    <div class="cta"data-aos="fade-right"data-aos-duration="1500">
+        <a class="botonInformate" href="#contacto">Contáctanos</a>
+    </div>
+    <div class="bajar">
+        <a href="#ofrecer" translate="yes"><img src="app/icon/flechablanca.png" class="flechaBajar"></a>
+    </div>
+</section>
 
 
-    </header>
-
-    <!-- Aquí está el contenido de la landing page, con el texto de reclamo, el CTA y la flecha que indica que se puede bajar -->
-
-    <div class="container">
-        <div class="container2">
-            <div>
-                <h1 class="slogan">¿QUIERES AUMENTAR LA PRODUCTIVIDAD DE TU CAMPO REDUCIENDO COSTES?</h1>
-            </div>
-            <div class="boton"><a class="botonInformate" href="formulariocontacto.html">Contáctanos</a></div>
-            <div class="contenedorFlecha"><a href="#ofrecer"><img src="app/icon/flechablanca.png"
-                        class="flechaBajar"></a>
-            </div>
+<div id="ofrecer" class="contenedor" >
+    <div class="caja"data-aos="flip-right"  data-aos-duration="1500">
+        <h3 class="tituloh3" >¿Que ofrecemos?</h3>
+        <div class="textolargo">
+            <p>Nuestras sondas están equipadas con una serie de sesores capaces de monitorizar de manera
+                óptima todo tipo de campos y plantaciones de una manera económica.</p>
+        </div>
+    </div>
+    <div class="caja" data-aos="flip-right"data-aos-duration="1500">
+        <h3 class="tituloh3">¿Cómo funciona?</h3>
+        <div class="textolargo">
+            <p>Nuestras sondas cuentan con sensores que recogen datos directamente del campo y los
+                envían a una nube a la cual se puede acceder de manera remota y poder visualizarlos en la app.</p>
+        </div>
+    </div>
+    <div class="caja" data-aos="flip-right"data-aos-duration="1500">
+        <h3 class="tituloh3">¿Cómo se muestran?</h3>
+        <div class="textolargo">
+            <p>Se puede acceder a todos los datos recopilados por los sensores a través de nuestra
+                propia página web, que cuenta con una interfaz sencilla en la que se muestra la nube de datos por
+                medio de
+                gráficas.</p>
+        </div>
+    </div>
+    <div class="caja" data-aos="flip-right"data-aos-duration="1500">
+        <h3 class="tituloh3">¿Quienes somos?</h3>
+        <div class="textolargo">
+            <p>Somos una StartUp dedicada a la monitorización profesional de plantaciones y campos de
+                explotación agrícolas.</p>
         </div>
     </div>
 
-    <!-- Aqui hay un contenedor con información que contiene lo que ofrecemos, un icono, una foto y un texto -->
+</div>
+<div id="contacto" class="">
+    <h1 class="cn">Contacta con nosotros</h1>
+    <div  class="contacto_form">
 
-    <section class="seccionQue_ofrecemos" id="ofrecer">
-        <div class="fondoInformacion"><img src="app/image/plantitas.jpg" class="fondoInfo">
-            <h2 class="titulo1">¿Que ofrecemos?</h2>
-        </div>
-        <div class="contenedorInformación">
-            <div class="texto1">
-                <p>Nuestras sondas están equipadas con una serie de sesores capaces de monitorizar de manera
-                    óptima todo tipo de campos y plantaciones de una manera económica.</p>
-            </div>
+        <form class="formulario" >
+            <input type="text" class="contenedornombre" name="nombre_form" placeholder="Nombre*" required>
+            <input type="text" class="contenedornombre" name="apellido_form" placeholder="Apellidos*" required>
+            <input type="text" class="contenedornombre" name="correo_form" placeholder="Email*" required>
+            <input type="text" class="contenedornombre" name="motivo_form" placeholder="motivo*" required>
+            <input type="submit" value="Contáctanos" class="botonlogin" id="botonform">
+            <div id="output_form" class="salida"></div>
+        </form>
+    </div>
 
-        </div>
-        <div class="contenedorFlechaInfo"><a href="#funciona"><img src="app/icon/flechablanca.png"
-                    class="flechaBajar"></a></div>
+</div>
 
-    </section>
 
-    <!-- Aqui hay un contenedor con información que contiene el funcionamiento, un icono, una foto y un texto -->
+<footer>
+    <div class="textofuter" >
+        <p>2021 Todos los derechos reservados</p>
+        <p>Pagina hecha por el grupo 7</p>
+        <p class="alvaro"> ALVARITO te llevamos en el corazon estes donde estés</p>
 
-    <section class="seccionQue_ofrecemos" id="funciona">
-        <div class="fondoInformacion"><img src="app/image/fotoindex2.jpg" class="fondoInfo">
-            <h2 class="titulo1">¿Cómo funciona?</h2>
-        </div>
-        <div class="contenedorInformación">
-            <div class="texto1">
-                <p>Nuestras sondas cuentan con sensores que recogen datos directamente del campo y los
-                    envían a una nube a la cual se puede acceder de manera remota y poder visualizarlos en la app.</p>
-            </div>
+    </div>
+    <div class="redessociales">
+        <a href="www.facebook.com"><img src="app/icon/facebook.svg" alt="facebook" class="rrss"></a>
+        <a href="www.instagram.com"><img src="app/icon/instagram.svg" alt="instagram" class="rrss"></a>
+    </div>
+</footer>
 
-        </div>
-        <div class="contenedorFlechaInfo"><a href="#muestra"><img src="app/icon/flechablanca.png"
-                    class="flechaBajar"></a></div>
 
-    </section>
-
-    <!-- Aqui hay un contenedor con información que contiene como se muestran los datos-->
-
-    <section class="seccionQue_ofrecemos" id="muestra">
-        <div class="fondoInformacion"><img src="app/image/comoDatos.jpg" class="fondoInfo">
-            <h2 class="titulo2">¿Cómo se muestran?</h2>
-        </div>
-        <div class="contenedorInformación">
-            <div class="texto1">
-                <p>Se puede acceder a todos los datos recopilados por los sensores a través de nuestra
-                    propia página web, que cuenta con una interfaz sencilla en la que se muestra la nube de datos por
-                    medio de
-                    gráficas.</p>
-            </div>
-
-        </div>
-        <div class="contenedorFlechaInfo"><a href="#somos"><img src="app/icon/flechablanca.png" class="flechaBajar"></a>
-        </div>
-
-    </section>
-
-    <section class="seccionQue_ofrecemos" id="somos">
-        <div class="fondoInformacion"><img src="app/image/quienes_somos.jpg" class="fondoInfo">
-            <h2 class="titulo2">¿Quienes somos?</h2>
-        </div>
-        <div class="contenedorInformación">
-            <div class="texto1">
-                <p>Somos una StartUp dedicada a la monitorización profesional de plantaciones y campos de
-                    explotación agrícolas.</p>
-            </div>
-        </div>
-        <footer>
-            <div class="f1">
-                <p class="textoFooter">Todos los derechos reservados</p>
-                <p class="textoFooter">Página realizada por el grupo 7</p>
-            </div>
-            <div class="f2">
-                <div class="f3"><a href="www.facebook.com"><img src="app/icon/facebook.svg" alt="facebook"
-                            class="menu"></a>
-                    <a href="www.instagram.com"><img src="app/icon/instagram.svg" alt="instagram" class="menu"></a>
-                </div>
-            </div>
-        </footer>
-    </section>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="app/js/contacto.js"></script>
+<script src="app/js/login.js"></script>
+<script>
+    AOS.init();
+    var botonIniciarSesion = document.getElementById("botonIniciarSesion");
+    botonIniciarSesion.addEventListener('click', function (event) {
+        var login = document.getElementById("login");
+        login.style.display = "flex";
+    })
+    var cerrar = document.getElementById("cerrariniciarsesion");
+    cerrar.addEventListener('click', function (event) {
+        var login = document.getElementById("login");
+        login.style.display = "none";
+    })
+</script>
 
 </body>
-
 </html>

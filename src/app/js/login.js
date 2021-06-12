@@ -1,12 +1,10 @@
 
-console.log(document.querySelector("form"))
-
 document.querySelector("form").addEventListener("submit", function (event){
     console.log(event);
     event.preventDefault();
     let dataLogin = new FormData(event.target)  ;
-    console.log(dataLogin.get("nombre"));
-    console.log(dataLogin.get("contrasenya"));
+    console.log(dataLogin.get("nombre_login"));
+    console.log(dataLogin.get("contrasenya_login"));
 
     fetch( '../src/api/v1.0/index.php', {
         method:"POST",
@@ -16,7 +14,7 @@ document.querySelector("form").addEventListener("submit", function (event){
            return respuesta.json();
         }
         else{
-            document.getElementById("output").textContent = "Nombre de usuario o contraseña incorrectos";
+            document.getElementById("output_login").textContent = "Nombre de usuario o contraseña incorrectos";
         }
     }).then(function (datos){
         if(datos.rol !== 'admin'){

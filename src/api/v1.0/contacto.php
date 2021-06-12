@@ -13,10 +13,10 @@ $conn = mysqli_connect($serverNombre, $userNombre, $password, $dbNombre);
 
 if ($metodo == 'POST') {
 
-    $Nombre = $_POST['nombre'];
-    $Apellido = $_POST['apellido'];
-    $correo = $_POST['correo'];
-    $motivo = $_POST['motivo'];
+    $Nombre = $_POST['nombre_form'];
+    $Apellido = $_POST['apellido_form'];
+    $correo = $_POST['correo_form'];
+    $motivo = $_POST['motivo_form'];
 
 
     if (!$conn) {

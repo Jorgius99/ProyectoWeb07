@@ -1,669 +1,435 @@
-*, html, body {
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-.fondo{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-.container{
-    width: 100%;
-    height: 100%;
-    margin-bottom: 0;
-    position: relative;
-    height: calc(100vh - 8.5rem);
-}
-.container2{
-    width: 100%;
-    height: 100%;
-    margin-bottom: 0;
-    position: relative;
-    height: calc(100vh - 8.5rem);
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-}
-
-html{
-    background-color:#0d1a27;
-    width: 100%;
-}
-header{
-    z-index: 3;
-    width:100%;
-    background-color:#0d1a27;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    height: 8.5rem;
-
-}
-body{
-    background-color: #0d1a27;
+html {
     margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
 }
-.logoGti{
 
-    text-align: left;
+body {
+    background-color: #0d1a27;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+.salida{
+    color:red;
+    font-size: 0.8rem;
+}
+
+/*
+aqui va el header
+ */
+
+header {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: minmax(0, 4rem);
+    position: sticky;
+    top: 0;
     background-color: white;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    display: block;
-    flex: 1 1 0;
+    z-index: 98;
 
 }
-.contenedorLogo{
+
+.contenedorMenu {
+    margin-right: 1rem;
+    padding: 0.2rem;
     display: flex;
-    height: 100%;
-    width: 60%;
+    flex-direction: row-reverse;
 }
-.triangulo {
-    border-left: 5.38rem solid white;
-    border-top: 4.26rem solid transparent;
-    border-bottom: 4.26rem solid transparent;
-    position: relative;
-    left: -2px;
+
+.iniciasesion {
+    padding: 10px;
+    height: 60%;
+
 }
-.menu{
-    width: 3rem;
-    margin-right: 3rem;
+
+.logoGti {
+    padding: 5px;
+    height: 80%;
+
 }
-h1{
-    font-size: 4.5rem;
-    position: relative;
-    font-weight: 700;
+
+/*
+aqui termina header
+ */
+
+/*---------------------------------------------------------------------------------*/
+
+/*
+inicio de pagina principal
+*/
+.landin {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.slogan {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
     text-align: center;
-    color: #0d1a27;
-    z-index: 2;
-    margin: 3rem 2.2rem;
 }
-.boton{
-    width: 100%;
-    height: 7rem;
-    position: relative;
+
+.principal_Imagen {
     display: flex;
-    align-items: center;
+}
+
+.imgp {
+    width: 100%;
+}
+
+.slogan2 {
+    color: darkgrey;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.cta {
+    width: 100%;
+    height: 5.2rem;
+    display: flex;
     justify-content: center;
 }
-.botonInformate{
-    font-size: 2rem;
+
+.botonInformate {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
     font-weight: 800;
     font-family: 'Source Sans Pro', sans-serif;
     padding: 2rem 4rem;
-    margin-top: 5%;
-    margin-bottom: 2%;
     border-radius: 400px;
-    position: relative;
-    -webkit-box-shadow: 0px 0px 35px 6px rgba(30,8,7,0.44); 
-box-shadow: 0px 0px 35px 6px rgba(30,8,7,0.44);
-    background-color: #633B54;
-}
-.contenedorFlecha{
-    position: relative;
-    width: 100%;
-    height: 6rem;
-    background-color: #0d1a27;
-    opacity: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 0;
-}
-.contenedorFlecha > a{
-    height: 3rem;
-}
-.flechaBajar{
-    width: 3rem;
-    margin-top: .5rem;
-    z-index: 2;
-    position: relative;
-}
-.seccionQue_ofrecemos{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-}
-.fondoInfo{
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
     position: absolute;
-    filter: blur(4px) grayscale(30%);;
-}
-.titulo2{
-    color: #0d1a27;
-    font-size: 100px;
-    margin: 3rem auto 0 auto;
-    text-align: center;
-    z-index: 2;
-    position: relative;
-}
-.titulo1{
-    color: white;
-    font-size: 100px;
-    margin: 3rem auto 0 auto;
-    text-align: center;
-    z-index: 2;
-    position: relative;
+    box-shadow: 0px 0px 35px 6px rgba(30, 8, 7, 0.44);
+    background-color: #660555;
+
 }
 
-.contenedorInformación{
+.bajar {
+    display: flex;
+    justify-content: center;
+    height: 2rem;
+
+}
+
+.flechaBajar {
+    height: 2rem;
+}
+
+/*
+aqui termina la pagina principal
+ */
+
+
+/*--------------------------------------------------------------------------*/
+
+
+/*
+comienzan los diferentes div
+*/
+
+.contenedor {
+    margin: 0 1.5rem;
+    padding-top: 4rem;
+    height: 90vh;
     display: flex;
     flex-direction: column;
-    height: 35vh;
-    width: 85vw;
-    align-items: center;
-    background-color: #0d1a27;
-    border-radius: 10px;
-    opacity: 80%;
-    margin-left: 7%;
-}
-.texto1{
-
-    height: 30vh;
-    width: 80vw;
-    font-family:Helvetica;
-    font-size: 37px;
-    color: white;
-    position: relative;
-
-
-
-}
-.texto2{
-    margin-left: 30px;
-    height: 30vh;
-    width: 500px;
-    font-family:Helvetica;
-    font-size: 37px;
-    color: white;
-}
-.contenedorFlechaInfo{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #0d1a27;
-    opacity: 100%;
-    margin-top: 0%;
-    padding: 10px 0;
-}
-
-/*
-MENU CSS
- */
-
-/*
-MENU CSS
- */
-
-.texto1indice{ /* MENU */
-    color: white;
-    font-size: 100px;
-    font-family:Helvetica;
-    z-index: 1;
-    margin-top: -6rem;
-    margin-left: 5%;
-}
-
-a{ /* ENLACES */
-    color: white;
-    font-size: 50px;
-    text-decoration: none;
-    font-family:Helvetica;
-    z-index: 1;
-}
-
-.caja1indice{ /* INICIAR SESION ... CONTACTANOS */
-    margin-left: 3rem;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    align-items:  center;
-}
-
-.columna{
-    justify-content: center;
-}
-
-.textoindice2{ /* INICIAR SESSION */
-    opacity: 70%;
-    margin-left: 2rem;
-    text-decoration: underline;
-}
-
-
-.menu_indice{ /* NAV CONTIENE ALL */
-    position: relative;
-    visibility: hidden;
-    transform: rotate(30deg) translate(80%, -580%) scale3d(-1, -1, 1);
-    transform: matrix();
-    transition: all 0.75s;
-    z-index: 1;
-}
-
-.indice:target{ /* TRANSICION */
-    visibility:visible;
-    opacity:1;
-    z-index: 1;
-}
-
-.indice:target .menu_indice{ /* TRANSICION */
-    position: fixed;
-    transform: rotate(0deg) ;
-    visibility: visible;
-    background: #0d1a27;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-}
-
-.indice{ /* DIV INDICE */
-    visibility: hidden;
-    opacity: 0;
-    transition: all 1s;
-    position: fixed;
-    z-index: 1;
-    margin-top: -8.5rem;
-}
-
-.imagen{ /* CRUZ */
-    margin: 2rem 2rem;
-    margin-left: 95%;
-    width: 3rem;
-    height: 3rem;
-}
-
-.ofrecer{ /* LI OFRECER */
-    display: flex;
-
-}
-.textoofrecer{ /* TEXTO OFRECER*/
-    opacity: 75%;
-    margin-right: 12rem;
-    text-decoration: underline;
-}
-.icono{ /* ICONO */
-    width: 4rem;
-    height: 4rem;
-    opacity: 80%;
-}
-.datos{ /* LI DATOS */
-    display: flex;
-
-}
-.funciona{ /* LI FUNCIONA */
-    display: flex;
-
-}
-.textomostrar{ /* TEXTO COMO SE MUESTRAN */
-    opacity: 75%;
-    margin-right: 6rem;
-    text-decoration: underline;
-}
-.textofunciona{ /* TEXTO COMO FUNCIONA */
-    opacity: 80%;
-    margin-right: 13rem;
-    text-decoration: underline;
-}
-.somos{ /* LI SOMOS */
-    display: flex;
-
-}
-.textosomos{ /* TEXTO QUIENES SOMOS */
-    opacity: 75%;
-    margin-right: 12rem;
-    text-decoration: underline;
-}
-.contacto{ /* LI CONTACTO*/
-    display: flex;
-
-}
-.textocontacto{ /* TEXTO CONTACTO */
-    opacity: 75%;
-    margin-right: 23rem;
-    text-decoration: underline;
-}
-
-.columna{/* div columnad*/
-    display: flex;
-    flex:1 1 0;
-}
-
-@media (max-width:1100px) {
-    h1{
-        font-size: 5rem;
-        line-height: 5rem;
-    }
-    .titulo1{
-        margin-top: 5rem;
-        font-size: 5rem;
-    }
-    .titulo2{
-        margin-top: 5rem;
-        font-size: 5rem;
-    }
-    .indice{
-        margin-bottom: -3.5rem;
-    }
-    .menu_indice{
-        margin-top: -2rem;
-    }
-    .columna{
-        display:flex;
-        flex-direction: column;
-    }
-
-    .icono{
-        width: 4rem;
-        height: 4rem;
-        opacity: 80%;
-    }
-
-    .texto1indice{
-        color: white;
-        font-size: 75px;
-        font-family:Helvetica;
-        z-index: 1;
-        margin-top: -3rem;
-    }
-
-    .imagen{
-        margin: 1rem 1rem;
-        margin-left: 90%;
-        width: 3rem;
-        height: 3rem;
-    }
-
-    .textoindice2{
-        opacity: 70%;
-        margin-left: 2rem;
-        font-size: 35px;
-    }
-
-    .textoofrecer{
-        opacity: 70%;
-        margin-left: 2rem;
-        font-size: 35px;
-    }
-
-    .textomostrar{
-        opacity: 70%;
-        margin-left: 2rem;
-        font-size: 35px;
-    }
-
-    .textofunciona{
-        opacity: 70%;
-        margin-left: 2rem;
-        font-size: 35px;
-    }
-
-    .textosomos{
-        opacity: 70%;
-        margin-left: 2rem;
-        font-size: 35px;
-    }
-
-    .textocontacto{
-        opacity: 70%;
-        margin-left: 2rem;
-        font-size: 35px;
-    }
-}
-
-
-@media(max-width: 850px){
-
-    .indice{
-        margin-bottom: -3.5rem;
-    }
-    .columna{
-        display:flex;
-        flex-direction: column;
-    }
-    .icono{
-        width: 4rem;
-        height: 4rem;
-        opacity: 80%;
-    }
-
-    .texto1indice{
-        color: white;
-        font-size: 75px;
-        font-family:Helvetica;
-        z-index: 1;
-        margin-top: -3rem;
-    }
-
-    .imagen{
-        margin: 3rem 1rem;
-        margin-left: 88%;
-        width: 3rem;
-        height: 3rem;
-    }
-
-    .textoindice2{
-        opacity: 70%;
-        margin-left: 2rem;
-        font-size: 35px;
-    }
-
-    .textoofrecer{
-        opacity: 70%;
-        margin-left: 2rem;
-        font-size: 35px;
-    }
-
-    .textomostrar{
-        opacity: 70%;
-        margin-left: 2rem;
-        font-size: 35px;
-    }
-
-    .textofunciona{
-        opacity: 70%;
-        margin-left: 2rem;
-        font-size: 35px;
-    }
-
-    .textosomos{
-        opacity: 70%;
-        margin-left: 2rem;
-        font-size: 35px;
-    }
-
-    .textocontacto{
-        opacity: 70%;
-        margin-left: 2rem;
-        font-size: 35px;
-    }
-
-    header{
-        height: 5rem;
-    }
-    .triangulo{
-        border-left: 3rem solid white;
-        border-top: 2.55rem solid transparent;
-        border-bottom: 2.55rem solid transparent;
-        top: -1px;
-    }
-    h1{
-        font-size: 4rem;
-        line-height: 4rem;
-    }
-    .titulo1{
-        font-size: 4rem;
-    }
-    .titulo2{
-        font-size: 4rem;
-    }
-    .texto1{
-        font-size: 30px;
-    }
-    .texto2{
-        font-size: 30px;
-    }
-    .contenedorFlechaInfo{
-        margin-top: 7rem;
-        height: 13rem
-    }
-
-
-
-}
-@media(max-width:650px){
-    h1{
-        padding-top: 2rem;
-        font-size: 3.6rem;
-        line-height: 3.6rem;
-    }
-    .boton{
-        margin-top: 10%;
-    }
-    .botonInformate{
-        font-size: 1.6rem;
-        padding: 1.5rem 2rem;
-        margin-top: 5%;
-        margin-bottom: 2%;
-    }
-    .contenedorFlecha{
-        margin-top: 12rem;
-        height: 12rem;
-    }
-    .flechaBajar{
-        margin-bottom: 1.5rem;
-    }
-
-    /*h1{
-        font-size: 25px;
-        line-height: 25px;
-    }*/
-    .titulo1{
-        margin-top: 6rem;
-        font-size: 6rem;
-    }
-    .titulo2{
-        margin-top: 6rem;
-        font-size: 6rem;
-    }
-    .icono{
-        width: 4rem;
-        height: 4rem;
-        opacity: 80%;
-    }
-    .texto1indice{
-        color: white;
-        font-size: 75px;
-        font-family:Helvetica;
-        z-index: 1;
-        margin-top: -3rem;
-        text-align: center;
-    }
-
-    .imagen{
-        margin: 3rem 1rem;
-        margin-left: 88%;
-        width: 3rem;
-        height: 3rem;
-    }
-
-    .textoindice2{
-        opacity: 70%;
-        margin-left: 2rem;
-        font-size: 45px;
-    }
-
-    .textoofrecer{
-        opacity: 70%;
-        margin-left: 2rem;
-        font-size: 35px;
-    }
-
-    .textomostrar{
-        opacity: 70%;
-        margin-left: 2rem;
-        font-size: 35px;
-    }
-
-    .textofunciona{
-        opacity: 70%;
-        margin-left: 2rem;
-        font-size: 35px;
-    }
-
-    .textosomos{
-        opacity: 70%;
-        margin-left: 2rem;
-        font-size: 35px;
-    }
-
-    .textocontacto{
-        opacity: 70%;
-        margin-left: 2rem;
-        font-size: 35px;
-    }
-
-    .caja1indice{
-        margin-left: 3rem;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-    }
-    .menu_indice{
-        width: 100%;
-        height: 100%;
-    }
-    .contacto{
-        margin-top:-0.10rem;
-    }
-
-    .indice{
-        margin-top: -9rem;
-    }
-    .columna{
-        display:flex;
-        flex-direction:column ;
-    }
-}
-footer{
-    position: relative;
-    display: flex;
     justify-content: space-between;
-    margin-top: 5rem;
+
 }
-.textoFooter{
-    font-size: 20px;
+
+.caja {
+    margin: 0.5rem;
+    background-color: #99CE34;
+    border-radius: 1.5rem;
+}
+
+.tituloh3 {
+    color: cornsilk;
+    text-align: center;
+}
+
+.textolargo {
+    text-align: justify;
+    font-size: 0.8rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+/*
+aqui terminan los diferentes div
+ */
+/*---------------------------------------------------------------------------------*/
+/*
+aqui comienza el footer
+*/
+footer {
+    margin-top: 2rem;
+
+    height: 4rem;
+    display: flex;
+}
+
+.textofuter {
+    color: honeydew;
+    width: 50%;
+    font-size: 0.5rem;
+}
+
+.textofuter .alvaro {
+    font-size: .3rem;
+}
+
+.redessociales {
+    margin: auto 1rem 0 auto;
+}
+
+.rrss {
+    padding: 1rem;
+    height: 2rem;
+
+}
+
+/*
+aqui termina el futer
+ */
+/*-------------------------------------------------------------------------------*/
+/*
+comienzo del loguin como span
+ */
+
+.contenedorlogin {
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    width: 80%;
+    max-width: 400px;
+    background-color: #f6f6f6;
+    border-radius: 2rem;
+    opacity: 100%;
+    flex-direction: column;
+
+}
+
+.cerr {
+    /* background-color: chocolate;*/
+    position: absolute;
+    width: 80%;
+    max-width: 400px;
+    height: 2rem;
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+.cerrar {
+    padding: 1rem;
+    width: 1rem;
+    display: flex;
+    text-align: end;
+    justify-content: end;
+}
+
+
+.is {
+    text-align: center;
+    font-size: 2rem;
+    color: #633B54;
+}
+
+.formulario {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario input {
+
+}
+
+.contenedornombre {
+    text-align: initial;
+    text-decoration: none;
+    margin: 0.2rem;
+    width: 85%;
+    height: 2rem;
+    border: #633B54 solid 2px;
+    border-radius: 5px;
+    background-color: #f6f6f6;
+    color: #633B54;
+    font: 400 1rem Helvetica;
+}
+
+.botonlogin {
+
     font-family: Helvetica;
-}
-
-@media(max-width:550px){
-    .titulo1{
-        font-size: 4rem;
-    }
-    .titulo2{
-        font-size: 4rem;
-    }
-    .texto1{
-        font-size: 30px;
-    }
-    .texto2{
-        font-size: 30px;
-    }
-    .contenedorFlechaInfo{
-        margin-top: 6rem;
-        height: 10rem
-    }
-    .contenedorFlecha{
-        margin-top: 10%;
-        height: 9rem;
-    }
-
+    color: white;
+    border: white;
+    width: 85%;
+    height: 2.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 3px 5px 2px #999;
+    background-color: #633B54;
 
 }
+
+.olvidocontrasenya {
+    text-align: center;
+    text-decoration: none;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #999999;
+}
+
+.olvidocontrasenya:hover {
+    color: #633B54;
+}
+
+/*
+final del login como span
+ */
+/*------------------------------------------------------------------------------------*/
+/*
+comienzo del formulario de contactanos
+ */
+#contacto {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.contacto_form {
+    width: 80%;
+    max-width: 400px;
+    background-color: #f6f6f6;
+    border-radius: 2rem;
+    opacity: 100%;
+    flex-direction: column;
+    margin: auto;
+}
+
+.cn {
+    color: #FFF;
+    text-align: center;
+    font-size: 3rem;
+}
+
+/*para tablet*/
+
+@media (min-width: 600px) {
+    .imgp {
+        margin: auto;
+        width: 80%;
+    }
+
+    .contenedor {
+        justify-content: space-between;
+    }
+
+    .tituloh3 {
+        font-size: 2rem;
+    }
+
+    .textolargo {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    .landin {
+        display: grid;
+        grid-template-rows: 40% 20% 30% 10%;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "principal Imagen"
+    "secundario Imagen"
+    "boton Imagen"
+    "flecha flecha";
+    }
+
+    .principal {
+        grid-area: principal;
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    .principal_Imagen {
+        grid-area: Imagen;
+    }
+
+    .secundario {
+        grid-area: secundario;
+        padding: 3rem;
+    }
+
+    .slogan2 {
+        font-size: 2rem;
+    }
+
+
+    .cta {
+        padding-top: 5rem;
+        grid-area: boton;
+
+    }
+
+    .botonInformate {
+        font-size: 1.5rem;
+        font-weight: 700;
+
+    }
+
+    .bajar {
+        grid-area: flecha;
+    }
+
+    .contenedor {
+        margin: 0 auto;
+        width: 90vw;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .caja {
+        width: 20%;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

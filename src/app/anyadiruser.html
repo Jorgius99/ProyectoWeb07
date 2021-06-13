@@ -3,27 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Gerente | GTI</title>
-    <link rel="stylesheet" href="css/formulariocontacto.css">
+    <link rel="stylesheet" href="css/cambiarContraseña.css">
 </head>
 <body>
 <!--                                                Header                                                           -->
 <header>
-    <a href="../index.html" class="logo"><img src="icon/logoGTI.svg" class="logoGti"><span class="triangulo"></span>
-    </a>
-    <div><a href="paginagerente.html"><img src="icon/x_blanco.png" class="menu"></a></div>
+    <div class="contenedorLogo">
+        <a href="#"><img src="icon/logoGTI.svg" class="logoGti"></a>
+    </div>
+    <div class="contenedorMenu">
+        <a href="paginagerente.html" id="botonIniciarSesion"><img src="icon/cerrar.svg" class="iniciasesion"></a>
+    </div>
 </header>
 <!--                                         Inicio del formulario                                                   -->
-<div class="padre">
-    <article class="titulo"><h1>Añade un usuario nuevo.</h1></article>
-    <div class="formulario">
-        <form action="#" id="bloque-usuario">
+<div id="contacto">
+    <article class="cn"><h1>Añade un usuario nuevo</h1></article>
+    <div class="contacto_form">
+        <form action="#" id="bloque-contactanos"class="formulario">
             <input type="text" class="contenedornombre" name="usuario" placeholder="nombre usuario nuevo*" required>
             <input type="text" class="contenedornombre" name="contrasenya" placeholder="contraseña de usuario nuevo*" required>
             <input type="text" class="contenedornombre" name="nombre" placeholder="nombre*" required>
             <input type="text" class="contenedornombre" name="telefono" placeholder="telefono*" required>
             <input type="text" class="contenedornombre" name="correo" placeholder="Email*" required>
             <input type="text" class="contenedornombre" name="dni" placeholder="DNI o NIF*" required>
-            <input type="submit" value="Nuevo user" class="boton" id="boton_usuario">
+            <input type="submit" value="Contáctanos" class="botonlogin">
+            <div id="output" class="salida" ></div>
         </form>
     </div>
     <article class="titulo"><h1>Añade una parcela nueva</h1></article>
@@ -45,8 +49,6 @@
         </form>
     </div>
 </div>
-
-<div id="output" style="color: red" style="font-size: 90px" ></div>
 <script src="js/anyadiruserFake.js"></script>
 <script src="js/anyadirParcelas.js"></script>
 <script src="js/anyadirSensores.js"></script>

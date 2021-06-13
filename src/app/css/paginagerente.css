@@ -1,66 +1,55 @@
 html {
     margin: 0px;
     background-color: #0d1a27;
+    font-size: 16px;
 }
 body{
-    margin:0px;
+    margin:0;
+    padding: 0;
 }
 
 /*Aqui empieza el header*/
+
 header {
-    height: 120px;
-    width: 102%;
-    background-color: #0d1a27;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    height: 8.5rem;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: minmax(0, 4rem);
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 98;
 
 }
 
-.tabla{
-    margin-bottom:10rem;
-}
-.logo {
+.contenedorMenu {
+    margin-right: 1rem;
+    padding: 0.2rem;
     display: flex;
-    height: 100%;
-    width: 60%;
+    flex-direction: row-reverse;
+}
+
+.iniciasesion {
+    padding: 10px;
+    height: 60%;
+
 }
 
 .logoGti {
+    padding: 5px;
+    height: 80%;
 
-    text-align: left;
-    background-color: white;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    display: block;
-    flex: 1 1 0;
-}
-
-.triangulo {
-    border-left: 5.38rem solid white;
-    border-top: 4.26rem solid transparent;
-    border-bottom: 4.26rem solid transparent;
-    position: relative;
-    left: -2px;
-}
-
-.menu {
-    margin-left: 7px;
-    margin-right: 50px;
-    margin-top: 30px;
-    text-align: left;
-    width: 3rem;
-    height: 3rem;
-    position: relative;
 }
 
 /*Aqui acaba el header*/
-h1{
+.tabla{
+    margin-bottom:10rem;
+}
+
+h1 {
     font-family: Helvetica;
-    font-size: 125px;
-    color:white;
+    font-size: 4vw;
+    color: black;
+
 
 }
 p {
@@ -70,10 +59,8 @@ p {
     text-align: center;
     margin: 0;
 }
-.saludo{
-    width: 50vw;
-    height:auto;
-    margin-left: 65px;
+.saludo {
+    margin:auto auto;
 }
 
 .txttabla{
@@ -149,4 +136,13 @@ footer {
     color: white;
 
 }
+@media (min-width: 650px){
+    h1 {
+        font-size: 1.6rem;
 
+    }
+    .nombre {
+
+        font-size: 1.6rem;
+    }
+}

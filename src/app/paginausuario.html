@@ -3,25 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Usuario | GTI</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+
     <link rel="stylesheet" type="text/css" href="css/paginausuario.css">
-    <style>
-       .nombre{
-           font-size: 30px;
-           color: white;
-       }
-    </style>
 </head>
 <body>
 <!-- Aqui empieza el header, que es comun en casi todas las paginas de la web -->
 <header>
-    <a href="../index.html" class="logo"><img src="icon/logoGTI.svg" class="logoGti"><span class="triangulo"></span></a>
-    <div><a href="../iniciarsesion.html"><img src="icon/x_blanco.png" class="menu"></a></div>
+    <div class="contenedorLogo">
+        <a href="../index.html"><img src="icon/logoGTI.svg" class="logoGti"></a>
+    </div>
+    <div class="saludo">
+         <h1 id="sal">  </h1>
+    </div>
+
+    <div class="contenedorMenu">
+        <a href="../index.html" id="botonIniciarSesion"><img src="icon/logOut.svg" class="iniciasesion"></a>
+    </div>
 </header>
 
 <main>
-    <div class="saludo">
-        <h1> Hola <div id="output" class="nombre"></div></h1>
-    </div>
+
     <div class="mapacaja">
     <section id="map"></section>
     </div>

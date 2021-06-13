@@ -1,4 +1,4 @@
-fetch('../src/api/v1.0/nombre.php', {
+fetch('../api/v1.0/nombre.php', {
     method: "GET"
 
 }).then(function (respuesta) {
@@ -6,5 +6,5 @@ fetch('../src/api/v1.0/nombre.php', {
         return respuesta.json();
     }
 }).then(function (datos) {
-    document.getElementById("output").textContent = datos.nombre;
+    document.getElementById("sal").textContent ="Hola " + datos.nombre;
 });

@@ -2,7 +2,7 @@ document.querySelector("form").addEventListener("submit", function (event){
     event.preventDefault();
 
     let datausuarionuevo = new FormData(event.target)  ;
-    fetch( '../api/v1.0/anyadiruser.php', {
+    fetch( '../api/v1.0/anyadirParcela.php', {
         method:"POST",
         body: datausuarionuevo
     }).then(function (respuesta){

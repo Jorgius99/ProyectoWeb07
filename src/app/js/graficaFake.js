@@ -8,7 +8,7 @@ function getParameterByName(name) {
 var idSensor = getParameterByName('sensor');
 
 
-fetch('../src/api/v1.0/obtenerMediciones.php?sensor=' + idSensor, {
+fetch('../api/v1.0/obtenerMediciones.php?sensor=' + idSensor, {
     method: "GET"
 }).then(function (respuesta) {
 
@@ -109,7 +109,6 @@ if(a==false){
 else{
     location.reload()
 }
-
     });
     //-----------------------------------------------
     var bl = document.querySelector('#lum');
@@ -121,9 +120,7 @@ else{
                     name: i.toString(),
                     value: parseFloat(datos[i].luminosidad)
                 })
-
             }
-
             new Morris.Line({
                 element: 'myfirstchart',
                 data: aux,
@@ -136,11 +133,7 @@ else{
         else{
             location.reload()
         }
-
     });
-
 //---------------------------------------------------------
-
-
 })
 

@@ -1,5 +1,3 @@
-
-
 let mapaGoogle;
 
 function iniciarmapa() {
@@ -43,7 +41,7 @@ function iniciarmapa() {
                     label: datos[i].idParcela,
                     animation: google.maps.Animation.DROP,
                     map: mapaGoogle,
-                    Marker:setZIndex(1),
+                    //Marker:setZIndex(1),
                 });
 
                 (function (marker, i) {
@@ -131,7 +129,7 @@ function iniciarmapa() {
                     let punto={
                         lat: parseFloat(vert.coordenadaX),
                         lng: parseFloat(vert.coordenadaY),
-                        Marker:setZIndex(3),
+                        //Marker:setZIndex(3),
                     }
                     vertices.push(punto)
 
@@ -139,12 +137,12 @@ function iniciarmapa() {
                         position:punto,
                         label: vert.idSensor,
                         map: mapaGoogle,
-                        Marker:setZIndex(3),
+                       // Marker:setZIndex(3),
                     });
 
                     google.maps.event.addListener(m, 'click', function () {
                         location.href="../app/Grafica.html?sensor="+vert.idSensor;
-                        Marker:setZIndex(3);
+                        //Marker:setZIndex(3);
                     });
 
                 });

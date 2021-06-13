@@ -5,10 +5,6 @@
     <title>Gerente | GTI</title>
     <link rel="stylesheet" href="css/formulariocontacto.css">
 </head>
-<style>
-
-
-</style>
 <body>
 <!--                                                Header                                                           -->
 <header>
@@ -20,18 +16,39 @@
 <div class="padre">
     <article class="titulo"><h1>Añade un usuario nuevo.</h1></article>
     <div class="formulario">
-        <form action="#" id="bloque-contactanos">
+        <form action="#" id="bloque-usuario">
             <input type="text" class="contenedornombre" name="usuario" placeholder="nombre usuario nuevo*" required>
             <input type="text" class="contenedornombre" name="contrasenya" placeholder="contraseña de usuario nuevo*" required>
             <input type="text" class="contenedornombre" name="nombre" placeholder="nombre*" required>
             <input type="text" class="contenedornombre" name="telefono" placeholder="telefono*" required>
             <input type="text" class="contenedornombre" name="correo" placeholder="Email*" required>
             <input type="text" class="contenedornombre" name="dni" placeholder="DNI o NIF*" required>
-            <input type="submit" value="Contáctanos" class="boton">
+            <input type="submit" value="Nuevo user" class="boton" id="boton_usuario">
+        </form>
+    </div>
+    <article class="titulo"><h1>Añade una parcela nueva</h1></article>
+    <div class="formulario">
+        <form action="#" id="bloque-parcela">
+            <input type="text" class="contenedornombre" name="Usuario_parcela" placeholder="Usuario*" required>
+            <input type="text" class="contenedornombre" name="coordenadaX_parcela" placeholder="coordenadaX*" required>
+            <input type="text" class="contenedornombre" name="coordenadaY_parcela" placeholder="coordenadaY" required>
+            <input type="submit" value="Añade" class="boton" id="boton_parcela">
+        </form>
+    </div>
+    <article class="titulo"><h1>Añade los sensores para las parcelas</h1></article>
+    <div class="formulario">
+        <form action="#" id="bloque-sensores">
+            <input type="text" class="contenedornombre" name="idParcela" placeholder="Usuario*" required>
+            <input type="text" class="contenedornombre" name="coordenadaX_sensores" placeholder="coordenadaX*" required>
+            <input type="text" class="contenedornombre" name="coordenadaY_sensores" placeholder="coordenadaY*" required>
+            <input type="submit" value="Añade" class="boton" id="boton_sensores">
         </form>
     </div>
 </div>
+
 <div id="output" style="color: red" style="font-size: 90px" ></div>
 <script src="js/anyadiruserFake.js"></script>
+<script src="js/anyadirParcelas.js"></script>
+<script src="js/anyadirSensores.js"></script>
 </body>
 </html>

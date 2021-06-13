@@ -6,7 +6,7 @@ document.querySelector("form").addEventListener("submit", function (event){
     console.log(dataLogin.get("nombre_login"));
     console.log(dataLogin.get("contrasenya_login"));
 
-    fetch( '../src/api/v1.0/index.php', {
+    fetch( 'api/v1.0/index.php', {
         method:"POST",
         body:dataLogin
     }).then(function (respuesta){
@@ -18,10 +18,10 @@ document.querySelector("form").addEventListener("submit", function (event){
         }
     }).then(function (datos){
         if(datos.rol !== 'admin'){
-            window.location = "../src/app/paginausuario.html"
+            window.location = "app/paginausuario.html"
         }
         else {
-            location.href = "../src/app/paginagerente.html"
+            location.href = "app/paginagerente.html"
         }
         })
 });

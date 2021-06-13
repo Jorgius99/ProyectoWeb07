@@ -9,6 +9,10 @@ body{
     margin: 0;
     padding: 0;
 }
+.formularios{
+    display:flex;
+    flex-direction: column;
+}
 header {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -90,15 +94,22 @@ header {
     border-radius: 2rem;
     opacity: 100%;
     flex-direction: column;
-    margin: auto;
+    margin:1rem auto;
 }
 .cn {
     font-family: sans-serif;
-    color: #FFF;
+    color: black;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 .salida{
     color:red;
     font-size: 0.8rem;
+}
+@media(min-width: 700px){
+
+    .formularios{
+        display:grid;
+        grid-template-columns:33% 33% 33% ;
+    }
 }

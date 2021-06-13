@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>Gerente | GTI</title>
     <link rel="stylesheet" href="css/cambiarContraseña.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
 </head>
 <body>
 <!--                                                Header                                                           -->
@@ -16,10 +20,16 @@
     </div>
 </header>
 <!--                                         Inicio del formulario                                                   -->
+
+<section class="formularios">
+
+
 <div id="contacto">
-    <article class="cn"><h1>Añade un usuario nuevo</h1></article>
+
     <div class="contacto_form">
+        <article class="cn"><h1>Añade un usuario nuevo</h1></article>
         <form action="#" id="bloque-contactanos"class="formulario">
+
             <input type="text" class="contenedornombre" name="usuario" placeholder="nombre usuario nuevo*" required>
             <input type="text" class="contenedornombre" name="contrasenya" placeholder="contraseña de usuario nuevo*" required>
             <input type="text" class="contenedornombre" name="nombre" placeholder="nombre*" required>
@@ -27,28 +37,39 @@
             <input type="text" class="contenedornombre" name="correo" placeholder="Email*" required>
             <input type="text" class="contenedornombre" name="dni" placeholder="DNI o NIF*" required>
             <input type="submit" value="Contáctanos" class="botonlogin">
-            <div id="output" class="salida" ></div>
+            <div id="output_userNuevo" class="salidao" ></div>
         </form>
     </div>
-    <article class="titulo"><h1>Añade una parcela nueva</h1></article>
-    <div class="formulario">
-        <form action="#" id="bloque-parcela">
+ </div>
+<div id="contacto">
+
+    <div class="contacto_form">
+        <article class="cn"><h1>Añade una parcela nueva</h1></article>
+        <form action="#" id="bloque-parcela" class="formulario">
             <input type="text" class="contenedornombre" name="Usuario_parcela" placeholder="Usuario*" required>
             <input type="text" class="contenedornombre" name="coordenadaX_parcela" placeholder="coordenadaX*" required>
             <input type="text" class="contenedornombre" name="coordenadaY_parcela" placeholder="coordenadaY" required>
-            <input type="submit" value="Añade" class="boton" id="boton_parcela">
-        </form>
-    </div>
-    <article class="titulo"><h1>Añade los sensores para las parcelas</h1></article>
-    <div class="formulario">
-        <form action="#" id="bloque-sensores">
-            <input type="text" class="contenedornombre" name="idParcela" placeholder="Usuario*" required>
-            <input type="text" class="contenedornombre" name="coordenadaX_sensores" placeholder="coordenadaX*" required>
-            <input type="text" class="contenedornombre" name="coordenadaY_sensores" placeholder="coordenadaY*" required>
-            <input type="submit" value="Añade" class="boton" id="boton_sensores">
+            <input type="submit" value="Añade" class="botonlogin" id="boton_parcela">
+            <div id="output_parcelaNueva" class="salida" ></div>
         </form>
     </div>
 </div>
+    <div id="contacto">
+
+        <div class="contacto_form">
+            <article class="cn"><h1>Añade los sensores para las parcelas</h1></article>
+            <form action="#" id="bloque-sensores" class="formulario">
+                <input type="text" class="contenedornombre" name="idParcela" placeholder="Parcela*" required>
+                <input type="text" class="contenedornombre" name="coordenadaX_sensores" placeholder="coordenadaX*" required>
+                <input type="text" class="contenedornombre" name="coordenadaY_sensores" placeholder="coordenadaY*" required>
+                <input type="submit" value="Añade" class="botonlogin" id="boton_sensores">
+                <div id="output_sensorNuevo" class="salida" ></div>
+
+            </form>
+        </div>
+    </div>
+</section>
+
 <script src="js/anyadiruserFake.js"></script>
 <script src="js/anyadirParcelas.js"></script>
 <script src="js/anyadirSensores.js"></script>

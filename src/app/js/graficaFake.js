@@ -1,4 +1,3 @@
-
 function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -17,33 +16,34 @@ fetch('../api/v1.0/obtenerMediciones.php?sensor=' + idSensor, {
         return respuesta.json()
     }
 }).then(function (datos) {
-    /* for (let i = 0; i < datos.length; i++) {
+   /*
+     for (let i = 0; i < datos.length; i++) {
          console.log("temperatura=" + datos[i].temperatura);
          console.log("humedad=" + datos[i].humedad);
          console.log("salinidad=" + datos[i].salinidad);
          console.log("luminosidad=" + datos[i].luminosidad);
 
      }
-     */
+*/
 
     /*
     aqui empieza tu codigo
      */
     var hum = []
     for (i = 0; i < datos.length; i++) {
-        hum.push({ser1: parseFloat(datos[i].idMedicion), ser2: parseFloat(datos[i].humedad)})
+        hum.push(parseFloat(datos[i].humedad))
     }
     var sal = []
     for (i = 0; i < datos.length; i++) {
-        sal.push({ser1: parseFloat(datos[i].idMedicion), ser2: parseFloat(datos[i].salinidad)})
+        sal.push(parseFloat(datos[i].salinidad))
     }
     var temp = []
     for (i = 0; i < datos.length; i++) {
-        temp.push({ser1: parseFloat(datos[i].idMedicion), ser2: parseFloat(datos[i].temperatura)})
+        temp.push( parseFloat(datos[i].temperatura))
     }
     var lum = []
     for (i = 0; i < datos.length; i++) {
-        lum.push({ser1: parseFloat(datos[i].idMedicion), ser2: parseFloat(datos[i].luminosidad)})
+        lum.push( parseFloat(datos[i].luminosidad))
     }
 
     //Código para hacer la gráfica
@@ -52,7 +52,11 @@ fetch('../api/v1.0/obtenerMediciones.php?sensor=' + idSensor, {
     // Obtener una referencia al elemento canvas del DOM
     const $grafica = document.querySelector("#grafica");
 // Las etiquetas son las que van en el eje X.
-    const etiquetas = ["10:00", "12:00", "14:00", "16:00"]
+    var e= []
+    for (let i = 0; i < datos.length ; i++) {
+        e.push(i)
+    }
+    const etiquetas = e;
 // Podemos tener varios conjuntos de datos. Comencemos con uno
     const datosVentas2020 = {
         label: "Temperatura",
@@ -107,61 +111,3 @@ fetch('../api/v1.0/obtenerMediciones.php?sensor=' + idSensor, {
     });
 
 })
-
-
-
-
-
-
-
-
-<<<<<<< Updated upstream
-        }
-        //console.log(aux)
-        new Morris.Line({
-            element: 'myfirstchart',
-            data: aux,
-            xkey: 'year',
-            ykeys: ['value'],
-            labels: ['Value']
-        });
-        a=true;
-}
-else{
-    location.reload()
-}
-    });
-    //-----------------------------------------------
-    var bl = document.querySelector('#lum');
-    bl.addEventListener('click', function (event) {
-        if(a==false){
-            var aux = []
-            for (let i = 0; i < datos.length; i++) {
-                aux.push({
-                    name: i.toString(),
-                    value: parseFloat(datos[i].luminosidad)
-                })
-            }
-            new Morris.Line({
-                element: 'myfirstchart',
-                data: aux,
-                xkey: 'name',
-                ykeys: ['value'],
-                labels: ['Value']
-            });
-            a=true
-        }
-        else{
-            location.reload()
-        }
-    });
-//---------------------------------------------------------
-})
-=======
-
-
-
-
-
->>>>>>> Stashed changes
-

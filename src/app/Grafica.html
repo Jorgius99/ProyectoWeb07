@@ -5,19 +5,25 @@
     <title>Gráficas | GTI</title>
     <!-- Aqui va la librería que usaremos para mostrar las gráficas -->
     <link rel="stylesheet" href="../app/css/grafica.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+
 
 </head>
 <body>
-<<<<<<< Updated upstream
-
 
 <header>
     <div class="contenedorLogo">
-        <a href="#"><img src="icon/logoGTI.svg" class="logoGti"></a>
+        <a href="../index.html"><img src="icon/logoGTI.svg" class="logoGti"></a>
     </div>
+    <div class="saludo">
+        <h2 id="sal">  </h2>
+    </div>
+
     <div class="contenedorMenu">
-        <a href="#" id="botonIniciarSesion"><img src="icon/iniciarSesion.svg" class="iniciasesion"></a>
+        <a href="paginausuario.html" id="botonIniciarSesion"><img src="icon/cerrar.svg" class="iniciasesion"></a>
     </div>
 </header>
 
@@ -25,33 +31,25 @@
     <div id="myfirstchart" ></div>
 </div>
 
-<div class="botones">
-    <div class="luminosidadYsalinidad">
-<a href="#" class="botonInformate" id="lum">Luminosidad</a>
-<a href="#" class="botonInformate"id="sal">Salinidad</a>
-    </div>
-
-    <div class="temperaturaYhumedad">
-<a href="#" class="botonInformate"id="temp">Temperatura</a>
-<a href="#" class="botonInformate"id="hum">Humedad</a>
-    </div>
-</div>
-
-<div class="botongenerarsensor">
-    <button onclick="f1()" class="botonInformate">Generar mediciones</button>
+<div >
+    <button onclick="f1()" class="botonlogin">Generar mediciones</button>
 
 </div>
 
+
+
+<!-- Este es el script del js de los datos de las gráficas -->
+<h1>Medidas</h1>
+<canvas id="grafica"></canvas>
+
+
+<script src="js/anyadirmedicion.js"></script>
+<script src="js/graficaFake.js"></script>
+<script src="js/nombreFake.js"></script>
 <!-- Aquí van los scripts de la librería de las gráficas -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
-<!-- Este es el script del js de los datos de las gráficas -->
-=======
-<div class="header"><a href="paginausuario.html"><img src="icon/x_blanco.png" class="menu"></a></div>
-<h1>Medidas</h1>
-<canvas id="grafica"></canvas>
->>>>>>> Stashed changes
-<script src="js/graficaFake.js"></script>
 </body>
 </html>

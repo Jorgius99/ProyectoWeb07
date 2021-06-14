@@ -16,6 +16,9 @@ $temp = $_POST["temperatura"];
 $hum = $_POST["humedad"];
 $sal = $_POST["salinidad"];
 $lum = $_POST["luminosidad"];
+$fecha = $_POST["fecha"];
+$hora = $_POST["hora"];
+
 if ($metodo === 'POST') {
 
 
@@ -30,7 +33,7 @@ if ($metodo === 'POST') {
         http_response_code(500);
         die("Error: " . mysqli_connect_error());
     }
-    $sql = "INSERT INTO `mediciones` (`idSensor`, `idMedicion`, `temperatura`, `humedad`, `salinidad`, `luminosidad`) VALUES ('$id', NULL ,'$temp','$hum','$sal','$lum')";
+    $sql = "INSERT INTO `mediciones` (`idSensor`, `idMedicion`, `temperatura`, `humedad`, `salinidad`, `luminosidad`,`hora`,`fecha`) VALUES ('$id', NULL ,'$temp','$hum','$sal','$lum','$hora','$fecha')";
     $result = mysqli_query($conn, $sql);
 
 

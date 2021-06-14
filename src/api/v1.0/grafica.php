@@ -35,6 +35,7 @@ if ($metodo === 'GET') {
         $resultado[$i] = $respuesta;
         $i++;
     }
+
     echo json_encode($resultado);
 
 

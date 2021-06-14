@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-05-2021 a las 19:11:40
+-- Tiempo de generación: 14-06-2021 a las 17:28:02
 -- Versión del servidor: 10.4.18-MariaDB
 -- Versión de PHP: 8.0.3
 
@@ -28,10 +28,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `contacto` (
-  `idPeticiones` int(255) NOT NULL,
-  `Nombre` varchar(255) DEFAULT NULL,
-  `Apellido` varchar(255) DEFAULT NULL,
-  `correo` varchar(255) DEFAULT NULL,
+  `idPeticiones` int(30) NOT NULL,
+  `Nombre` varchar(20) DEFAULT NULL,
+  `Apellido` varchar(20) DEFAULT NULL,
+  `correo` varchar(30) DEFAULT NULL,
   `motivo` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -40,7 +40,8 @@ CREATE TABLE `contacto` (
 --
 
 INSERT INTO `contacto` (`idPeticiones`, `Nombre`, `Apellido`, `correo`, `motivo`) VALUES
-(1, 'Carlos', 'Ipiens', 'carlosipiens@gmail.com', 'Hola');
+(1, 'Carlos', 'Ipiens', 'carlosipiens@gmail.com', 'Hola'),
+(2, 'pepe', 'Marin', 'jomaraln@upv.es', 'vuestra págin es alucinante, segid asi chiquets!!!!!');
 
 -- --------------------------------------------------------
 
@@ -49,24 +50,25 @@ INSERT INTO `contacto` (`idPeticiones`, `Nombre`, `Apellido`, `correo`, `motivo`
 --
 
 CREATE TABLE `login` (
-  `id` int(255) NOT NULL,
-  `usuario` varchar(255) NOT NULL,
-  `contrasenya` varchar(255) NOT NULL,
+  `id` int(30) NOT NULL,
+  `usuario` varchar(20) NOT NULL,
+  `contrasenya` varchar(20) NOT NULL,
   `rol` enum('usuario','admin') NOT NULL,
-  `nombre` varchar(255) DEFAULT NULL,
-  `telefono` int(255) DEFAULT NULL,
-  `correo` varchar(255) DEFAULT NULL,
-  `DNI/NIF` varchar(255) DEFAULT NULL
+  `nombre` varchar(20) DEFAULT NULL,
+  `telefono` int(15) DEFAULT NULL,
+  `correo` varchar(30) DEFAULT NULL,
+  `DNI/NIF` varchar(20) DEFAULT NULL,
+  `madre` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `login`
 --
 
-INSERT INTO `login` (`id`, `usuario`, `contrasenya`, `rol`, `nombre`, `telefono`, `correo`, `DNI/NIF`) VALUES
-(1, 'admin', '1234', 'admin', 'Alvaro', 658741295, 'admin@gti.es', '26523485J'),
-(2, 'user1', '1234', 'usuario', 'Paco', 627465234, 'user1@gti.com', '35412654S'),
-(3, 'user2', '1234', 'usuario', 'Roberto', 613245644, 'user2@gti.com', '64521354D');
+INSERT INTO `login` (`id`, `usuario`, `contrasenya`, `rol`, `nombre`, `telefono`, `correo`, `DNI/NIF`, `madre`) VALUES
+(1, 'admin', '1234', 'admin', 'Alvaro', 658741295, 'admin@gti.es', '26523485J', 'Garcia'),
+(2, 'user1', '1234', 'usuario', 'Paco', 627465234, 'user1@gti.com', '35412654S', 'Reinoso'),
+(3, 'user2', '1234', 'usuario', 'Roberto', 613245644, 'user2@gti.com', '64521354D', 'Perez');
 
 -- --------------------------------------------------------
 
@@ -75,12 +77,14 @@ INSERT INTO `login` (`id`, `usuario`, `contrasenya`, `rol`, `nombre`, `telefono`
 --
 
 CREATE TABLE `mediciones` (
-  `idSensor` int(255) NOT NULL,
+  `idSensor` int(30) NOT NULL,
   `idMedicion` int(11) NOT NULL,
   `temperatura` double NOT NULL,
-  `humedad` int(255) DEFAULT NULL,
-  `salinidad` int(255) DEFAULT NULL,
-  `luminosidad` int(255) DEFAULT NULL
+  `humedad` int(10) DEFAULT NULL,
+  `salinidad` int(10) DEFAULT NULL,
+  `luminosidad` int(10) DEFAULT NULL,
+  `hora` time(6) NOT NULL,
+  `fecha` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -90,8 +94,8 @@ CREATE TABLE `mediciones` (
 --
 
 CREATE TABLE `parcela` (
-  `idParcela` int(255) NOT NULL,
-  `idUsuario` int(255) NOT NULL,
+  `idParcela` int(30) NOT NULL,
+  `idUsuario` int(30) NOT NULL,
   `coordenadaX` double NOT NULL,
   `coordenadaY` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -112,8 +116,8 @@ INSERT INTO `parcela` (`idParcela`, `idUsuario`, `coordenadaX`, `coordenadaY`) V
 --
 
 CREATE TABLE `sensores` (
-  `idParcela` int(255) NOT NULL,
-  `idSensor` int(255) NOT NULL,
+  `idParcela` int(30) NOT NULL,
+  `idSensor` int(30) NOT NULL,
   `coordenadaX` double NOT NULL,
   `coordenadaY` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -157,8 +161,7 @@ ALTER TABLE `login`
 -- Indices de la tabla `mediciones`
 --
 ALTER TABLE `mediciones`
-  ADD PRIMARY KEY (`idMedicion`) USING BTREE,
-  ADD UNIQUE KEY `idSensor` (`idSensor`);
+  ADD PRIMARY KEY (`idMedicion`) USING BTREE;
 
 --
 -- Indices de la tabla `parcela`
@@ -182,41 +185,35 @@ ALTER TABLE `sensores`
 -- AUTO_INCREMENT de la tabla `contacto`
 --
 ALTER TABLE `contacto`
-  MODIFY `idPeticiones` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idPeticiones` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `mediciones`
 --
 ALTER TABLE `mediciones`
-  MODIFY `idMedicion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idMedicion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
 
 --
 -- AUTO_INCREMENT de la tabla `parcela`
 --
 ALTER TABLE `parcela`
-  MODIFY `idParcela` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `idParcela` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `sensores`
 --
 ALTER TABLE `sensores`
-  MODIFY `idSensor` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `idSensor` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Restricciones para tablas volcadas
 --
-
---
--- Filtros para la tabla `mediciones`
---
-ALTER TABLE `mediciones`
-  ADD CONSTRAINT `mediciones_ibfk_1` FOREIGN KEY (`idSensor`) REFERENCES `sensores` (`idSensor`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `parcela`

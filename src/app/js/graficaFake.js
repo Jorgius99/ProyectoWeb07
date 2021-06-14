@@ -53,8 +53,21 @@ fetch('../api/v1.0/obtenerMediciones.php?sensor=' + idSensor, {
     const $grafica = document.querySelector("#grafica");
 // Las etiquetas son las que van en el eje X.
     var e= []
+
     for (let i = 0; i < datos.length ; i++) {
-        e.push(i)
+
+      var fecha=  new Date(datos[i].fecha+' '+datos[i].hora)
+        var segundos = fecha.getSeconds()
+        var minutos = fecha.getMinutes()
+        var horas = fecha.getHours()
+        var mes= fecha.getUTCMonth()+1
+        var año=fecha.getFullYear()
+        var dia=fecha.getDate()
+        var tiempo = horas + ":" + minutos + ":" + segundos
+        var Fecha= año+'-'+mes+'-'+dia;
+
+        e.push(Fecha+' '+tiempo)
+        //console.log(a)
     }
     const etiquetas = e;
 // Podemos tener varios conjuntos de datos. Comencemos con uno

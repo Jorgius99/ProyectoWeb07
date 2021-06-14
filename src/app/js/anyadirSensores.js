@@ -1,4 +1,4 @@
-document.querySelector("#bloque-sensores").addEventListener("submit", function (event){
+document.querySelector("form").addEventListener("submit", function (event){
     event.preventDefault();
 
     let datausuarionuevo = new FormData(event.target)  ;

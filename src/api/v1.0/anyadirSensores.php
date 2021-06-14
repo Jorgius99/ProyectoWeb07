@@ -20,9 +20,9 @@ if($metodo =='POST') {
         die("Error: " . mysqli_connect_error());
     }
     $sql = "INSERT INTO `sensores`(`idParcela`, `idSensor`, `coordenadaX`, `coordenadaY`) VALUES ('$idParcela','','$coordenadaX','$coordenadaY')";
+    $result = mysqli_query($conn, $sql);//
 
-
-    if (mysqli_query($conn, $sql)) {
+    if (mysqli_num_rows($result) > 0) {
         echo "todo introducido con exito";
     } else {
         http_response_code(401);

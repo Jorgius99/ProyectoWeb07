@@ -7,10 +7,10 @@ document.querySelector("form").addEventListener("submit", function (event){
         body: datausuarionuevo
     }).then(function (respuesta){
         if(respuesta.ok){
-            document.getElementById("output").textContent = "Tarea realizada con éxito";
+            document.getElementById("output_userNuevo").textContent = "Tarea realizada con éxito";
         }
         else{
-            document.getElementById("output").textContent = "algo ha fallado";
+            document.getElementById("output_userNuevo").textContent = "algo ha fallado";
         }
     })
 });

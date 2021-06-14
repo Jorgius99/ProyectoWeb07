@@ -1,12 +1,12 @@
 
-document.querySelector("form").addEventListener("submit", function (event){
+document.querySelector("#login_form").addEventListener("submit", function (event){
     console.log(event);
     event.preventDefault();
     let dataLogin = new FormData(event.target)  ;
     console.log(dataLogin.get("nombre_login"));
     console.log(dataLogin.get("contrasenya_login"));
 
-    fetch( './api/v1.0/index.php', {
+    fetch( 'api/v1.0/index.php', {
         method:"POST",
         body:dataLogin
     }).then(function (respuesta){

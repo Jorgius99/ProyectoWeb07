@@ -110,11 +110,24 @@ inicio de pagina principal
 
 }
 
-.bajar {
+.flechabajar {
     display: flex;
     justify-content: center;
     height: 2rem;
+    animation: flecha-animada 1s ease-in-out infinite;
 
+}
+
+@keyframes flecha-animada {
+    from {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 .flechaBajar {
@@ -395,7 +408,7 @@ comienzo del formulario de contactanos
 
     }
 
-    .bajar {
+    .flechabajar {
         grid-area: flecha;
     }
 

@@ -1,6 +1,7 @@
-document.querySelector("form").addEventListener("submit", function (event){
+document.querySelector("#bloque-parcela").addEventListener("submit", function (event){
     event.preventDefault();
 
+    console.log("cualquier cosa")
     let datausuarionuevo = new FormData(event.target)  ;
     fetch( '../api/v1.0/anyadirParcela.php', {
         method:"POST",

@@ -1,4 +1,4 @@
-document.querySelector("form").addEventListener("submit", function (event){
+document.querySelector("#bloque-sensores").addEventListener("submit", function (event){
     event.preventDefault();
 
     let datausuarionuevo = new FormData(event.target)  ;
@@ -7,10 +7,10 @@ document.querySelector("form").addEventListener("submit", function (event){
         body: datausuarionuevo
     }).then(function (respuesta){
         if(respuesta.ok){
-            document.getElementById("output").textContent = "Tarea realizada con éxito";
+            document.getElementById("output_sensorNuevo").textContent = "Tarea realizada con éxito";
         }
         else{
-            document.getElementById("output").textContent = "algo ha fallado";
+            document.getElementById("output_sensorNuevo").textContent = "algo ha fallado";
         }
     })
 });

@@ -31,7 +31,10 @@ header {
     z-index: 98;
 
 }
-
+.cabecera{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
 .contenedorMenu {
     margin-right: 1rem;
     padding: 0.2rem;
@@ -50,19 +53,17 @@ header {
     height: 80%;
 
 }
-.botonlogin {
-
+.boton {
+margin:auto 1rem auto auto;
     font-family: Helvetica;
     color: white;
     border: white;
-    width: 85%;
+    width: 10%;
     height: 2.2rem;
     font-size: 1rem;
     font-weight: bold;
-    margin-top: 1rem;
     border-radius: 8px;
     position: relative;
-    box-shadow: 3px 5px 2px #999;
     background-color: #633B54;
 
 }

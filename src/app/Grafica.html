@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
           rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
 
 </head>
 <body>
@@ -19,7 +19,7 @@
         <a href="../index.html"><img src="icon/logoGTI.svg" class="logoGti"></a>
     </div>
     <div class="saludo">
-        <h2 id="sal">  </h2>
+        <h2 id="sal"></h2>
     </div>
 
     <div class="contenedorMenu">
@@ -27,27 +27,18 @@
     </div>
 </header>
 
-<div class="grafica">
-    <div id="myfirstchart" ></div>
-</div>
-
-<div >
-    <button onclick="f1()" class="botonlogin">Generar mediciones</button>
-
-</div>
-
-
-
 <!-- Este es el script del js de los datos de las gráficas -->
-<h1>Medidas</h1>
-<canvas id="grafica"></canvas>
+<div class="cabecera">
+    <h1>Medidas</h1>
+    <button onclick="f1()" class="boton" >+</button>
+</div>
 
+<canvas id="grafica"></canvas>
 
 <script src="js/anyadirmedicion.js"></script>
 <script src="js/graficaFake.js"></script>
-<script src="js/nombreFake.js"></script>
 <!-- Aquí van los scripts de la librería de las gráficas -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>

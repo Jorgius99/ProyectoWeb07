@@ -1,5 +1,5 @@
 html{
-    background-color:#0d1a27;
+    background-color:#f1f1f1;
     margin: 0;
     font-size: 16px;
 
@@ -19,7 +19,7 @@ header {
     grid-template-rows: minmax(0, 4rem);
     position: sticky;
     top: 0;
-    background-color: white;
+    background-color: #f1f1f1;
     z-index: 98;
 
 }
@@ -59,17 +59,19 @@ header {
     margin: 0.2rem;
     width: 85%;
     height: 2rem;
-    border: #633B54 solid 2px;
+    border: #2B0124 solid 2px;
     border-radius: 5px;
-    background-color: #f6f6f6;
-    color: #633B54;
+    background-color: #E1C7DD;
+    color: #2B0124;
     font: 400 1rem Helvetica;
+}
+::-webkit-input-placeholder {
+    color: #2B0124;
 }
 .botonlogin {
 
     font-family: Helvetica;
-    color: white;
-    border: white;
+    color: #660555;
     width: 85%;
     height: 2.2rem;
     font-size: 1rem;
@@ -77,8 +79,10 @@ header {
     margin-top: 1rem;
     border-radius: 8px;
     position: relative;
-    box-shadow: 3px 5px 2px #999;
-    background-color: #633B54;
+    box-shadow: #2B0124 1px 1px 1px;
+    position: relative;
+    background-color: #f1f1f1;
+
 
 }
 #contacto {
@@ -95,7 +99,7 @@ header {
 .contacto_form {
     width: 80%;
     max-width: 400px;
-    background-color: #f6f6f6;
+    background-color: #E1C7DD;
     border-radius: 2rem;
     opacity: 100%;
     flex-direction: column;
@@ -103,18 +107,12 @@ header {
 }
 .cn {
     font-family: sans-serif;
-    color: black;
+    color: #660555;
     text-align: center;
     font-size: 1.5rem;
+    border-bottom: 0;
 }
 .salida{
-    color:red;
+    color:#2B0124;
     font-size: 0.8rem;
-}
-@media(min-width: 700px){
-
-    .formularios{
-        display:grid;
-        grid-template-columns:33% 33% 33% ;
-    }
 }

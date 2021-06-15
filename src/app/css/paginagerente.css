@@ -1,7 +1,8 @@
 html {
     margin: 0px;
-    background-color: #0d1a27;
+    background-color: #f1f1f1;
     font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 body{
     margin:0;
@@ -16,8 +17,9 @@ header {
     grid-template-rows: minmax(0, 4rem);
     position: sticky;
     top: 0;
-    background-color: white;
+    background-color: #f1f1f1;
     z-index: 98;
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
 
 }
 
@@ -41,6 +43,22 @@ header {
 }
 
 /*Aqui acaba el header*/
+.navegacion{
+    height: 4rem;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.caja{
+    margin:auto auto;
+}
+.icono{
+    height: 2.5rem;
+}
+.mas{
+    margin-right:5px;
+    height: 1rem;
+}
+
 .tabla{
     margin-bottom:10rem;
 }
@@ -48,14 +66,15 @@ header {
 h1 {
     font-family: Helvetica;
     font-size: 4vw;
-    color: black;
+    color: #2B0124;
+
 
 
 }
 p {
     font-family: Helvetica;
     font-size: 55px;
-    color:white;
+    color:#2B0124;
     text-align: center;
     margin: 0;
 }
@@ -64,7 +83,7 @@ p {
 }
 
 .txttabla{
-    color: white;
+    color: #2B0124;
     size: 2rem;
 }
 
@@ -75,12 +94,12 @@ table {
 
 }
 th {
-    border-bottom: solid 2px white;
-    color: white;
+    border-bottom: solid 2px #2B0124;
+    color: #2B0124;
 }
 td {
-    border-bottom: solid 1px white;
-    color: white;
+    border-bottom: solid 1px #2B0124;
+    color: #2B0124;
     padding: 1rem 4rem;
 }
 
@@ -136,6 +155,125 @@ footer {
     color: white;
 
 }
+/*
+formulartos
+ */
+.contactou {
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.contactop {
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.contactos {
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.contacto2{
+    width: 80%;
+    max-width: 400px;
+    background-color: #D19BC8;
+    border-radius: 2rem;
+    opacity: 100%;
+    flex-direction: column;
+    margin:1rem auto;
+}
+
+.cn {
+    font-family: sans-serif;
+    color: #660555;
+    text-align: center;
+    font-size: 1.5rem;
+    border-bottom: 0;
+}
+.formulario {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedornombre {
+    text-align: initial;
+    text-decoration: none;
+    margin: 0.2rem;
+    width: 85%;
+    height: 2rem;
+    border: #2B0124 solid 2px;
+    border-radius: 5px;
+    background-color: #E1C7DD;
+    color: #2B0124;
+    font: 400 1rem Helvetica;
+}
+::-webkit-input-placeholder {
+    color: #2B0124;
+}
+.botonlogin {
+
+    font-family: Helvetica;
+    color: #660555;
+    width: 85%;
+    height: 2.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: #2B0124 1px 1px 1px;
+    position: relative;
+    background-color: #f1f1f1;
+
+}
+.salida{
+    color:#2B0124;
+    font-size: 0.8rem;
+}
+
+
+.cerr {
+    /* background-color: chocolate;*/
+    position: absolute;
+    width: 80%;
+    max-width: 400px;
+    height: 2rem;
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+.cerrar {
+    padding: 1rem;
+    width: 1rem;
+    display: flex;
+    text-align: end;
+    justify-content: end;
+}
+
 @media (min-width: 650px){
     h1 {
         font-size: 1.6rem;
@@ -144,5 +282,12 @@ footer {
     .nombre {
 
         font-size: 1.6rem;
+    }
+    .icono{
+        height: 3rem;
+    }
+    .mas{
+        margin-right:10px;
+        height: 1rem;
     }
 }

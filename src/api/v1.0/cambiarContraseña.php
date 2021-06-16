@@ -7,6 +7,7 @@ if($metodo =='POST') {
 
     $usuario = $_POST['usuario'];
     $contrasenya = $_POST['contrasenya'];
+    $madre = $_POST['madre'];
 
 
     $serverNombre = "localhost";
@@ -20,7 +21,7 @@ if($metodo =='POST') {
         http_response_code(500);
         die("Error: " . mysqli_connect_error());
     }
-    $sql1="SELECT * FROM `login` WHERE usuario='$usuario'";
+    $sql1="SELECT * FROM `login` WHERE usuario='$usuario' AND madre='$madre'";
     $a=mysqli_query($conn, $sql1);//
     if(mysqli_num_rows($a)>0){
         $sql = "UPDATE `login` SET contrasenya='$contrasenya' WHERE usuario='$usuario'";

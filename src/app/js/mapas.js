@@ -22,6 +22,8 @@ function iniciarmapa() {
 
         mapaGoogle = new google.maps.Map(document.getElementById('map'), {
             mapTypeId: 'hybrid',
+            zoom: 4,
+            center: {lat: 0, lng: 0},
             styles: [
                 {
                     featureType: 'poi',
@@ -37,6 +39,13 @@ function iniciarmapa() {
             rotateControl: false,
         });
 
+       mapaGoogle.addListener('zoom_changed', () => {
+            console.log (mapaGoogle.getZoom());
+
+            if(mapaGoogle.getZoom() < 13){
+                ocultar();
+            }
+        })
 
         initMap(datos)
 
@@ -51,10 +60,12 @@ function initMap(datos) {
     mapaGoogle.setTilt(0);
     //console.log("Google Maps cargado!!");
 
-    mapaGoogle = new google.maps.Map(document.getElementById('map'), {
+    /*mapaGoogle = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 40.41691146311564, lng: -3.703518517408268},
         zoom: 6.5
     });
+    */
+
 
     let bounds = new google.maps.LatLngBounds();
     //console.log(bounds)
@@ -201,27 +212,29 @@ function iniciarsensores(idParcela) {
 
         })
     } else {
-        marcasVertices.forEach(function (m) {
-            console.log(m);
-            m.setMap(null);
-            m = null;
-        })
-        poligono.forEach(function (polygon){
-            console.log(polygon);
-            polygon.setMap(null);
-            polygon = null;
-        })
-        marcasVertices = [];
-        poligono = [];
+        ocultar();
     }
-    
+
 
 }//Iniciar sensores
 
 var marcasVertices = [];
 var poligono = [];
 
-
+function ocultar(){
+    marcasVertices.forEach(function (m) {
+        console.log(m);
+        m.setMap(null);
+        m = null;
+    })
+    poligono.forEach(function (polygon){
+        console.log(polygon);
+        polygon.setMap(null);
+        polygon = null;
+    })
+    marcasVertices = [];
+    poligono = [];
+}
 //main
 
 //crear cuadros de texto en las cosas

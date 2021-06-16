@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="css/paginagerente.css">
 
+
 </head>
 
 <body>
@@ -17,21 +18,108 @@
         <a href="../index.html"><img src="icon/logoGTI.svg" class="logoGti"></a>
     </div>
     <div class="saludo">
-        <h1 id="sal">  </h1>
+        <h1 id="sal"></h1>
     </div>
 
     <div class="contenedorMenu">
         <a href="../index.html" id="botonIniciarSesion"><img src="icon/logOut.svg" class="iniciasesion"></a>
     </div>
 </header>
-<div class="saludo">
-    <h1> Hola
-        <div id="output" class="nombre"></div>
-    </h1>
-</div>
+
+<nav class="navegacion">
+    <div class="caja">
+        <a href="avisos.html">
+            <img src="icon/notificacion.svg" alt="avisos" class="icono">
+        </a>
+
+
+    </div>
+    <div class="caja">
+        <a href="#" id="aUser">
+            <img src="icon/boton-circular-plus.svg" alt="mas" class="mas">
+            <img src="icon/iniciarSesion.svg" alt="añadir user" class="icono">
+        </a>
+    </div>
+    <div class="caja" id="aParcela">
+
+        <img src="icon/boton-circular-plus.svg" alt="mas" class="mas"><img
+            src="icon/campos.svg"
+            alt="añadir Parcela"
+            class="icono"></div>
+    <div class="caja" id="aSensor"><img src="icon/boton-circular-plus.svg" alt="mas" class="mas"><img
+            src="icon/mapas-y-banderas.svg"
+            alt="añadir sensor"
+            class="icono"></div>
+</nav>
+
+<section class="contactou" id="anyadirUser">
+    <div class="contacto2">
+        <div class="cerr">
+            <a href="#" id="cerraru"><img src="icon/cerrar.svg" alt="cerrar" class="cerrar"></a>
+        </div>
+        <div class="contacto_form">
+            <article class="cn"><h1>Añade un usuario nuevo</h1></article>
+            <form action="#" id="bloque-contactanos" class="formulario">
+
+                <input type="text" class="contenedornombre" name="usuario" placeholder="nombre usuario nuevo*" required>
+                <input type="text" class="contenedornombre" name="contrasenya"
+                       placeholder="contraseña de usuario nuevo*" required>
+                <input type="text" class="contenedornombre" name="nombre" placeholder="nombre*" required>
+                <input type="text" class="contenedornombre" name="telefono" placeholder="telefono*" required>
+                <input type="text" class="contenedornombre" name="correo" placeholder="Email*" required>
+                <input type="text" class="contenedornombre" name="dni" placeholder="DNI o NIF*" required>
+                <input type="submit" value="añadir" class="botonlogin">
+                <div id="output_userNuevo" class="salida"></div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="contactop" id="anyadirParcela">
+    <div class="contacto2">
+        <div class="cerr">
+            <a href="#" id="cerrarp"><img src="icon/cerrar.svg" alt="cerrar" class="cerrar"></a>
+        </div>
+        <div class="contacto_form">
+            <article class="cn"><h1>Añade una parcela nueva</h1></article>
+            <form action="#" id="bloque-parcela" class="formulario">
+                <input type="text" class="contenedornombre" name="Usuario_parcela" placeholder="Usuario*" required>
+                <input type="text" class="contenedornombre" name="coordenadaX_parcela" placeholder="coordenadaX*"
+                       required>
+                <input type="text" class="contenedornombre" name="coordenadaY_parcela" placeholder="coordenadaY"
+                       required>
+                <input type="submit" value="Añade" class="botonlogin" id="boton_parcela">
+                <div id="output_parcelaNueva" class="salida"></div>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="contactos" id="anyadirSensor">
+    <div class="contacto2">
+        <div class="cerr">
+            <a href="#" id="cerrars"><img src="icon/cerrar.svg" alt="cerrar" class="cerrar"></a>
+        </div>
+        <div class="contacto_form">
+            <article class="cn"><h1>Añade los sensores para las parcelas</h1></article>
+            <form action="#" id="bloque-sensores" class="formulario">
+                <input type="text" class="contenedornombre" name="idParcela" placeholder="Parcela*" required>
+                <input type="text" class="contenedornombre" name="coordenadaX_sensores" placeholder="coordenadaX*"
+                       required>
+                <input type="text" class="contenedornombre" name="coordenadaY_sensores" placeholder="coordenadaY*"
+                       required>
+                <input type="submit" value="Añade" class="botonlogin" id="boton_sensores">
+                <div id="output_sensorNuevo" class="salida"></div>
+
+            </form>
+        </div>
+    </div>
+</section>
+
 <!-- Aqui va a ir la tabla de usuarios -->
+
+
 <div id="divtabla">
-    <!-- Aqui va a ir la tabla de usuarios -->
+
     <table>
         <thead>
         <tr>
@@ -48,12 +136,51 @@
     </table>
 </div>
 
-<div class="cosasgerente">
-<a class="boton" href="avisos.html">Tus avisos</a>
-<a class="boton" href="anyadiruser.html">Crear usuarios</a>
-</div>
+<script src="js/anyadiruserFake.js"></script>
+<script src="js/anyadirParcelas.js"></script>
+<script src="js/anyadirSensores.js"></script>
 
 <script src="js/mostrarusuariosFAKE.js"></script>
 <script src="js/nombreFake.js"></script>
+<script>
+
+
+    var botonUsuario = document.getElementById("aUser");
+    botonUsuario.addEventListener('click', function (event) {
+        var addUser = document.getElementById("anyadirUser");
+        addUser.style.display = "flex";
+    })
+
+    var botonParcela = document.getElementById("aParcela");
+    botonParcela.addEventListener('click', function (event) {
+        var addPar = document.getElementById("anyadirParcela");
+        addPar.style.display = "flex";
+    })
+
+    var botonSensor = document.getElementById("aSensor");
+    botonSensor.addEventListener('click', function (event) {
+        var addSen = document.getElementById("anyadirSensor");
+        addSen.style.display = "flex"
+    })
+
+    var cu = document.getElementById("cerraru");
+    cu.addEventListener('click', function (event) {
+        var addUser = document.getElementById("anyadirUser");
+        addUser.style.display = "none"
+    })
+
+    var cp = document.getElementById("cerrarp");
+    cp.addEventListener('click', function (event) {
+        var addPar = document.getElementById("anyadirParcela");
+        addPar.style.display = "none"
+    })
+
+    var cs = document.getElementById("cerrars");
+    cs.addEventListener('click', function (event) {
+        var addSen = document.getElementById("anyadirSensor");
+        addSen.style.display = "none"
+    })
+
+</script>
 </body>
 </html>

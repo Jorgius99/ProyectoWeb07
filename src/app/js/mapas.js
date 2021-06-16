@@ -11,14 +11,6 @@ function iniciarmapa() {
         }
 
     }).then(function (datos) {
-        //for (let i = 0; i < datos.length; i++) {
-        //    console.log(datos[i].coordenadaX);
-        //   console.log(datos[i].coordenadaY);
-        //}
-
-        /* pinchos
-        var markers=[];
-        pinchos*/
 
         mapaGoogle = new google.maps.Map(document.getElementById('map'), {
             mapTypeId: 'hybrid',
@@ -42,7 +34,7 @@ function iniciarmapa() {
        mapaGoogle.addListener('zoom_changed', () => {
             console.log (mapaGoogle.getZoom());
 
-            if(mapaGoogle.getZoom() < 13){
+            if(mapaGoogle.getZoom() < 15){
                 ocultar();
             }
         })
@@ -52,41 +44,26 @@ function iniciarmapa() {
     })
 }
 
-// (x1+x2)/2 (y1+Y2)/2
-//function medio (coordx, coordy)
-
-
 function initMap(datos) {
     mapaGoogle.setTilt(0);
-    //console.log("Google Maps cargado!!");
-
-    /*mapaGoogle = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 40.41691146311564, lng: -3.703518517408268},
-        zoom: 6.5
-    });
-    */
-
 
     let bounds = new google.maps.LatLngBounds();
-    //console.log(bounds)
 
     for (let i = 0; i < datos.length; i++) {
         var x = datos[i].coordenadaX
         var y = datos[i].coordenadaY
-        //console.log(typeof x)
-        //console.log(typeof y)
         parseFloat(y)
-        // console.log(typeof parseFloat(x))
-        // console.log(typeof parseFloat(y))
         var marker = new google.maps.Marker({
             position: {lat: parseFloat(x), lng: parseFloat(y)},
             label: datos[i].idParcela,
             animation: google.maps.Animation.DROP,
             map: mapaGoogle,
-            //Marker:setZIndex(1),
         });
 
-        //bounds.extend({lat: parseFloat(x), lng: parseFloat(y)})
+        infowindow = new google.maps.InfoWindow({
+            content: 'Campo ' + datos[i].idParcela,
+        });
+        infowindow.open(mapaGoogle, marker);
         bounds.extend(marker.position);
 
         (function (marker, i) {
@@ -95,50 +72,11 @@ function initMap(datos) {
                 mapaGoogle.panTo({lat: parseFloat(x), lng: parseFloat(y)})
                 iniciarsensores(marker.label);
 
-                infowindow = new google.maps.InfoWindow({
-                    content: 'Campo ' + datos[i].idParcela,
-                });
-                infowindow.open(mapaGoogle, marker);
             });
         })(marker, i);
     }
 
     mapaGoogle.fitBounds(bounds);
-
-
-    /* pinchos
-    function addmarker(location){
-        var marker = new google.maps.Marker({
-            position: location,
-            map:mapaGoogle,
-        });
-        markers.push(marker);
-    }
-
-    function setMapOnAll(map) {
-        for (let i = 0; i < markers.length; i++) {
-            markers[i].setMap(map);
-        }
-    }
-
-    function clearMarkers() {
-        setMapOnAll(null);
-    }
-
-    function showMarkers() {
-        setMapOnAll(map);
-    }
-     pinchos*/
-
-
-    /*
-    var marker1 = new google.maps.Marker({
-        position: event.latLng,
-        map: mapaGoogle,
-        collisionBehavior:
-        google.maps.CollisionBehavior.OPTIONAL_AND_HIDES_LOWER_PRIORITY,
-    });
-    */
 
 }
 
@@ -165,7 +103,6 @@ function iniciarsensores(idParcela) {
                 let punto = {
                     lat: parseFloat(vert.coordenadaX),
                     lng: parseFloat(vert.coordenadaY),
-                    //Marker:setZIndex(3),
                 }
                 vertices.push(punto)
 
@@ -173,14 +110,12 @@ function iniciarsensores(idParcela) {
                     position: punto,
                     label: vert.idSensor,
                     map: mapaGoogle,
-                    // Marker:setZIndex(3),
                 });
 
                 marcasVertices.push(m);
 
                 google.maps.event.addListener(m, 'click', function () {
                     location.href = "../app/Grafica.html?sensor=" + vert.idSensor;
-                    //Marker:setZIndex(3);
                 });
 
             });
@@ -199,16 +134,12 @@ function iniciarsensores(idParcela) {
             poligono.push(polygon);
 
             let bounds = new google.maps.LatLngBounds();
-            //console.log(bounds)
             polygon.getPath().getArray().forEach(function (v) {
                 bounds.extend(v);
             })
-            //  }
             mapaGoogle.fitBounds(bounds);
 
             console.log(mapaGoogle)
-
-            //polygon.setMap(map)
 
         })
     } else {
@@ -235,16 +166,3 @@ function ocultar(){
     marcasVertices = [];
     poligono = [];
 }
-//main
-
-//crear cuadros de texto en las cosas
-/*
-  var popup = new google.maps.InfoWindow();
-
-      poligono.addListener('click', function (e) {
-        popup.setContent('Contenido');
-        popup.setPosition(e.latLng);
-        popup.open(miMapa);
-      });
-
- */

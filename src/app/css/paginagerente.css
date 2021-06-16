@@ -273,7 +273,10 @@ formulartos
     text-align: end;
     justify-content: end;
 }
-
+.table-reflow{
+    margin-top: 3rem;
+    background-color:#f1f1f1;
+}
 @media (min-width: 650px){
     h1 {
         font-size: 1.6rem;

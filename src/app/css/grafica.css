@@ -4,10 +4,7 @@ html {
     font-size: 16px;
     font-family: 'Source Sans Pro', sans-serif;
 }
-.container{
-    width: auto;
-    height: 80vh;
-}
+
 body{
     margin:0;
     padding: 0;
@@ -75,8 +72,9 @@ margin:auto 1rem auto auto;
     background-color: #633B54;
 
 }
-#grafica{
-    height: 80vh;
+
+canvas {
+    max-height: 80vh;
 }
 
 @media (min-width: 650px){

@@ -30,7 +30,7 @@ header {
     top: 0;
     background-color: #f1f1f1;
     z-index: 98;
-    border-bottom: 1px solid rgba(0, 0, 0,0.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 
 }
 
@@ -69,11 +69,15 @@ inicio de pagina principal
     justify-content: space-around;
 
 }
-
+h1{
+    font-size: 2rem;
+    margin:0 1.5rem;
+}
 .slogan {
     font-family: 'Source Sans Pro', sans-serif;
     color: #2B0124;
     text-align: center;
+
 }
 
 .principal_Imagen {
@@ -85,18 +89,24 @@ inicio de pagina principal
     width: 80%;
     margin: 0 auto;
 }
-
+h2{
+    font-size: 1.3rem;
+    margin:0 1.5rem;
+}
 .slogan2 {
     color: darkgrey;
     font-size: 1rem;
     text-align: center;
 }
-
+.morado{
+    color:#660555;
+}
 .cta {
     width: 100%;
     height: 5.2rem;
     display: flex;
     justify-content: center;
+
 }
 
 .botonInformate {
@@ -152,7 +162,7 @@ comienzan los diferentes div
 .contenedor {
     margin: 0 1.5rem 3rem 1.5rem;
     padding-top: 4rem;
-    height: 90vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -161,9 +171,14 @@ comienzan los diferentes div
 
 .caja {
     margin: 0.7rem;
-    background-color: #660555;
+    background-color: #D19BC8;
     border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
 }
+
 .tituloh3 {
     color: #f1f1f1;
     text-align: center;
@@ -178,6 +193,15 @@ comienzan los diferentes div
     padding-right: 0.5rem;
     margin-bottom: 1rem;
 
+}
+.cajafotofoto{
+    width: max-content;
+    height: max-content;
+
+}
+.foto{
+
+    width:90%;
 }
 
 /*
@@ -403,6 +427,12 @@ comienzo del formulario de contactanos
     .textolargo {
         font-size: 1rem;
     }
+    h1 {
+        font-size: 3.2rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
 }
 
 @media (min-width: 1000px) {
@@ -425,7 +455,12 @@ comienzo del formulario de contactanos
     .principal_Imagen {
         grid-area: Imagen;
     }
-
+    h1 {
+        font-size: 3.5rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
     .secundario {
         grid-area: secundario;
         padding: 3rem;
@@ -439,7 +474,7 @@ comienzo del formulario de contactanos
     .cta {
         padding-top: 5rem;
         grid-area: boton;
-
+        margin: auto auto 0 auto;
     }
 
     .botonInformate {

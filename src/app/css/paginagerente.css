@@ -4,10 +4,10 @@ html {
     font-size: 16px;
     font-family: 'Source Sans Pro', sans-serif;
 }
-
 /*
-puebas
+borrar estilos
  */
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -31,13 +31,11 @@ puebas
     -moz-box-sizing: content-box;
     box-sizing: content-box;
 }
-
-
-
-
 /*
-finpruebas
+borrar estilos
  */
+
+
 body{
     margin:0;
     padding: 0;

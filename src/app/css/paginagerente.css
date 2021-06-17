@@ -4,11 +4,49 @@ html {
     font-size: 16px;
     font-family: 'Source Sans Pro', sans-serif;
 }
+
+/*
+puebas
+ */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+*:before,
+*:after {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+
+
+
+/*
+finpruebas
+ */
 body{
     margin:0;
     padding: 0;
+    background-color: #f1f1f1;
 }
-
+:root {
+    --bs-white: #f1f1f1;
+    --bs-light: #f1f1f1;
+}
 /*Aqui empieza el header*/
 
 header {
@@ -35,7 +73,9 @@ header {
     height: 60%;
 
 }
-
+::after, ::before {
+    box-sizing:content-box;
+}
 .logoGti {
     padding: 5px;
     height: 80%;
@@ -47,6 +87,7 @@ header {
     height: 4rem;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: #f1f1f1;
 }
 .caja{
     margin:auto auto;

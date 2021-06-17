@@ -57,7 +57,7 @@ function f1() {
         }
     ).then(function (respuesta) {
         if (respuesta.ok) {
-            alert("Tarea realizada con éxito")
+            location.reload()
             //document.getElementById("output").textContent = "Tarea realizada con éxito";
         } else {
             alert("error")

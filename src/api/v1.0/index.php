@@ -1,5 +1,5 @@
 <?php
-
+include './conexion.php';
 $metodo = $_SERVER['REQUEST_METHOD'];
 
 session_start();
@@ -10,17 +10,6 @@ if($metodo ==='POST') {
     $contrasenya = $_POST['contrasenya_login'];
 
 
-    $serverNombre = "localhost";
-    $userNombre = "root";
-    $password = "";
-    $dbNombre = "proyectoweb007";
-
-
-    $conn = mysqli_connect($serverNombre, $userNombre, $password, $dbNombre);
-    if (!$conn) {
-        http_response_code(500);
-        die("Error: " . mysqli_connect_error());
-    }
     $sql = "SELECT * FROM `login` WHERE `usuario`='$nombre' AND `contrasenya`='$contrasenya'";
     $result = mysqli_query($conn, $sql);//
 

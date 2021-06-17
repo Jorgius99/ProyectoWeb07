@@ -1,5 +1,5 @@
 <?php
-
+include './conexion.php';
 $metodo = $_SERVER['REQUEST_METHOD'];
 session_start();
 
@@ -10,26 +10,17 @@ if($metodo =='POST') {
     $madre = $_POST['madre'];
 
 
-    $serverNombre = "localhost";
-    $userNombre = "root";
-    $password = "";
-    $dbNombre = "proyectoweb007";
 
-
-    $conn = mysqli_connect($serverNombre, $userNombre, $password, $dbNombre);
-    if (!$conn) {
-        http_response_code(500);
-        die("Error: " . mysqli_connect_error());
-    }
     $sql1="SELECT * FROM `login` WHERE usuario='$usuario' AND madre='$madre'";
     $a=mysqli_query($conn, $sql1);//
+
     if(mysqli_num_rows($a)>0){
         $sql = "UPDATE `login` SET contrasenya='$contrasenya' WHERE usuario='$usuario'";
         $result = mysqli_query($conn, $sql);//
 
-        if (mysqli_num_rows($result) > 0) {
+        if (mysqli_query($conn, $sql)) {
 
-            echo "todo introducido con exito";
+            echo "Formulario rellenado de forma correcta";
 
         } else {
             http_response_code(401);

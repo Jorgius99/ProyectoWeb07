@@ -1,4 +1,5 @@
 <?php
+include './conexion.php';
 $metodo = $_SERVER['REQUEST_METHOD'];
 session_start();
 
@@ -8,17 +9,7 @@ if($metodo =='POST') {
     $idParcela = $_POST['idParcela'];
     $coordenadaY = $_POST['coordenadaY_sensores'];
 
-    $serverNombre = "localhost";
-    $userNombre = "root";
-    $password = "";
-    $dbNombre = "proyectoweb007";
 
-
-    $conn = mysqli_connect($serverNombre, $userNombre, $password, $dbNombre);
-    if (!$conn) {
-        http_response_code(500);
-        die("Error: " . mysqli_connect_error());
-    }
     $sql = "INSERT INTO `sensores`(`idParcela`, `idSensor`, `coordenadaX`, `coordenadaY`) VALUES ('$idParcela','','$coordenadaX','$coordenadaY')";
 
 

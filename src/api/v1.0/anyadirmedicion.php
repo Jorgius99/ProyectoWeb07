@@ -1,4 +1,5 @@
 <?php
+include './conexion.php';
 $metodo = $_SERVER['REQUEST_METHOD'];
 
 session_start();
@@ -22,19 +23,16 @@ $hora = $_POST["hora"];
 if ($metodo === 'POST') {
 
 
-    $serverNombre = "localhost";
-    $userNombre = "root";
-    $password = "";
-    $dbNombre = "proyectoweb007";
 
-
-    $conn = mysqli_connect($serverNombre, $userNombre, $password, $dbNombre);
-    if (!$conn) {
-        http_response_code(500);
-        die("Error: " . mysqli_connect_error());
-    }
     $sql = "INSERT INTO `mediciones` (`idSensor`, `idMedicion`, `temperatura`, `humedad`, `salinidad`, `luminosidad`,`hora`,`fecha`) VALUES ('$id', NULL ,'$temp','$hum','$sal','$lum','$hora','$fecha')";
-    $result = mysqli_query($conn, $sql);
 
+    if (mysqli_query($conn, $sql)) {
+
+        echo "Formulario rellenado de forma correcta";
+
+    } else {
+        http_response_code(401);
+        die();
+    }
 
 }

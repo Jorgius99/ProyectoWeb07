@@ -1,5 +1,5 @@
 <?php
-
+include './conexion.php';
 $metodo = $_SERVER['REQUEST_METHOD'];
 
 session_start();
@@ -7,17 +7,7 @@ $idSensor = $_SESSION["id"];
 
 if ($metodo === 'GET') {
 
-    $serverNombre = "localhost";
-    $userNombre = "root";
-    $password = "";
-    $dbNombre = "proyectoweb007";
 
-
-    $conn = mysqli_connect($serverNombre, $userNombre, $password, $dbNombre);
-    if (!$conn) {
-        http_response_code(500);
-        die("Error: " . mysqli_connect_error());
-    }
     $sql = "SELECT * FROM `mediciones` WHERE `idSensor`='$idSensor'";
     $result = mysqli_query($conn, $sql);//
     $resultado = array();

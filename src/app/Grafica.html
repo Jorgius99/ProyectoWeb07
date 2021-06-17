@@ -14,7 +14,7 @@
 </head>
 <body>
 <!-- HEADER -->
-<div class="container">
+
 <header>
     <div class="contenedorLogo">
         <a href="../index.html"><img src="icon/logoGTI.svg" class="logoGti"></a>
@@ -29,13 +29,14 @@
 </header>
 
 <!-- Este es el script del js de los datos de las gráficas -->
+<div class="container">
 <div class="cabecera">
     <h1 class="text">Medidas</h1>
     <button onclick="f1()" class="boton" >+</button>
 </div>
 <!-- gráfica -->
-<canvas id="grafica"></canvas>
-
+<canvas id="grafica" ></canvas>
+</div>
 
 
 
@@ -50,6 +51,6 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
-</div>
+
 </body>
 </html>

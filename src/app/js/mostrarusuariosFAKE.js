@@ -13,7 +13,6 @@ fetch( '../api/v1.0/mostrarusuarios.php', {
     for (let i = 0; i < datos.length; i++) {
         console.log(datos[i].nombre)
         console.log(datos[i].correo)
-        console.log(datos[i].DNI)
         console.log(datos[i].telefono)
 
     }
@@ -23,8 +22,7 @@ fetch( '../api/v1.0/mostrarusuarios.php', {
         let varId = `<td>${datos[i].id}</td>`;
         let varnombre = `<td>${datos[i].nombre}</td>`;
         let varcorreo = `<td>${datos[i].correo}</td>`;
-        let varDNI = `<td>${datos[i].DNI}</td>`;
         let vartelefono = `<td>${datos[i].telefono}</td>`;
-        tableBody.innerHTML += `<td>${varId + varnombre + varcorreo + varDNI + vartelefono}</td>`;
+        tableBody.innerHTML += `<td>${varId + varnombre + varcorreo + vartelefono}</td>`;
     }
 })

@@ -13,7 +13,6 @@ if ($metodo == 'GET') {
         $respuesta["nombre"] = $fila ["nombre"];
         $respuesta["correo"] = $fila ["correo"];
         $respuesta["telefono"] = $fila ["telefono"];
-        $respuesta["DNI"] = $fila ["DNI/NIF"];
         $respuesta["id"] = $fila ["id"];
             $resultado[$i]=$respuesta;
             $i++;

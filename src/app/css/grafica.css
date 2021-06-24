@@ -76,6 +76,11 @@ margin:auto 1rem auto auto;
 canvas {
     max-height: 80vh;
 }
+.aviso{
+    color: #2B0124;
+    font-size: 13px;
+    margin-left: 5%;
+}
 
 @media (min-width: 650px){
     h2 {
@@ -84,6 +89,10 @@ canvas {
     }
     .nombre {
 
+        font-size: 1.6rem;
+    }
+    .aviso{
+        color: #f1f1f1;
         font-size: 1.6rem;
     }
 }

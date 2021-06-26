@@ -91,7 +91,7 @@
         </div>
     </div>
     <div class="caja" data-aos="flip-right"data-aos-duration="1500">
-        <h3 class="tituloh3">¿Quienes somos?</h3>
+        <h3 class="tituloh3">¿Quiénes somos?</h3>
         <div class="textolargo">
             <p>Somos una StartUp dedicada a la monitorización profesional de plantaciones y campos de
                 explotación agrícolas.</p>
@@ -102,28 +102,28 @@
     </div>
 
 </div>
-<div id="contacto" class="">
+<section id="contacto" class="">
     <h1 class="cn">Contacta con nosotros</h1>
     <div  class="contacto_form">
 
-        <form class="formulario" id="contactanos_form" >
+        <form class="formulario" id="contactanos_form" action="api/v1.0/phpmailer/enviocorreo.php" method="post">
             <input  type="text" class="contenedorcontacta" name="nombre_form" placeholder="Nombre*" required>
             <input type="text" class="contenedorcontacta" name="apellido_form" placeholder="Apellidos*" required>
             <input type="email" class="contenedorcontacta" name="correo_form" placeholder="Email*" required>
             <input type="text" class="contenedorcontacta" name="motivo_form" placeholder="motivo*" required>
-            <input type="submit" value="Contáctanos" class="botoncontacto" id="botonform">
+            <button type="submit" value="Contáctanos" class="botoncontacto" id="botonform" onclick="enviar()">Contáctanos</button>
             <div id="output_form" class="salida"></div>
         </form>
     </div>
 
-</div>
+</section>
 
 
 <footer>
     <div class="textofuter" >
         <p>2021 Todos los derechos reservados</p>
-        <p>Pagina hecha por el grupo 7</p>
-        <p class="alvaro"> ALVARITO te llevamos en el corazon estes donde estés</p>
+        <p>Página hecha por el grupo 7</p>
+        <p class="alvaro"> ALVARITO te llevamos en el corazon estés donde estés</p>
 
     </div>
     <div class="redessociales">

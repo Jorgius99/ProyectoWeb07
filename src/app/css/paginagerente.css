@@ -260,7 +260,7 @@ formulartos
 .contenedornombre {
     text-align: initial;
     text-decoration: none;
-    margin: 0.2rem;
+    margin: 0.4rem;
     width: 85%;
     height: 2rem;
     border: #2B0124 solid 2px;
@@ -268,6 +268,7 @@ formulartos
     background-color: #E1C7DD;
     color: #2B0124;
     font: 400 1rem Helvetica;
+    padding: 0.5rem;
 }
 ::-webkit-input-placeholder {
     color: #2B0124;

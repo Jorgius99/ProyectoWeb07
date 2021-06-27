@@ -15,11 +15,6 @@ $password = "";
 $dbNombre = "proyectoweb007";
 
 
-
-
-
-
-
 $conn = mysqli_connect($serverNombre, $userNombre, $password, $dbNombre);
 
 if (!$conn) {

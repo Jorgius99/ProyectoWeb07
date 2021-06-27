@@ -103,15 +103,16 @@
 
 </div>
 <section id="contacto" class="">
-    <h1 class="cn">Contacta con nosotros</h1>
-    <div  class="contacto_form">
 
-        <form class="formulario" id="contactanos_form" action="api/v1.0/phpmailer/enviocorreo.php" method="post">
-            <input  type="text" class="contenedorcontacta" name="nombre_form" placeholder="Nombre*" required>
+    <h1 class="cn">Contacta con nosotros</h1>
+
+    <div  class="contacto_form">
+        <form class="formulario" id="contactanos_form" >
+            <input type="text" class="contenedorcontacta" name="nombre_form" placeholder="Nombre*" required>
             <input type="text" class="contenedorcontacta" name="apellido_form" placeholder="Apellidos*" required>
             <input type="email" class="contenedorcontacta" name="correo_form" placeholder="Email*" required>
-            <input type="text" class="contenedorcontacta" name="motivo_form" placeholder="motivo*" required>
-            <button type="submit" value="Contáctanos" class="botoncontacto" id="botonform" onclick="enviar()">Contáctanos</button>
+            <textarea type="text" class="contenedorcontacta-motivo" name="motivo_form" placeholder="Motivo*" required></textarea>
+            <input type="submit" value="Contáctanos" class="botoncontacto" id="botonform" >
             <div id="output_form" class="salida"></div>
         </form>
     </div>

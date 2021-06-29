@@ -48,6 +48,10 @@ function initMap(datos) {
     mapaGoogle.setTilt(0);
 
     let bounds = new google.maps.LatLngBounds();
+    const image = {
+        url: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+        size: new google.maps.Size(20, 22),
+    };
 
     for (let i = 0; i < datos.length; i++) {
         var x = datos[i].coordenadaX
@@ -58,6 +62,7 @@ function initMap(datos) {
             label: datos[i].idParcela,
             animation: google.maps.Animation.DROP,
             map: mapaGoogle,
+            icon: image,
         });
 
         infowindow = new google.maps.InfoWindow({

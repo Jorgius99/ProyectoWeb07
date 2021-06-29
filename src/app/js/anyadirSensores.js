@@ -8,6 +8,7 @@ document.querySelector("#bloque-sensores").addEventListener("submit", function (
     }).then(function (respuesta){
         if(respuesta.ok){
             document.getElementById("output_sensorNuevo").textContent = "Tarea realizada con éxito";
+            location.reload()
         }
         else{
             document.getElementById("output_sensorNuevo").textContent = "algo ha fallado";

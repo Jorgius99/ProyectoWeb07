@@ -8,6 +8,7 @@ document.querySelector("#contactanos_form").addEventListener("submit", function 
     }).then(function (respuesta){
         if(respuesta.ok){
             document.getElementById("output_form").textContent = "Tarea realizada con éxito";
+            location.reload()
         }
         else{
             document.getElementById("output_form").textContent = "Algo ha falado";

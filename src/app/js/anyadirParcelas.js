@@ -9,6 +9,7 @@ document.querySelector("#bloque-parcela").addEventListener("submit", function (e
     }).then(function (respuesta){
         if(respuesta.ok){
             document.getElementById("output_parcelaNueva").textContent = "Tarea realizada con éxito";
+            location.reload()
         }
         else{
             document.getElementById("output_parcelaNueva").textContent = "algo ha fallado";

@@ -8,6 +8,7 @@ document.querySelector("form").addEventListener("submit", function (event){
     }).then(function (respuesta){
         if(respuesta.ok){
             document.getElementById("output_userNuevo").textContent = "Tarea realizada con éxito";
+            location.reload()
         }
         else{
             document.getElementById("output_userNuevo").textContent = "algo ha fallado";

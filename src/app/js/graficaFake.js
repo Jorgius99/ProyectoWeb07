@@ -73,28 +73,28 @@ fetch('../api/v1.0/obtenerMediciones.php?sensor=' + idSensor, {
     const etiquetas = eje_x;
 // Podemos tener varios conjuntos de datos. Comencemos con uno
     const temperatura = {
-        label: "Temperatura",
+        label: "Temperatura(ºC)",
         data: temp, // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
         backgroundColor: 'rgba(255, 1, 64, 0.2)', // Color de fondo
         borderColor: 'rgba(255, 1, 64, 1)', // Color del borde
         borderWidth: 1,// Ancho del borde
     };
     const humedad = {
-        label: "Humedad",
+        label: "Humedad(%)",
         data: hum,// La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
         backgroundColor: 'rgba(54, 162, 235, 0.2)',// Color de fondo
         borderColor: 'rgba(54, 162, 235, 1)',// Color del borde
         borderWidth: 1,// Ancho del borde
     };
     const salinidad = {
-        label: "Salinidad",
+        label: "Salinidad(%)",
         data: sal, // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
         backgroundColor: 'rgba(255, 1000, 64, 0.2)',// Color de fondo
         borderColor: 'rgba(100, 1000, 100, 100)',// Color del borde
         borderWidth: 1,// Ancho del borde
     };
     const luminosidad = {
-        label: "Luminosidad",
+        label: "Luminosidad(%)",
         data: lum,/*[15000, 5000, 4500, 3000],*/ // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
         backgroundColor: 'rgba(255, 300, 64, 0.2)',// Color de fondo
         borderColor: 'rgba(255, 300, 64, 1)',// Color del borde

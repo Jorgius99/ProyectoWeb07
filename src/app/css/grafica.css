@@ -82,7 +82,31 @@ canvas {
     margin-left: 5%;
 }
 
+.movilgirar {
+    height: 2rem;
+    animation: movil-girar 2s ease-in-out infinite;
+
+}
+.iconomovil{
+    margin:5px;
+    display: flex;
+    justify-content: center;
+}
+@keyframes movil-girar {
+    from {
+        transform: rotate(0);
+    }
+    50% {
+        transform:rotate(90deg);
+    }
+    to {
+        transform: rotate(0);
+    }
+}
 @media (min-width: 650px){
+    .iconomovil{
+        display: none;
+    }
     h2 {
         font-size: 1.6rem;
 

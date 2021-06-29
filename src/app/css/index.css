@@ -287,7 +287,12 @@ comienzo del loguin como span
     text-align: end;
     justify-content: end;
 }
-
+.cc{
+    font-size: 2.5
+    rem;
+text-align: center;
+    color: #633B54;
+}
 
 .is {
     text-align: center;
